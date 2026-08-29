@@ -133,6 +133,14 @@ npm run build
 
 ---
 
+## 📋 使用者需求與系統規範
+
+本專案完整的個人化需求、決策邏輯、日期自動判定、100% 單一通路條目標準與維護規範，詳見：
+👉 [**使用者需求與系統規格書 (USER_SPECIFICATION.md)**](USER_SPECIFICATION.md)
+
+---
+
 ## 📄 授權條款
 
 本專案採用 [MIT License](LICENSE) 開源授權，歡迎自由修改與自用。
+

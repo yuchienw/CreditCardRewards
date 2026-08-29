@@ -7,14 +7,10 @@ interface TopContextBarProps {
   onUpdateContext: (updater: (prev: UserContext) => UserContext) => void;
 }
 
-const WEEKDAY_NAMES = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
-
 export const TopContextBar: React.FC<TopContextBarProps> = ({
   context,
   onUpdateContext,
 }) => {
-  const today = new Date();
-  const currentDayName = WEEKDAY_NAMES[today.getDay()];
 
   const toggleBirthday = () => {
     onUpdateContext((prev) => ({
@@ -101,7 +97,7 @@ export const TopContextBar: React.FC<TopContextBarProps> = ({
             </span>
           </button>
 
-          {/* 3. Automatic Weekend / Weekday detection (週末移到最後面) */}
+          {/* 3. Automatic Weekend / Weekday detection (平日 / 假日) */}
           <button
             onClick={toggleWeekend}
             className={`flex items-center justify-center space-x-1 py-1 px-1.5 sm:px-3 rounded-xl sm:rounded-full text-[11px] sm:text-xs font-bold transition-all border cursor-pointer active:scale-95 text-center ${
@@ -109,19 +105,19 @@ export const TopContextBar: React.FC<TopContextBarProps> = ({
                 ? 'bg-emerald-600 text-white border-emerald-400 shadow-xs shadow-emerald-500/20'
                 : 'bg-slate-800 text-slate-300 border-slate-700 hover:text-white hover:border-slate-500'
             }`}
-            title="系統已自動根據今日日期判定！點擊可手動切換平日/週末測試"
+            title="點擊切換平日 (1%) / 假日 (2%) 測試"
           >
             <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-300 shrink-0" />
             <span className="truncate">
               {context.isWeekend ? (
                 <>
-                  <span className="sm:hidden">🌴 週末 2%</span>
-                  <span className="hidden sm:inline">🌴 今日{currentDayName} (週末 2%)</span>
+                  <span className="sm:hidden">🌴 假日 2%</span>
+                  <span className="hidden sm:inline">🌴 假日 (2.0%)</span>
                 </>
               ) : (
                 <>
-                  <span className="sm:hidden">💼 {currentDayName} 1%</span>
-                  <span className="hidden sm:inline">💼 今日{currentDayName} (平日 1%)</span>
+                  <span className="sm:hidden">💼 平日 1%</span>
+                  <span className="hidden sm:inline">💼 平日 (1.0%)</span>
                 </>
               )}
             </span>

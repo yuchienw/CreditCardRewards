@@ -919,8 +919,31 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 🍲 火鍋、燒肉、餐酒館、王品與瓦城集團各獨立餐廳
+  // 🍲 火鍋、燒肉、特色餐飲、王品與瓦城集團各獨立餐廳
   // =========================================================================
+  {
+    id: 'jun-beef-noodles',
+    name: '竣師父牛肉麵',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['竣師父', '竣師父牛肉麵', '牛肉麵', '東區宵夜', '東區牛肉麵', '麻辣牛肉麵', '大安牛肉麵'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+    tips: '吃竣師父牛肉麵：刷【台新 Richart 卡】切換【好饗刷】或【國泰 CUBE 卡】切換【樂饗購】皆享 3.3% 高回饋！'
+  },
   {
     id: 'pastaio',
     name: 'PASTAIO 手工義大利麵',

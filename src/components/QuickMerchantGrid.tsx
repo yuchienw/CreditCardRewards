@@ -92,7 +92,7 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="搜尋通路 (例如: 50嵐, 燒肉, 牛肉麵, PlayStation, 蝦皮, 全聯, 新光三越)..."
+            placeholder="搜尋通路"
             className="w-full px-3 py-2.5 bg-transparent border-none text-slate-900 placeholder:text-slate-400 focus:outline-hidden font-medium text-[16px] leading-normal"
           />
           {searchQuery && (
@@ -110,7 +110,7 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
             className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-sm shrink-0 flex items-center gap-1.5 cursor-pointer"
           >
             <Search className="w-3.5 h-3.5" />
-            <span>搜尋送出</span>
+            <span>送出</span>
           </button>
         </form>
       </div>

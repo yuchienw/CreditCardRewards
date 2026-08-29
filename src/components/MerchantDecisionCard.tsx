@@ -6,19 +6,24 @@ import {
   Sparkles, 
   Lightbulb, 
   CheckCircle2, 
-  Layers 
+  Layers, 
+  ExternalLink,
+  Clock,
+  ShieldCheck
 } from 'lucide-react';
 
 interface MerchantDecisionCardProps {
   merchant: Merchant;
   context: UserContext;
   onOpenSchemeModal: () => void;
+  onOpenSourceModal: () => void;
 }
 
 export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   merchant,
   context,
   onOpenSchemeModal,
+  onOpenSourceModal,
 }) => {
   const decision = evaluateBestCard(merchant, context);
   const isCubeWinner = decision.winnerCard === 'cube';
@@ -38,13 +43,24 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
           </h2>
         </div>
 
-        <button
-          onClick={onOpenSchemeModal}
-          className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-medium text-indigo-100 transition-colors border border-white/15"
-        >
-          <Layers className="w-3.5 h-3.5" />
-          <span>權益總表對照</span>
-        </button>
+        <div className="flex items-center space-x-2">
+          <button
+            onClick={onOpenSourceModal}
+            className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-xs font-medium text-amber-200 transition-colors border border-amber-400/30"
+            title="查看此權益的官方原始出處與公告"
+          >
+            <ShieldCheck className="w-3.5 h-3.5 text-amber-300" />
+            <span>資料出處</span>
+          </button>
+
+          <button
+            onClick={onOpenSchemeModal}
+            className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-medium text-indigo-100 transition-colors border border-white/15"
+          >
+            <Layers className="w-3.5 h-3.5" />
+            <span>方案總表</span>
+          </button>
+        </div>
       </div>
 
       {/* Decision Result Highlight */}
@@ -203,6 +219,30 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
             </div>
           </div>
         )}
+
+        {/* Validity & Source Footnote */}
+        <div className="pt-2 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-700 border-t border-slate-100">
+          <div className="flex items-center space-x-3">
+            <span className="inline-flex items-center space-x-1 font-medium text-slate-700">
+              <Clock className="w-3.5 h-3.5 text-amber-500" />
+              <span>權益有效至：<strong className="text-slate-800">{merchant.validUntil}</strong></span>
+            </span>
+            <span className="text-slate-700">|</span>
+            <span className="text-slate-700">查核日期：{merchant.lastVerifiedAt}</span>
+          </div>
+
+          {merchant.officialSourceUrl && (
+            <a
+              href={merchant.officialSourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-1 text-indigo-600 hover:text-indigo-800 font-semibold transition-colors"
+            >
+              <span>查看發卡行官方公告</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

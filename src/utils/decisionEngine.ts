@@ -38,6 +38,7 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
       winnerRate: cubeRate,
       winnerSchemeName: cubeSchemeName,
       winnerNote: cubeNote,
+      validUntil: merchant.validUntil,
       runnerUpCard: 'richart',
       runnerUpRate: richartRate,
       runnerUpSchemeName: richartSchemeName,
@@ -50,6 +51,7 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
       winnerRate: richartRate,
       winnerSchemeName: richartSchemeName,
       winnerNote: richartNote,
+      validUntil: merchant.validUntil,
       runnerUpCard: 'cube',
       runnerUpRate: cubeRate,
       runnerUpSchemeName: cubeSchemeName,
@@ -62,6 +64,7 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
       winnerRate: cubeRate,
       winnerSchemeName: `雙卡皆享 ${cubeRate}% (CUBE: ${cubeSchemeName} / 台新: ${richartSchemeName})`,
       winnerNote: cubeNote || richartNote,
+      validUntil: merchant.validUntil,
       runnerUpCard: undefined,
       runnerUpRate: richartRate,
       runnerUpSchemeName: richartSchemeName,
@@ -69,3 +72,4 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
     };
   }
 }
+

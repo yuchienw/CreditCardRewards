@@ -5,7 +5,8 @@ import { TopContextBar } from './components/TopContextBar';
 import { MerchantDecisionCard } from './components/MerchantDecisionCard';
 import { QuickMerchantGrid } from './components/QuickMerchantGrid';
 import { SchemeDrawer } from './components/SchemeDrawer';
-import { CreditCard, Layers } from 'lucide-react';
+import { SourceGuideModal } from './components/SourceGuideModal';
+import { CreditCard, Layers, ShieldCheck } from 'lucide-react';
 
 export function App() {
   // 使用者情境變數（預設 8 月壽星）
@@ -24,6 +25,7 @@ export function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isSchemeOpen, setIsSchemeOpen] = useState(false);
+  const [isSourceOpen, setIsSourceOpen] = useState(false);
 
   // 當搜尋字串精準符合某個通路時，自動切換該通路
   const handleSearchChange = (q: string) => {
@@ -59,13 +61,23 @@ export function App() {
             </div>
           </div>
 
-          <button
-            onClick={() => setIsSchemeOpen(true)}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors text-xs font-semibold border border-slate-200"
-          >
-            <Layers className="w-3.5 h-3.5 text-slate-600" />
-            <span>權益方案總表</span>
-          </button>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setIsSourceOpen(true)}
+              className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-amber-50 text-amber-800 hover:bg-amber-100 transition-colors text-xs font-semibold border border-amber-200"
+            >
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
+              <span>資料出處與維護</span>
+            </button>
+
+            <button
+              onClick={() => setIsSchemeOpen(true)}
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors text-xs font-semibold border border-slate-200"
+            >
+              <Layers className="w-3.5 h-3.5 text-slate-600" />
+              <span>方案總表</span>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -80,6 +92,7 @@ export function App() {
             merchant={selectedMerchant}
             context={context}
             onOpenSchemeModal={() => setIsSchemeOpen(true)}
+            onOpenSourceModal={() => setIsSourceOpen(true)}
           />
         </section>
 
@@ -113,6 +126,12 @@ export function App() {
       <SchemeDrawer
         isOpen={isSchemeOpen}
         onClose={() => setIsSchemeOpen(false)}
+      />
+
+      {/* Official Sources & Data Maintenance Modal */}
+      <SourceGuideModal
+        isOpen={isSourceOpen}
+        onClose={() => setIsSourceOpen(false)}
       />
 
       {/* Minimal Footer */}

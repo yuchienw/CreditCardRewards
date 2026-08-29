@@ -18,6 +18,7 @@ export interface CubeDetail {
   scheme: CubeScheme;
   schemeName: string;
   rate: number;
+  validUntil?: string;
   note?: string;
   isBirthdaySpecial?: boolean; // 是否為慶生月加碼 (如 10%)
 }
@@ -26,6 +27,7 @@ export interface RichartDetail {
   scheme: RichartScheme;
   schemeName: string;
   rate: number;
+  validUntil?: string;
   payMethod?: 'any' | 'taishin_pay' | 'line_pay' | 'general';
   note?: string;
 }
@@ -38,7 +40,10 @@ export interface Merchant {
   tags: string[];
   cube: CubeDetail;
   richart: RichartDetail;
-  richartAltPay?: RichartDetail; // 若台新Pay與LinePay不同回饋
+  richartAltPay?: RichartDetail;
+  validUntil: string; // 權益時效，例如 "2026/12/31"
+  lastVerifiedAt: string; // 上次人工/官方查核日期
+  officialSourceUrl?: string; // 官方權益出處連結
   tips?: string;
 }
 
@@ -55,6 +60,7 @@ export interface BestCardResult {
   winnerRate: number;
   winnerSchemeName: string;
   winnerNote: string;
+  validUntil: string;
   runnerUpCard?: 'cube' | 'richart';
   runnerUpRate?: number;
   runnerUpSchemeName?: string;

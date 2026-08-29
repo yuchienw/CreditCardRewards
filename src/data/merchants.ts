@@ -387,10 +387,9 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (生日月慶生月 10%)',
+      schemeName: '樂饗購',
       rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '切換「樂饗購」享 3.3% / 生日月慶生月 10%'
+      note: '切換「樂饗購」享 3.3%'
     },
     richart: {
       scheme: 'chill',
@@ -399,7 +398,7 @@ export const MERCHANTS: Merchant[] = [
       isChillSpecial: true,
       note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
     },
-    tips: '吃海底撈兩張卡都很神！Richart 卡切【Chill 刷】直接享 10%；生日月 CUBE【慶生月】也享 10%！'
+    tips: '吃海底撈必刷【台新 Richart 卡】切換【Chill 刷】享 10% 狂飆回饋！CUBE 卡切換樂饗購享 3.3%。'
   },
   {
     id: 'uma-bbq',
@@ -412,10 +411,9 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (生日月慶生月 10%)',
+      schemeName: '樂饗購',
       rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '切換「樂饗購」3.3% / 生日月慶生月 10%'
+      note: '切換「樂饗購」3.3%'
     },
     richart: {
       scheme: 'chill',

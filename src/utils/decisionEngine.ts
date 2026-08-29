@@ -183,6 +183,7 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
 
   // ================= 類型 C: 餐飲美食 / 手搖飲 / 火鍋燒肉 =================
   else if (merchant.category === 'dining_delivery') {
+    // 1. Chill 刷門市直刷
     if (merchant.richart.isChillSpecial) {
       pathways.push({
         icon: '🔥',
@@ -197,6 +198,22 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
       });
     }
 
+    // 2. 外送平台 (Foodpanda / Uber Eats) 通道
+    if (merchant.id !== 'uber-eats' && merchant.id !== 'foodpanda') {
+      pathways.push({
+        icon: '🛵',
+        title: '改用 Foodpanda / Uber Eats 外送訂購',
+        condition: '透過外送平台訂餐或外帶自取',
+        recommendedCard: 'richart',
+        cardName: 'Richart 卡 / CUBE 卡',
+        schemeName: 'Richart 好饗刷 (3.3%) / CUBE 樂饗購 (3.3% / 生日月10%)',
+        rate: 3.3,
+        highlightText: '3.3% ~ 10%',
+        note: '若該店有上架外送，透過 Uber Eats / Foodpanda 訂餐切換 Richart「好饗刷」享 3.3%；生日月刷 CUBE 特店最高享 10%！'
+      });
+    }
+
+    // 3. 生日月慶生
     if (merchant.cube.isBirthdaySpecial) {
       pathways.push({
         icon: '🎂',
@@ -211,6 +228,7 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
       });
     }
 
+    // 4. LINE Pay
     pathways.push({
       icon: '📲',
       title: '使用 LINE Pay 掃碼付款',
@@ -223,6 +241,7 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
       note: '手搖或餐廳支援 LINE Pay，刷 Richart「Pay 著刷」享 2.3%。'
     });
 
+    // 5. 週末聚餐
     pathways.push({
       icon: '🌴',
       title: '週末聚餐結帳',
@@ -296,6 +315,18 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
 
   // ================= 類型 F: 未列出之自訂/一般消費 =================
   else {
+    pathways.push({
+      icon: '🛵',
+      title: '若是餐飲店家，可看是否有 Foodpanda / Uber Eats',
+      condition: '透過外送平台下單訂購',
+      recommendedCard: 'richart',
+      cardName: 'Richart 卡 / CUBE 卡',
+      schemeName: 'Richart 好饗刷 (3.3%) / CUBE 樂饗購 (3.3%)',
+      rate: 3.3,
+      highlightText: '3.3% 回饋',
+      note: '若該店有配合外送，透過 Uber Eats 或 Foodpanda 點餐直接升級為 3.3% 高回饋！'
+    });
+
     pathways.push({
       icon: '🏢',
       title: '若此店家設於百貨專櫃內',

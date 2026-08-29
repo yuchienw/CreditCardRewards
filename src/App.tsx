@@ -14,6 +14,7 @@ export function App() {
     birthMonth: 8,
     isCurrentMonthBirthday: true, // 預設開啟 8 月生日慶生特店加碼 (10%)
     isWeekend: false,
+    cubeLevel: 'level3',
     selectedPayMethod: 'all',
   });
 

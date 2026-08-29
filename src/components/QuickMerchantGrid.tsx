@@ -28,8 +28,8 @@ interface QuickMerchantGridProps {
 }
 
 const BASE_CATEGORY_TABS = [
-  { id: 'all', label: '全部通路', icon: Sparkles },
   { id: 'favorites', label: '常用通路', icon: Heart, isFavoriteTab: true },
+  { id: 'all', label: '全部通路', icon: Sparkles },
   { id: 'game_stream', label: '遊戲 & 影音', icon: Gamepad2 },
   { id: 'mobile_pay', label: '行動支付', icon: Smartphone },
   { id: 'ecommerce', label: '網購電商', icon: ShoppingBag },
@@ -93,7 +93,7 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="搜尋通路 (例如: 50嵐, 燒肉, 牛肉麵, PlayStation, 蝦皮, 全聯, 新光三越)..."
-            className="w-full px-3 py-2.5 bg-transparent border-none text-slate-900 placeholder:text-slate-400 focus:outline-hidden font-medium text-sm sm:text-base"
+            className="w-full px-3 py-2.5 bg-transparent border-none text-slate-900 placeholder:text-slate-400 focus:outline-hidden font-medium text-[16px] leading-normal"
           />
           {searchQuery && (
             <button

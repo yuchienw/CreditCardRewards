@@ -32,7 +32,7 @@ export function App() {
   // 目前選取的通路（預設選中 PlayStation）
   const [selectedMerchantId, setSelectedMerchantId] = useState<string>('playstation');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('favorites');
   const [isSchemeOpen, setIsSchemeOpen] = useState(false);
   const [isSourceOpen, setIsSourceOpen] = useState(false);
   const [isExpiryAlertOpen, setIsExpiryAlertOpen] = useState(false);

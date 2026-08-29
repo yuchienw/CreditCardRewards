@@ -42,7 +42,8 @@ export interface Merchant {
     scheme: CubeScheme;
     schemeName: string;
     rate: number; // Level 2 (3.0%) 或 Level 3 (3.3%)
-    isBirthdaySpecial?: boolean; // 生日月 10%
+    isBirthdaySpecial?: boolean; // 生日月加碼 (10% 或 3.5%)
+    birthdayRate?: number; // 慶生月專屬利率 (如 10.0 或 3.5，未填預設為 10.0)
     note?: string;
   };
   richart: {

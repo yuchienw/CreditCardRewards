@@ -284,7 +284,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
                 className="text-base font-black text-emerald-700 bg-white px-2 py-0.5 rounded-lg border border-emerald-200 shadow-2xs"
               >
                 {context.isCurrentMonthBirthday && merchant.cube.isBirthdaySpecial
-                  ? '10.0%'
+                  ? `${merchant.cube.birthdayRate || 10.0}%`
                   : `${merchant.cube.rate}%`}
               </span>
             </div>
@@ -292,7 +292,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
               <div>
                 <span className="font-semibold text-emerald-950">權益方案：</span>
                 {context.isCurrentMonthBirthday && merchant.cube.isBirthdaySpecial
-                  ? '🎂 慶生月 (生日特店)'
+                  ? `🎂 慶生月 (${merchant.cube.birthdayRate || 10.0}%)`
                   : merchant.cube.schemeName}
               </div>
               <div className="text-[11px] text-slate-700">{merchant.cube.note}</div>

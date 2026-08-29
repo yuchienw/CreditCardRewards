@@ -52,10 +52,10 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
   onToggleFavorite,
   context,
 }) => {
-  // 動態計算當前情境下國泰 CUBE 卡的實質回饋率（包含壽星月 10% 與 Lv1/Lv2/Lv3 切換）
+  // 動態計算當前情境下國泰 CUBE 卡的實質回饋率（包含壽星月 10% / 3.5% 與 Lv1/Lv2/Lv3 切換）
   const getEffectiveCubeRate = (m: Merchant) => {
     if (context.isCurrentMonthBirthday && m.cube.isBirthdaySpecial) {
-      return 10.0;
+      return m.cube.birthdayRate || 10.0;
     }
     if (m.cube.rate === 3.3 || m.cube.rate === 3.0 || m.cube.rate === 2.0) {
       if (context.cubeLevel === 'level1') return 2.0;

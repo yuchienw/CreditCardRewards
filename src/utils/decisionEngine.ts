@@ -39,11 +39,12 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
     }
   }
 
-  // 慶生月 10% 判斷：必須是官方特店且當前為生日月份
+  // 慶生月判斷：必須是官方特店且當前為生日月份（新光三越/Uber Eats/Klook 為 3.5%，特色私廚/PlayStation/樂園等為 10.0%）
   if (context.isCurrentMonthBirthday && merchant.cube.isBirthdaySpecial) {
-    cubeRate = 10.0;
-    cubeSchemeName = '慶生月 (官方生日專屬特店)';
-    cubeNote = `🎂 ${context.birthMonth}月壽星專屬！官方指定特店切換「慶生月」獨享 10% 小樹點加碼！`;
+    const specialRate = merchant.cube.birthdayRate || 10.0;
+    cubeRate = specialRate;
+    cubeSchemeName = `慶生月 (${specialRate}%)`;
+    cubeNote = `🎂 ${context.birthMonth}月壽星專屬！官方指定特店切換「慶生月」享 ${specialRate}% 小樹點回饋！`;
   }
 
   // 2. 計算台新 Richart 卡在該條件下的實際回饋率
@@ -84,6 +85,7 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
 
     // 只有官方明確列入慶生月特店的數位平台 (如 PlayStation / Nintendo) 才推薦慶生月
     if (merchant.cube.isBirthdaySpecial) {
+      const bdayRate = merchant.cube.birthdayRate || 10.0;
       pathways.push({
         icon: '🎂',
         title: '壽星月份專屬特店加碼',
@@ -91,9 +93,9 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
         recommendedCard: 'cube',
         cardName: '國泰 CUBE 卡',
         schemeName: '慶生月',
-        rate: 10.0,
-        highlightText: '最高 10.0% 小樹點',
-        note: '此平台為 CUBE 官方生日月指定特店，生日當月切換「慶生月」獨享 10% 超高回饋！'
+        rate: bdayRate,
+        highlightText: `最高 ${bdayRate}% 小樹點`,
+        note: `此平台為 CUBE 官方生日月指定特店，生日當月切換「慶生月」獨享 ${bdayRate}% 回饋！`
       });
     }
 
@@ -113,18 +115,30 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
 
   // ================= 類型 B: 實體服飾 / 運動品牌 / 百貨品牌 (adidas, Nike, UNIQLO, 百貨專櫃) =================
   else if (merchant.category === 'department_fashion') {
-    // 1. 若本身即為新光三越或設櫃於新光三越
-    if (merchant.id === 'shinkong-mitsukoshi' || merchant.cube.isBirthdaySpecial) {
+    // 1. 若本身即為新光三越
+    if (merchant.id === 'shinkong-mitsukoshi') {
+      pathways.push({
+        icon: '💳',
+        title: '新光三越專櫃首推台新 Pay',
+        condition: '使用台新 Pay 或 skm pay 結帳',
+        recommendedCard: 'richart',
+        cardName: '台新 Richart 卡',
+        schemeName: 'Pay 著刷 (台新Pay 3.8%)',
+        rate: 3.8,
+        highlightText: '3.8% 台新 Point',
+        note: '於新光三越專櫃使用「台新 Pay」綁 Richart 卡付款享高達 3.8%，優於慶生月 3.5%！'
+      });
+
       pathways.push({
         icon: '🎂',
-        title: '新光三越壽星專屬加碼',
+        title: '新光三越壽星加碼 (3.5%)',
         condition: '於 8 月生日當月在新光三越館內消費',
         recommendedCard: 'cube',
         cardName: '國泰 CUBE 卡',
-        schemeName: '慶生月',
-        rate: 10.0,
-        highlightText: '最高 10.0% 小樹點',
-        note: '新光三越為 CUBE 官方慶生月特店，生日當月切換「慶生月」獨享 10% 小樹點！'
+        schemeName: '慶生月 (3.5%)',
+        rate: 3.5,
+        highlightText: '3.5% 小樹點',
+        note: '新光三越為 CUBE 官方慶生月特店，生日當月切換「慶生月」享 3.5% 小樹點無上限！'
       });
     }
 
@@ -149,10 +163,10 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
         condition: '門市設於新光三越館內',
         recommendedCard: 'richart',
         cardName: '台新 Richart 卡 / CUBE 卡',
-        schemeName: '台新 Pay (3.8%) / 生日月 CUBE (10%)',
+        schemeName: '台新 Pay (3.8%) / 慶生月 CUBE (3.5%)',
         rate: 3.8,
-        highlightText: '最高 3.8% ~ 10%',
-        note: '新光三越專櫃可綁定「台新 Pay」享 3.8%！若為 8 月生日當月刷 CUBE「慶生月」享 10% 小樹點。'
+        highlightText: '最高 3.8% ~ 3.5%',
+        note: '新光三越專櫃建議綁定「台新 Pay」享 3.8% 最高！若為 8 月生日當月刷 CUBE「慶生月」享 3.5% 小樹點。'
       });
     } else if (merchant.id !== 'shinkong-mitsukoshi') {
       // 本身為非新光三越的一般百貨 (SOGO / 遠百 / 微風 / 101 等)

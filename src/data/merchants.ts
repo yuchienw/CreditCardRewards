@@ -4143,13 +4143,14 @@ export const MERCHANTS: Merchant[] = [
     tags: ['uber eats', 'ubereats', '外送', '便當', '生鮮雜貨'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (🎂生日月特店最高 10%)',
+      schemeName: '慶生月 (3.5%) / 樂饗購 (3.3%)',
       rate: 3.3,
-      
-      note: '切換「樂饗購」享 3.3% / 生日月官方特店享 10%'
+      isBirthdaySpecial: true,
+      birthdayRate: 3.5,
+      note: '🎂 8月生日當月切換「慶生月」享 3.5% 小樹點無上限！平日切換「樂饗購」享 3.3%'
     },
     richart: {
       scheme: 'dining',
@@ -4157,7 +4158,7 @@ export const MERCHANTS: Merchant[] = [
       rate: 3.3,
       note: '切換「好饗刷」外送平台享 3.3%'
     },
-    tips: '叫外送平日兩張卡皆享 3.3%（CUBE 樂饗購 / Richart 好饗刷）；8 月生日月若 CUBE 特店加碼享 10%！'
+    tips: '叫外送平日兩張卡皆享 3.3%（CUBE 樂饗購 / Richart 好饗刷）；8 月生日當月刷 CUBE 卡切換【慶生月】升級享 3.5% 小樹點！'
   },
   {
     id: 'foodpanda',
@@ -4196,10 +4197,11 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (🎂生日月慶生月 10%)',
+      schemeName: '慶生月 (3.5%) / 樂饗購 (3.3%)',
       rate: 3.3,
       isBirthdaySpecial: true,
-      note: '切換「樂饗購」享 3.0%~3.3%！🎂 8月生日當月切換「慶生月」指定特店享 10% 小樹點！'
+      birthdayRate: 3.5,
+      note: '🎂 8月生日當月切換「慶生月」享 3.5% 小樹點無上限！平日切換「樂饗購」享 3.3%'
     },
     richart: {
       scheme: 'pay',
@@ -4208,7 +4210,7 @@ export const MERCHANTS: Merchant[] = [
       payMethod: 'taishin_pay',
       note: '在新光三越櫃位打開「台新 Pay」綁 Richart 刷享高達 3.8%！或直刷切換「大筆刷」享 3.3%'
     },
-    tips: '新光三越最神刷法：平常用【台新 Pay】綁 Richart 卡（Pay 著刷）享 3.8% 台新 Point；若在 8 月生日當月，則刷 CUBE 卡切換【慶生月】享最高 10% 小樹點！'
+    tips: '新光三越首推綁定【台新 Pay】刷 Richart 卡（Pay 著刷）享 3.8% 台新 Point！若在 8 月生日當月，刷 CUBE 卡切換【慶生月】享 3.5% 小樹點。'
   },
   {
     id: 'sogo-department',
@@ -6370,19 +6372,22 @@ export const MERCHANTS: Merchant[] = [
     tags: ['klook', '客路', '門票', '一日遊', '行程', 'sim卡', '交通券'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'travel',
-      schemeName: '趣旅行',
+      schemeName: '慶生月 (3.5%) / 趣旅行 (3.3%)',
       rate: 3.3,
-      note: '切換「趣旅行」享 3.3%'
+      isBirthdaySpecial: true,
+      birthdayRate: 3.5,
+      note: '🎂 8月生日當月切換「慶生月」享 3.5% 小樹點無上限！平日切換「趣旅行」享 3.3%'
     },
     richart: {
       scheme: 'travel',
       schemeName: '玩旅刷 (旅遊體驗 3.3%)',
       rate: 3.3,
       note: '切換「玩旅刷」享 3.3%'
-    }
+    },
+    tips: '8 月生日當月預訂 Klook 票券與行程，切換 CUBE 卡【慶生月】享 3.5% 小樹點；平日刷 Richart 卡【玩旅刷】或 CUBE 卡【趣旅行】享 3.3%。'
   },
   {
     id: 'kkday',

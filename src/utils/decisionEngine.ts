@@ -346,14 +346,14 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
 
     pathways.push({
       icon: '🏢',
-      title: '若此店家設於百貨專櫃內',
-      condition: '門市在百貨內且生日當月',
+      title: '若此店家設於各大百貨專櫃內',
+      condition: '由各大百貨商場統一收銀結帳',
       recommendedCard: 'cube',
-      cardName: '國泰 CUBE 卡',
-      schemeName: '慶生月 (10%) / 樂饗購 (3.3%)',
-      rate: 10.0,
-      highlightText: '最高 10.0%',
-      note: '若該店位在百貨專櫃內，生日月切 CUBE「慶生月」享 10%，平日享 3.3%！'
+      cardName: '國泰 CUBE 卡 / 台新 Richart 卡',
+      schemeName: 'CUBE 樂饗購 (3.3%) / Richart 大筆刷 (3.3%)',
+      rate: 3.3,
+      highlightText: '3.3% 點數回饋',
+      note: '若該店位在各大百貨專櫃內由百貨收銀結帳，切換 CUBE「樂饗購」或 Richart「大筆刷」享 3.3% 點數回饋！'
     });
 
     pathways.push({

@@ -23,6 +23,7 @@ interface MerchantDecisionCardProps {
   context: UserContext;
   onOpenSchemeModal: () => void;
   onOpenSourceModal: () => void;
+  onOpenExpiryAlertModal?: () => void;
 }
 
 export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
@@ -30,6 +31,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   context,
   onOpenSchemeModal,
   onOpenSourceModal,
+  onOpenExpiryAlertModal,
 }) => {
   const [showAllPathways, setShowAllPathways] = useState(true);
   const decision = evaluateBestCard(merchant, context);
@@ -42,22 +44,19 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
     <div className="bg-white rounded-3xl border-2 border-indigo-500/30 shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
       {/* 🚨 High-Priority Expiration Alert Banner (if expired or expiring soon) */}
       {validity.status === 'expired' && (
-        <div className="bg-rose-600 text-white px-5 py-3 flex items-center justify-between gap-3 text-xs sm:text-sm font-semibold shadow-md animate-pulse">
+        <div 
+          onClick={onOpenExpiryAlertModal}
+          className="bg-rose-600 text-white px-5 py-3 flex items-center justify-between gap-3 text-xs sm:text-sm font-semibold shadow-md cursor-pointer hover:bg-rose-700 transition-colors animate-pulse"
+        >
           <div className="flex items-center space-x-2">
             <AlertOctagon className="w-5 h-5 shrink-0 text-white" />
             <span>{validity.message}</span>
           </div>
-          {merchant.officialSourceUrl && (
-            <a
-              href={merchant.officialSourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-1 bg-white text-rose-700 font-bold rounded-lg hover:bg-rose-50 transition-colors shrink-0 flex items-center space-x-1"
-            >
-              <span>前往官網查核</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          )}
+          <div className="flex items-center space-x-2">
+            <span className="px-2.5 py-1 bg-white text-rose-700 font-bold rounded-lg shrink-0 text-xs">
+              查看詳情 ⚠️
+            </span>
+          </div>
         </div>
       )}
 

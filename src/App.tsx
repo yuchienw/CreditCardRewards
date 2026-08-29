@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { MERCHANTS } from './data/merchants';
 import type { Merchant, UserContext } from './types/merchant';
 import { TopContextBar } from './components/TopContextBar';
@@ -6,6 +6,8 @@ import { MerchantDecisionCard } from './components/MerchantDecisionCard';
 import { QuickMerchantGrid } from './components/QuickMerchantGrid';
 import { SchemeDrawer } from './components/SchemeDrawer';
 import { SourceGuideModal } from './components/SourceGuideModal';
+import { ExpiryAlertModal } from './components/ExpiryAlertModal';
+import { checkValidity } from './utils/validityChecker';
 import { CreditCard, Layers, ShieldCheck } from 'lucide-react';
 
 export function App() {
@@ -24,6 +26,7 @@ export function App() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isSchemeOpen, setIsSchemeOpen] = useState(false);
   const [isSourceOpen, setIsSourceOpen] = useState(false);
+  const [isExpiryAlertOpen, setIsExpiryAlertOpen] = useState(false);
 
   // 根據搜尋字串或選取的 ID 動態計算出當前的 Merchant
   const activeMerchant = useMemo<Merchant>(() => {
@@ -68,6 +71,14 @@ export function App() {
     const found = MERCHANTS.find((m) => m.id === selectedMerchantId);
     return found || MERCHANTS[0];
   }, [searchQuery, selectedMerchantId]);
+
+  // 當選取的通路已過期時，自動跳出 Popup 彈窗警告
+  useEffect(() => {
+    const validity = checkValidity(activeMerchant.validUntil);
+    if (validity.status === 'expired') {
+      setIsExpiryAlertOpen(true);
+    }
+  }, [activeMerchant.id, activeMerchant.validUntil]);
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-100 text-slate-900 font-sans">
@@ -151,9 +162,18 @@ export function App() {
             context={context}
             onOpenSchemeModal={() => setIsSchemeOpen(true)}
             onOpenSourceModal={() => setIsSourceOpen(true)}
+            onOpenExpiryAlertModal={() => setIsExpiryAlertOpen(true)}
           />
         </section>
       </main>
+
+      {/* Expiry Alert Popup Modal (自動彈出 / 點擊警報彈出) */}
+      <ExpiryAlertModal
+        isOpen={isExpiryAlertOpen}
+        onClose={() => setIsExpiryAlertOpen(false)}
+        merchant={activeMerchant}
+        onOpenSourceModal={() => setIsSourceOpen(true)}
+      />
 
       {/* Full Scheme Catalog Modal */}
       <SchemeDrawer

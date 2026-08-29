@@ -12,22 +12,57 @@ import { CreditCard, Layers, ShieldCheck, ArrowUp, Search } from 'lucide-react';
 
 export function App() {
   // 自動由系統當前真實日期判定：
-  // 1. 是否為週末六日 (週六 = 6, 週日 = 0)
-  // 2. 是否為 8 月生日當月
+  // 情境狀態初始化：
+  // 1. 預設平假日依當前即時真實日期判定 (週六 = 6, 週日 = 0)
+  // 2. 壽星加碼預設關閉 (false)，若有暫存則讀取暫存
+  // 3. CUBE 等級預設 Lv1 (2.0%)，若有暫存則讀取暫存
   const [context, setContext] = useState<UserContext>(() => {
     const today = new Date();
     const dayOfWeek = today.getDay();
-    const currentMonth = today.getMonth() + 1; // 1 ~ 12
-    const birthMonth = 8; // 使用者生日為 8 月
+    const isWeekendToday = dayOfWeek === 0 || dayOfWeek === 6;
+    const birthMonth = 8;
+
+    let savedBirthday: boolean | null = null;
+    let savedCubeLevel: 'level1' | 'level2' | 'level3' | null = null;
+
+    try {
+      const saved = localStorage.getItem('cc_user_context');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (typeof parsed.isCurrentMonthBirthday === 'boolean') {
+          savedBirthday = parsed.isCurrentMonthBirthday;
+        }
+        if (parsed.cubeLevel === 'level1' || parsed.cubeLevel === 'level2' || parsed.cubeLevel === 'level3') {
+          savedCubeLevel = parsed.cubeLevel;
+        }
+      }
+    } catch {}
 
     return {
       birthMonth,
-      isCurrentMonthBirthday: currentMonth === birthMonth,
-      isWeekend: dayOfWeek === 0 || dayOfWeek === 6,
-      cubeLevel: 'level2', // 預設持有帳戶扣繳 (3.0%)
+      isCurrentMonthBirthday: savedBirthday !== null ? savedBirthday : false,
+      isWeekend: isWeekendToday,
+      cubeLevel: savedCubeLevel !== null ? savedCubeLevel : 'level1',
       selectedPayMethod: 'all',
     };
   });
+
+  // 更新情境並暫存（壽星加碼與 CUBE 等級）到 localStorage
+  const handleUpdateContext = (updater: (prev: UserContext) => UserContext) => {
+    setContext((prev) => {
+      const next = updater(prev);
+      try {
+        localStorage.setItem(
+          'cc_user_context',
+          JSON.stringify({
+            isCurrentMonthBirthday: next.isCurrentMonthBirthday,
+            cubeLevel: next.cubeLevel,
+          })
+        );
+      } catch {}
+      return next;
+    });
+  };
 
   // 目前選取的通路（預設不選擇任何通路）
   const [selectedMerchantId, setSelectedMerchantId] = useState<string | null>(null);
@@ -215,8 +250,8 @@ export function App() {
         </div>
       </header>
 
-      {/* Top Context Switcher (自動判定平日/假日、生日月、CUBE Level) */}
-      <TopContextBar context={context} onUpdateContext={setContext} />
+      {/* Top Context Switcher (自動判定平日/假日、生日月與 CUBE Level 暫存保存) */}
+      <TopContextBar context={context} onUpdateContext={handleUpdateContext} />
 
       {/* Main Container */}
       <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">

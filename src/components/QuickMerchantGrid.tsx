@@ -275,28 +275,12 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
                   回饋率
                 </span>
                 <div className="flex items-center space-x-1.5 text-xs font-black">
-                  {/* 國泰 CUBE 綠色 */}
-                  <span
-                    className={`px-1.5 py-0.5 rounded-md font-bold text-[11px] ${
-                      isSelected
-                        ? 'bg-emerald-500/30 text-emerald-200 border border-emerald-400/30'
-                        : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                    }`}
-                    title="國泰 CUBE 卡回饋率"
-                  >
-                    國泰 {merchant.cube.rate}%
+                  <span className={isSelected ? 'text-emerald-300' : 'text-emerald-600'}>
+                    {merchant.cube.rate}%
                   </span>
-
-                  {/* 台新 Richart 紅色 */}
-                  <span
-                    className={`px-1.5 py-0.5 rounded-md font-bold text-[11px] ${
-                      isSelected
-                        ? 'bg-rose-500/30 text-rose-200 border border-rose-400/30'
-                        : 'bg-rose-50 text-rose-700 border border-rose-200'
-                    }`}
-                    title="台新 Richart 卡回饋率"
-                  >
-                    台新 {merchant.richart.rate}%
+                  <span className={isSelected ? 'text-white/40' : 'text-slate-300'}>|</span>
+                  <span className={isSelected ? 'text-rose-300' : 'text-rose-600'}>
+                    {merchant.richart.rate}%
                   </span>
                 </div>
               </div>

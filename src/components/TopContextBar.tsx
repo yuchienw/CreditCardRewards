@@ -107,15 +107,15 @@ export const TopContextBar: React.FC<TopContextBarProps> = ({
             </span>
           </button>
 
-          {/* CUBE Level switcher (國泰綠色系，顯示 Lv1/Lv2/Lv3) */}
+          {/* CUBE Level switcher (原版配色，顯示 Lv1/Lv2/Lv3) */}
           <button
             onClick={cycleCubeLevel}
             className={`flex items-center justify-center space-x-1 py-1 px-1.5 sm:px-3 rounded-xl sm:rounded-full text-[11px] sm:text-xs font-bold transition-all border cursor-pointer active:scale-95 text-center ${
               context.cubeLevel === 'level3'
-                ? 'bg-emerald-500 text-slate-950 border-emerald-300 font-extrabold shadow-xs shadow-emerald-500/20'
+                ? 'bg-amber-500 text-slate-950 border-amber-400 font-extrabold shadow-xs'
                 : context.cubeLevel === 'level2'
-                ? 'bg-emerald-600 text-white border-emerald-400 shadow-xs shadow-emerald-500/20'
-                : 'bg-emerald-800/80 text-emerald-200 border-emerald-700 hover:text-white'
+                ? 'bg-indigo-600 text-white border-indigo-400 shadow-xs shadow-indigo-500/20'
+                : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200'
             }`}
             title="點擊切換 CUBE 等級 (Lv1: 2.0% / Lv2: 3.0% / Lv3: 3.3%)"
           >

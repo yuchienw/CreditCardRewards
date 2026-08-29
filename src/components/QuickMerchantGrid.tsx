@@ -51,15 +51,7 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
   onToggleFavorite,
 }) => {
   const filteredMerchants = merchants.filter((m) => {
-    // 常用通路篩選
-    if (selectedCategory === 'favorites') {
-      if (!favorites.includes(m.id)) {
-        return false;
-      }
-    } else if (selectedCategory !== 'all' && m.category !== selectedCategory) {
-      return false;
-    }
-
+    // 1. 若有搜尋關鍵字，一律以全資料庫「全部通路」進行全局搜尋
     if (searchQuery.trim() !== '') {
       const q = searchQuery.trim().toLowerCase();
       const matchName = m.name.toLowerCase().includes(q);
@@ -67,6 +59,14 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
       const matchCategory = m.categoryLabel.toLowerCase().includes(q);
       return matchName || matchTags || matchCategory;
     }
+
+    // 2. 無搜尋關鍵字時，依分類標籤進行篩選（常用通路、遊戲、餐飲等）
+    if (selectedCategory === 'favorites') {
+      return favorites.includes(m.id);
+    } else if (selectedCategory !== 'all') {
+      return m.category === selectedCategory;
+    }
+
     return true;
   });
 

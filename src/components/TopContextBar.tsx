@@ -107,38 +107,23 @@ export const TopContextBar: React.FC<TopContextBarProps> = ({
             </span>
           </button>
 
-          {/* CUBE Level switcher */}
+          {/* CUBE Level switcher (國泰綠色系，顯示 Lv1/Lv2/Lv3) */}
           <button
             onClick={cycleCubeLevel}
             className={`flex items-center justify-center space-x-1 py-1 px-1.5 sm:px-3 rounded-xl sm:rounded-full text-[11px] sm:text-xs font-bold transition-all border cursor-pointer active:scale-95 text-center ${
               context.cubeLevel === 'level3'
-                ? 'bg-amber-500 text-slate-950 border-amber-400 font-extrabold shadow-xs'
+                ? 'bg-emerald-500 text-slate-950 border-emerald-300 font-extrabold shadow-xs shadow-emerald-500/20'
                 : context.cubeLevel === 'level2'
-                ? 'bg-indigo-600 text-white border-indigo-400 shadow-xs shadow-indigo-500/20'
-                : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200'
+                ? 'bg-emerald-600 text-white border-emerald-400 shadow-xs shadow-emerald-500/20'
+                : 'bg-emerald-800/80 text-emerald-200 border-emerald-700 hover:text-white'
             }`}
-            title="點擊切換 CUBE 等級 (Level 1: 2% / Level 2: 3% / Level 3 VIP: 3.3%)"
+            title="點擊切換 CUBE 等級 (Lv1: 2.0% / Lv2: 3.0% / Lv3: 3.3%)"
           >
             <Award className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
             <span className="truncate">
-              {context.cubeLevel === 'level3' && (
-                <>
-                  <span className="sm:hidden">⭐ VIP 3.3%</span>
-                  <span className="hidden sm:inline">CUBE: VIP 3.3%</span>
-                </>
-              )}
-              {context.cubeLevel === 'level2' && (
-                <>
-                  <span className="sm:hidden">💳 扣繳 3%</span>
-                  <span className="hidden sm:inline">CUBE: 扣繳 3.0%</span>
-                </>
-              )}
-              {context.cubeLevel === 'level1' && (
-                <>
-                  <span className="sm:hidden">💳 一般 2%</span>
-                  <span className="hidden sm:inline">CUBE: 一般 2.0%</span>
-                </>
-              )}
+              {context.cubeLevel === 'level3' && '💳 Lv3 (3.3%)'}
+              {context.cubeLevel === 'level2' && '💳 Lv2 (3.0%)'}
+              {context.cubeLevel === 'level1' && '💳 Lv1 (2.0%)'}
             </span>
           </button>
         </div>

@@ -142,10 +142,10 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
         <div
           className={`p-5 sm:p-6 rounded-2xl border-2 shadow-md relative overflow-hidden ${
             isCubeWinner
-              ? 'bg-linear-to-br from-amber-500/10 via-amber-50 to-white border-amber-400'
+              ? 'bg-linear-to-br from-emerald-500/15 via-emerald-50/80 to-white border-emerald-500'
               : isRichartWinner
-              ? 'bg-linear-to-br from-blue-500/10 via-blue-50 to-white border-blue-400'
-              : 'bg-linear-to-br from-emerald-500/10 via-emerald-50 to-white border-emerald-400'
+              ? 'bg-linear-to-br from-rose-500/15 via-rose-50/80 to-white border-rose-500'
+              : 'bg-linear-to-br from-indigo-500/10 via-slate-50 to-white border-indigo-400'
           }`}
         >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -154,10 +154,10 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
                 <span
                   className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider ${
                     isCubeWinner
-                      ? 'bg-amber-500 text-slate-950'
+                      ? 'bg-emerald-700 text-white'
                       : isRichartWinner
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-emerald-600 text-white'
+                      ? 'bg-rose-600 text-white'
+                      : 'bg-indigo-600 text-white'
                   }`}
                 >
                   <Trophy className="w-3.5 h-3.5" />
@@ -181,7 +181,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
 
               {/* Scheme instruction */}
               <div className="text-sm sm:text-base font-semibold text-slate-700 flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <CheckCircle2 className={`w-4 h-4 shrink-0 ${isCubeWinner ? 'text-emerald-600' : isRichartWinner ? 'text-rose-600' : 'text-indigo-600'}`} />
                 <span>
                   {isCubeWinner && `請於 App 切換為【${decision.winnerSchemeName}】方案`}
                   {isRichartWinner && `適用權益：【${decision.winnerSchemeName}】`}
@@ -192,7 +192,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
 
             {/* Huge Rate display */}
             <div className="text-left sm:text-right shrink-0 border-t sm:border-t-0 pt-3 sm:pt-0 border-slate-200">
-              <div className="text-4xl sm:text-5xl font-black text-indigo-700 tracking-tight">
+              <div className={`text-4xl sm:text-5xl font-black tracking-tight ${isCubeWinner ? 'text-emerald-700' : isRichartWinner ? 'text-rose-600' : 'text-indigo-700'}`}>
                 {decision.winnerRate}%
               </div>
               <div className="text-xs font-bold text-slate-700 mt-0.5">
@@ -226,7 +226,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
             </div>
             <button
               onClick={() => setShowAllPathways(!showAllPathways)}
-              className="text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center space-x-1"
+              className="text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center space-x-1 cursor-pointer"
             >
               <span>{showAllPathways ? '收合' : '展開'}</span>
               {showAllPathways ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
@@ -267,20 +267,21 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
 
         {/* Side-by-Side Comparison of both cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-          {/* CUBE Card box */}
+          {/* CUBE Card box (國泰 綠色背景) */}
           <div
             className={`p-4 rounded-2xl border transition-all ${
               isCubeWinner || isTie
-                ? 'bg-amber-50/40 border-amber-200 ring-1 ring-amber-300'
-                : 'bg-slate-50 border-slate-200'
+                ? 'bg-emerald-50/80 border-emerald-300 ring-2 ring-emerald-500/30'
+                : 'bg-emerald-50/30 border-emerald-100'
             }`}
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="font-bold text-slate-800 text-sm">國泰 CUBE 卡</span>
+              <span className="font-bold text-emerald-900 text-sm flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 inline-block"></span>
+                <span>國泰 CUBE 卡</span>
+              </span>
               <span
-                className={`text-base font-black ${
-                  isCubeWinner ? 'text-amber-600' : 'text-slate-700'
-                }`}
+                className="text-base font-black text-emerald-700 bg-white px-2 py-0.5 rounded-lg border border-emerald-200 shadow-2xs"
               >
                 {context.isCurrentMonthBirthday && merchant.cube.isBirthdaySpecial
                   ? '10.0%'
@@ -289,7 +290,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
             </div>
             <div className="text-xs text-slate-600 space-y-1">
               <div>
-                <span className="font-semibold text-slate-700">權益方案：</span>
+                <span className="font-semibold text-emerald-950">權益方案：</span>
                 {context.isCurrentMonthBirthday && merchant.cube.isBirthdaySpecial
                   ? '🎂 慶生月 (生日特店)'
                   : merchant.cube.schemeName}
@@ -298,20 +299,21 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
             </div>
           </div>
 
-          {/* Richart Card box */}
+          {/* Richart Card box (台新 紅色背景) */}
           <div
             className={`p-4 rounded-2xl border transition-all ${
               isRichartWinner || isTie
-                ? 'bg-blue-50/40 border-blue-200 ring-1 ring-blue-300'
-                : 'bg-slate-50 border-slate-200'
+                ? 'bg-rose-50/80 border-rose-300 ring-2 ring-rose-500/30'
+                : 'bg-rose-50/30 border-rose-100'
             }`}
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="font-bold text-slate-800 text-sm">台新 Richart 卡</span>
+              <span className="font-bold text-rose-900 text-sm flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-rose-600 inline-block"></span>
+                <span>台新 Richart 卡</span>
+              </span>
               <span
-                className={`text-base font-black ${
-                  isRichartWinner ? 'text-blue-600' : 'text-slate-700'
-                }`}
+                className="text-base font-black text-rose-700 bg-white px-2 py-0.5 rounded-lg border border-rose-200 shadow-2xs"
               >
                 {decision.winnerCard === 'richart'
                   ? `${decision.winnerRate}%`
@@ -322,7 +324,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
             </div>
             <div className="text-xs text-slate-600 space-y-1">
               <div>
-                <span className="font-semibold text-slate-700">權益方案：</span>
+                <span className="font-semibold text-rose-950">權益方案：</span>
                 {merchant.richart.schemeName}
               </div>
               <div className="text-[11px] text-slate-700">

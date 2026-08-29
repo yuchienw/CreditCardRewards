@@ -270,17 +270,33 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
                 </h4>
               </div>
 
-              <div className="mt-2.5 pt-2 border-t border-slate-100/60 dark:border-white/10 flex items-center justify-between text-xs">
-                <span className={`text-[11px] font-medium ${isSelected ? 'text-indigo-100' : 'text-slate-500'}`}>
+              <div className="mt-2.5 pt-2 border-t border-slate-100/60 flex items-center justify-between text-xs">
+                <span className={`text-[11px] font-medium ${isSelected ? 'text-white/80' : 'text-slate-500'}`}>
                   回饋率
                 </span>
-                <div className="flex items-center space-x-1.5 font-black text-xs">
-                  <span className={isSelected ? 'text-indigo-200' : 'text-indigo-600'}>
-                    {merchant.cube.rate}%
+                <div className="flex items-center space-x-1.5 text-xs font-black">
+                  {/* 國泰 CUBE 綠色 */}
+                  <span
+                    className={`px-1.5 py-0.5 rounded-md font-bold text-[11px] ${
+                      isSelected
+                        ? 'bg-emerald-500/30 text-emerald-200 border border-emerald-400/30'
+                        : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                    }`}
+                    title="國泰 CUBE 卡回饋率"
+                  >
+                    國泰 {merchant.cube.rate}%
                   </span>
-                  <span className={isSelected ? 'text-white/40' : 'text-slate-300'}>|</span>
-                  <span className={isSelected ? 'text-rose-200' : 'text-rose-600'}>
-                    {merchant.richart.rate}%
+
+                  {/* 台新 Richart 紅色 */}
+                  <span
+                    className={`px-1.5 py-0.5 rounded-md font-bold text-[11px] ${
+                      isSelected
+                        ? 'bg-rose-500/30 text-rose-200 border border-rose-400/30'
+                        : 'bg-rose-50 text-rose-700 border border-rose-200'
+                    }`}
+                    title="台新 Richart 卡回饋率"
+                  >
+                    台新 {merchant.richart.rate}%
                   </span>
                 </div>
               </div>

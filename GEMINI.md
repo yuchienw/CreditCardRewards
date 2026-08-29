@@ -118,8 +118,32 @@
 
 ---
 
-## 🌐 9. 官方來源連結
-- **台新 Richart 卡官方活動頁**：  
-  `https://mkp.taishinbank.com.tw/TsCms/marketing/expose/WM_20251216135624463/index.html`
-- **國泰 CUBE 卡官方特約清單**：  
-  `https://www.cathay-cube.com.tw/cathaybk/personal/product/credit-card/cards/cube-list`
+## 🌐 9. 唯一權威官方資料源 (Single Source of Truth)
+- **國泰 CUBE 卡官方權益網址（一律以此頁面為唯一標準）**：  
+  `https://www.cathay-cube.com.tw/cathaybk/personal/product/credit-card/cards/cube-list?Cub_ProjectCode=DBB4100001&gad_source=1&gad_campaignid=22687071549&gbraid=0AAAAACsfCOOY1aD1c_lekS9-QCefh3cFm&gclid=Cj0KCQjwhsrUBhDxARIsAN3AQSelfZNceCpvCYaa4bzK2VOgZ9UtbGkRBOtg4pyW7Rk3IxegRzP8Ks0aAlA9EALw_wcB`
+  - 涵蓋方案：`玩數位`、`樂饗購`、`趣旅行`、`集精選`、`慶生月`、`台塑家`、`全支付`、`固定回饋`。
+- **台新 Richart 卡官方權益網址（一律以此頁面為唯一標準）**：  
+  `https://mkp.taishinbank.com.tw/TsCms/marketing/expose/WM_20251216135624463/index.html?gad_campaignid=22054035743&gbraid=0AAAAABhSXuTBDqAoQ-2IZKdcB7rUR5pY_`
+  - 涵蓋方案：`Chill 刷 (10%/5%/3.3%)`、`Pay 著刷 (3.8%/2.3%)`、`天天刷 (3.3%)`、`大筆刷 (3.3%)`、`好饗刷 (3.3%)`、`數趣刷 (3.3%)`、`玩旅刷 (3.3%)`、`假日刷 (2.0%)`。
+
+---
+
+## 🚀 10. 程式碼更新與 GitHub Pages 同步發布流程 (Deployment Workflow)
+- **專案儲存庫**：`https://github.com/yuchienw/CreditCardRewards.git`
+- **線上即時展示網址**：`https://yuchienw.github.io/CreditCardRewards/`
+- **每次更新後的標準發布指令**（AI 助手每次修改完成後必須主動執行）：
+  1. **本機建置驗證**：
+     ```bash
+     npm run build
+     ```
+  2. **提交並推送至 main 主分支**：
+     ```bash
+     git add .
+     git commit -m "feat/style/fix: 描述本次變更"
+     git push origin main
+     ```
+  3. **自動同步發布至 GitHub Pages**：
+     ```bash
+     npm run deploy
+     ```
+     *(專案同時已配置 `.github/workflows/deploy.yml`，推送到 `main` 分支時 GitHub Actions 也會自動進行 CI/CD 部署。)*

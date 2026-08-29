@@ -7565,5 +7565,3315 @@ export const MERCHANTS: Merchant[] = [
       note: '週末六日切換「假日刷」全台一般消費 2.0%！平日 1.0%'
     },
     tips: '一般無特定加碼消費：週末六日刷【台新 Richart 卡】切換【假日刷】拿 2.0% 無腦刷，平日刷 Richart 拿 1.0%，均優於 CUBE 的 0.3%！'
+  },
+  {
+    id: 'official-bday-bday-0',
+    name: '澄居烤物燒肉',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["澄居烤物燒肉", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-torien-yakitori',
+    name: '鳥苑 Torien Yakitori',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["鳥苑 Torien Yakitori", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-2',
+    name: '豐生茶館梅川東店',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["豐生茶館梅川東店", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-sozai',
+    name: 'Sozai',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Sozai", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-4',
+    name: '稻鎮經典台灣菜',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["稻鎮經典台灣菜", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-suo',
+    name: '所 SUO',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["所 SUO", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-another-eatery',
+    name: 'Another Eatery',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Another Eatery", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-the-other-eatery',
+    name: 'The other Eatery中山小酒館',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["The other Eatery中山小酒館", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-8',
+    name: '輝室',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["輝室", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-9',
+    name: '鯡魚工作室',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["鯡魚工作室", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-10',
+    name: '三點三',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["三點三", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-11',
+    name: '粥起粥底火鍋熱炒',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["粥起粥底火鍋熱炒", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-12',
+    name: '你家樓下',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["你家樓下", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-13',
+    name: '銀杏中餐廳',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["銀杏中餐廳", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-ashin',
+    name: 'Ashin 阿鑫',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Ashin 阿鑫", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-15',
+    name: '京丘炭火燒鳥專門店',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["京丘炭火燒鳥專門店", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-16',
+    name: '京丘燒鳥酒処',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["京丘燒鳥酒処", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-17',
+    name: '燒鳩',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["燒鳩", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-18',
+    name: '朧板前燒肉',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["朧板前燒肉", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-19',
+    name: '久碳吉炭火燒肉',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["久碳吉炭火燒肉", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-20',
+    name: '小方舟串燒酒場',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["小方舟串燒酒場", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-21',
+    name: '毛蔬亞洲蔬食',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["毛蔬亞洲蔬食", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-komboi',
+    name: 'KOMBOI',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["KOMBOI", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-hosu',
+    name: '好嶼 HOSU',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["好嶼 HOSU", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-24',
+    name: '肉料理福',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["肉料理福", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-sur',
+    name: '澀 Sur-',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["澀 Sur-", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'uncle-ray-daan',
+    name: 'UNCLE RAY 串燒·牛飲·咖喱 (台北大安店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["uncle ray", "uncleray", "大安串燒", "大安居酒屋", "咖哩", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '8 月生日當月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'uncle-ray-taichung',
+    name: 'UNCLE RAY 串燒·牛飲·咖喱 (台中店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["uncle ray", "uncleray", "台中串燒", "台中居酒屋", "咖哩", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '8 月生日當月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'chen-ayi-hotpot-zhubei-bday',
+    name: '陳阿姨火鍋灶咖 (竹北店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["陳阿姨", "陳阿姨火鍋", "陳阿姨火鍋灶咖", "竹北火鍋", "大叔富弟", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '吃陳阿姨火鍋灶咖：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-29',
+    name: '蜀叔麻辣鍋',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["蜀叔麻辣鍋", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-pastaio',
+    name: 'Pastaio',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Pastaio", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-pastaio-noodle-cafe',
+    name: 'Pastaio noodle cafe',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Pastaio noodle cafe", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-32',
+    name: '青沐',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["青沐", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-rachel',
+    name: '芮秋 Rachel',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["芮秋 Rachel", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-li-chiu',
+    name: '立秋 Li Chiu',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["立秋 Li Chiu", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-35',
+    name: '祇園.禪院壽喜燒',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["祇園.禪院壽喜燒", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-36',
+    name: '有你真好湘菜沙龍',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["有你真好湘菜沙龍", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-bday-37',
+    name: '水鳥和洋創作料理',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["水鳥和洋創作料理", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'gao-taipei-store',
+    name: '髙 GAO Taipei (實體門市)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["gao taipei", "gao", "高taipei", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+  },
+  {
+    id: 'gao-taipei-online',
+    name: '髙 GAO Taipei (線上官網)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["gao taipei", "gao", "高taipei", "線上購物", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'secret-cake-daan',
+    name: '法國的秘密甜點 (大安門市)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["法國的秘密甜點", "諾曼地牛奶蛋糕", "大安甜點", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+  },
+  {
+    id: 'secret-cake-online',
+    name: '法國的秘密甜點 (線上官網)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["法國的秘密甜點", "諾曼地牛奶蛋糕", "線上訂購", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'creammm-t-store',
+    name: 'creammm.t (台中美村門市)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["creammm.t", "creammmt", "檸檬塔", "台中甜點", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+  },
+  {
+    id: 'creammm-t-online',
+    name: 'creammm.t (線上官網)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["creammm.t", "creammmt", "檸檬塔", "線上訂購", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-bday-aufglet',
+    name: 'AUFGLET',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["AUFGLET", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-fake-sober',
+    name: 'Fake Sober',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Fake Sober", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-sober-bakery',
+    name: 'Sober Bakery',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Sober Bakery", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-sober-burger',
+    name: 'Sober & Burger',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Sober & Burger", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-ktv-ktv',
+    name: '錢櫃KTV',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["錢櫃KTV", "ktv", "唱歌", "聚會", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (KTV 狂歡 10%)',
+      rate: 10.0,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    },
+    tips: '唱 錢櫃KTV 生日當月刷 CUBE【慶生月】享 10% 小樹點！或刷台新【Chill 刷】享 10% 台新 Point！',
+  },
+  {
+    id: 'official-bday-uber-eats',
+    name: 'Uber Eats',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Uber Eats", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'official-bday-klook',
+    name: 'Klook',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["Klook", "慶生特店", "精選美饌", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '【CUBE 官方慶生特店】：8 月生日月刷 CUBE【慶生月】享 10% 小樹點！平日刷 3.3%。',
+  },
+  {
+    id: 'funnow-app',
+    name: 'FunNow (即時預訂平台)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["funnow", "即時預訂", "休息", "按摩", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「趣旅行」享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ai-chatgpt',
+    name: 'ChatGPT',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["ChatGPT", "AI訂閱", "生產力工具", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ai-claude',
+    name: 'Claude',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Claude", "AI訂閱", "生產力工具", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ai-cursor',
+    name: 'Cursor',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Cursor", "AI訂閱", "生產力工具", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ai-duolingo',
+    name: 'Duolingo',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Duolingo", "AI訂閱", "生產力工具", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ai-gamma',
+    name: 'Gamma',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Gamma", "AI訂閱", "生產力工具", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ai-gemini',
+    name: 'Gemini',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Gemini", "AI訂閱", "生產力工具", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ai-perplexity',
+    name: 'Perplexity',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Perplexity", "AI訂閱", "生產力工具", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ai-speak',
+    name: 'Speak',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Speak", "AI訂閱", "生產力工具", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-stream-apple',
+    name: 'Apple 媒體服務',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Apple 媒體服務", "串流影音", "數位訂閱", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-stream-google-play',
+    name: 'Google Play',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Google Play", "串流影音", "數位訂閱", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-stream-max',
+    name: 'Max',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["Max", "串流影音", "數位訂閱", "玩數位"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ec-',
+    name: '蝦皮購物',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["蝦皮購物", "線上網購", "電商平台"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ec-momo',
+    name: 'momo購物網',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["momo購物網", "線上網購", "電商平台"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ec-pchome-24h',
+    name: 'PChome 24h購物',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["PChome 24h購物", "線上網購", "電商平台"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-tree-buy',
+    name: '小樹購 (國泰小樹點商城)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["小樹購", "國泰小樹購", "樹點商城"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'general',
+      schemeName: '一般消費',
+      rate: 1.0,
+      note: '一般消費享 1.0%'
+    },
+  },
+  {
+    id: 'official-coupang-tw',
+    name: 'Coupang 酷澎 (台灣)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["coupang", "酷澎", "火箭跨境", "火箭速配"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-taobao',
+    name: '淘寶 (Taobao / 天貓)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["淘寶", "天貓", "taobao", "海外電商", "跨境網購"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-dept-sogo',
+    name: '遠東SOGO百貨',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["遠東SOGO百貨", "百貨", "購物中心", "樂饗購"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-dept-',
+    name: '遠東百貨',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["遠東百貨", "百貨", "購物中心", "樂饗購"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-dept-att-4-fun',
+    name: 'ATT 4 FUN',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["ATT 4 FUN", "百貨", "購物中心", "樂饗購"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-dept-noke',
+    name: 'NOKE忠泰樂生活',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["NOKE忠泰樂生活", "百貨", "購物中心", "樂饗購"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'lalaport-nangang',
+    name: 'Mitsui Shopping Park LaLaport (南港)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["lalaport", "南港lalaport", "三井lalaport", "百貨購物"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'lalaport-taichung',
+    name: 'Mitsui Shopping Park LaLaport (台中)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["lalaport", "台中lalaport", "三井lalaport", "百貨購物"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-dept-big-city',
+    name: 'Big City遠東巨城購物中心',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["Big City遠東巨城購物中心", "百貨", "購物中心", "樂饗購"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-dept-citylink',
+    name: 'CITYLINK',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["CITYLINK", "百貨", "購物中心", "樂饗購"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-dept-skm-park',
+    name: 'SKM Park',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["SKM Park", "百貨", "購物中心", "樂饗購"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'mitsui-outlet-linkou',
+    name: 'MITSUI OUTLET PARK (林口)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["三井outlet", "林口outlet", "mitsui", "outlet"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'mitsui-outlet-taichung',
+    name: 'MITSUI OUTLET PARK (台中港)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["三井outlet", "台中港outlet", "mitsui", "outlet"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'mitsui-outlet-tainan',
+    name: 'MITSUI OUTLET PARK (台南)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["三井outlet", "台南outlet", "mitsui", "outlet"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-domestic-dining',
+    name: '全台國內餐飲 (實體餐廳與獨立名店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["全台餐飲", "國內餐飲", "餐廳", "小吃", "美食"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點（排除餐券）'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-hotel-',
+    name: '海外實體消費(含國外餐飲、飯店到店付款等)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["海外實體消費(含國外餐飲、飯店到店付款等)", "飯店住宿", "訂房", "國外飯店"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-park-',
+    name: '東京華納兄弟哈利波特影城',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["東京華納兄弟哈利波特影城", "哈利波特", "日本影城", "東京旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-park-usj',
+    name: '大阪環球影城(USJ)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["大阪環球影城(USJ)", "哈利波特", "日本影城", "東京旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'apple-wallet-suica',
+    name: 'Apple 錢包 (Suica 日本西瓜卡加值)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["suica", "西瓜卡", "apple pay suica", "日本交通", "日本旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'apple-wallet-pasmo',
+    name: 'Apple 錢包 (PASMO 日本交通卡加值)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["pasmo", "pasmo卡", "apple pay pasmo", "日本交通", "日本旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'apple-wallet-icoca',
+    name: 'Apple 錢包 (ICOCA 關西交通卡加值)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["icoca", "icoca卡", "apple pay icoca", "關西交通", "日本旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-transport-grab',
+    name: 'Grab',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["Grab", "叫車", "租車", "出行交通"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-transport-yoxi',
+    name: 'yoxi',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["yoxi", "叫車", "租車", "出行交通"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-transport-',
+    name: '台灣大車隊',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["台灣大車隊", "叫車", "租車", "出行交通"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-transport-irent',
+    name: 'iRent',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["iRent", "叫車", "租車", "出行交通"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-airline-',
+    name: '中華航空',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["中華航空", "機票", "航空", "海外旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-hotel-inn',
+    name: '東橫INN',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["東橫INN", "飯店住宿", "訂房", "國外飯店"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-travel-agency-',
+    name: '雄獅旅遊',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["雄獅旅遊", "旅行社", "跟團", "機加酒"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ev-u-power',
+    name: 'U-POWER',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["U-POWER", "電動車充電", "充電樁", "EV充電"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ev-evoasis',
+    name: 'EVOASIS',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["EVOASIS", "電動車充電", "充電樁", "EV充電"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ev-evalue',
+    name: 'EVALUE',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["EVALUE", "電動車充電", "充電樁", "EV充電"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ev-tail',
+    name: 'TAIL',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["TAIL", "電動車充電", "充電樁", "EV充電"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-ev-icharging',
+    name: 'iCharging',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["iCharging", "電動車充電", "充電樁", "EV充電"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'official-parking-',
+    name: '車麻吉',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["車麻吉", "路邊停車", "自動繳費", "停車場"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'general',
+      schemeName: '一般消費',
+      rate: 1.0,
+      note: '一般消費享 1.0%'
+    },
+  },
+  {
+    id: 'official-parking-utaggo',
+    name: 'uTagGo',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["uTagGo", "路邊停車", "自動繳費", "停車場"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'general',
+      schemeName: '一般消費',
+      rate: 1.0,
+      note: '一般消費享 1.0%'
+    },
+  },
+  {
+    id: 'official-px-',
+    name: '全聯福利中心(不含大全聯)',
+    category: 'grocery_convenience',
+    categoryLabel: '超市 & 藥妝',
+    tags: ["全聯福利中心(不含大全聯)", "全支付", "大全聯", "行動支付"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'pxpay',
+      schemeName: '全支付',
+      rate: 3.0,
+      note: '切換「全支付」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'general',
+      schemeName: '一般消費',
+      rate: 1.0,
+      note: '一般消費享 1.0%'
+    },
+  },
+  {
+    id: 'official-formosa-',
+    name: '台塑生醫實體門市',
+    category: 'grocery_convenience',
+    categoryLabel: '超市 & 藥妝',
+    tags: ["台塑生醫實體門市", "台塑生醫", "長庚生技", "台塑家"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'formosa',
+      schemeName: '台塑家',
+      rate: 3.3,
+      note: '切換「台塑家」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'general',
+      schemeName: '一般消費',
+      rate: 1.0,
+      note: '一般消費享 1.0%'
+    },
+  },
+  {
+    id: 'newcbparty-ktv',
+    name: '星聚點 KTV',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["星聚點", "星聚點ktv", "唱歌", "熱炒", "慶生"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (KTV 狂歡 10%)',
+      rate: 10.0,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    },
+  },
+  {
+    id: 'jetstar-air',
+    name: '捷星航空 (Jetstar Airways)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["捷星", "捷星航空", "jetstar", "廉航", "機票"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'ana-all-nippon',
+    name: 'ANA 全日空 (All Nippon Airways)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["ana", "全日空", "日本機票", "東京機票"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'airasia-air',
+    name: '亞洲航空 (AirAsia)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["airasia", "亞洲航空", "亞航", "東南亞廉航"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'united-airlines',
+    name: '聯合航空 (United Airlines)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["聯合航空", "united airlines", "美加機票", "舊金山直飛"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'vietjet-air',
+    name: '越捷航空 (VietJet Air)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["越捷航空", "vietjet", "越南機票", "廉航"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'korean-air',
+    name: '大韓航空 (Korean Air)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["大韓航空", "korean air", "首爾機票", "韓國旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'delta-air-lines',
+    name: '達美航空 (Delta Air Lines)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["達美航空", "delta", "美加機票", "西雅圖直飛"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'turkish-airlines',
+    name: '土耳其航空 (Turkish Airlines)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["土耳其航空", "turkish airlines", "伊斯坦堡", "歐洲轉機"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'qatar-airways',
+    name: '卡達航空 (Qatar Airways)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["卡達航空", "qatar airways", "杜哈", "五星級航空"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'air-france',
+    name: '法國航空 (Air France)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["法國航空", "air france", "巴黎機票", "歐洲機票"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'easy-rent-car',
+    name: '和運租車',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["和運租車", "和運", "租車自駕", "irent"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'carplus-rent',
+    name: '格上租車',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["格上租車", "格上", "租車自駕", "格上go smart"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'lifetour-tw',
+    name: '五福旅遊',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["五福旅遊", "五福旅行社", "日本跟團", "旅遊行程"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'startravel-tw',
+    name: '燦星旅遊',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["燦星旅遊", "燦星", "四國包機", "普吉島包機"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'richmond-travel',
+    name: '山富旅遊',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["山富旅遊", "山富旅行社", "日本包機", "郵輪假期"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'everfun-travel',
+    name: '長汎假期 (長榮航空直營旅行社)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["長汎假期", "長汎旅行社", "長榮旅行社", "長榮假期"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'phoenix-tour',
+    name: '鳳凰旅行社',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["鳳凰旅行社", "鳳凰旅遊", "上市旅行社", "歐洲跟團"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'ezfly-tw',
+    name: 'Ezfly 易飛網',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["ezfly", "易飛網", "機票比價", "自由行"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'perfect-travel',
+    name: '理想旅遊',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["理想旅遊", "理想旅行社", "高端旅遊", "歐洲頂級團"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'win-win-travel',
+    name: '永利旅行社',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["永利旅行社", "永利旅遊", "海外旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'sanka-travel',
+    name: '三賀旅行社',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["三賀旅行社", "三賀旅遊", "海外旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'eztravel-tw',
+    name: 'ezTravel 易遊網',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["eztravel", "易遊網", "環島之星", "火車票", "訂房"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'hoshino-resorts',
+    name: '星野集團 (Hoshino Resorts)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["星野集團", "星野渡假村", "虹夕諾雅", "界", "omo", "risonare"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'disney-hotels-global',
+    name: '全球迪士尼飯店 (Disney Hotels)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["迪士尼飯店", "東京迪士尼飯店", "全球迪士尼飯店", "迪士尼樂園酒店"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    },
+  },
+  {
+    id: 'fareastern-garden-city',
+    name: '遠東 Garden City (大巨蛋商場)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["garden city", "遠東gardencity", "大巨蛋商場", "潮美食公園"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'uni-president-taipei',
+    name: '統一時代百貨台北店',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["統一時代", "時代百貨", "市政府站時代百貨", "統一時代台北店"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點（不含DREAM PLAZA）'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'dayeh-takashimaya',
+    name: '大葉高島屋 (天母高島屋)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["大葉高島屋", "天母高島屋", "高島屋", "天母百貨"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'honhui-plaza',
+    name: '宏匯廣場 (新莊宏匯)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["宏匯廣場", "新莊宏匯", "副都心宏匯", "宏匯"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'taimall-shopping',
+    name: '台茂購物中心 (桃園台茂)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["台茂", "台茂購物中心", "桃園台茂", "南崁台茂"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'metrowalk-shopping',
+    name: '大江國際購物中心 (中壢大江)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["大江購物中心", "大江國際", "中壢大江", "大江"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'nice-plaza-chiayi',
+    name: '耐斯廣場 (嘉義耐斯)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["耐斯廣場", "嘉義耐斯", "耐斯松屋", "嘉義百貨"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'luna-plaza-yilan',
+    name: '蘭城新月廣場 (宜蘭新月)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["新月廣場", "宜蘭新月", "蘭城新月", "宜蘭百貨"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'showtime-live',
+    name: '秀泰生活 (各分館商場)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["秀泰生活", "秀泰生活館", "樹林秀泰", "台中秀泰", "嘉義秀泰"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'global-mall-tw',
+    name: '環球購物中心 (Global Mall 全台分館)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["環球購物中心", "global mall", "中和環球", "板橋環球", "南港環球", "桃園A8", "新左營環球", "屏東環球"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'pacific-department',
+    name: '太平洋百貨 (豐原/屏東)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["太平洋百貨", "豐原太平洋", "屏東太平洋", "太百"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'lopia-supermarket-tw',
+    name: 'LOPIA 台灣 (日系連鎖超市)',
+    category: 'grocery_convenience',
+    categoryLabel: '超市 & 藥妝',
+    tags: ["lopia", "樂比亞", "日系超市", "台中lopia", "中和lopia", "桃園lopia"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3%'
+    },
+  },
+  {
+    id: 'ikea-furniture-tw',
+    name: 'IKEA 宜家家居',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["ikea", "宜家家居", "ikea家具", "ikea餐廳", "瑞典肉丸"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+  },
+  {
+    id: 'smile-gas-station',
+    name: '統一速邁樂加油站 (限台灣本島)',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["速邁樂", "統一速邁樂", "速邁樂加油", "openpoint加油"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'formosa',
+      schemeName: '台塑家',
+      rate: 3.3,
+      note: '切換「台塑家」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3%'
+    },
+  },
+  {
+    id: 'formosa-vegetable-store',
+    name: '台塑蔬菜實體門市',
+    category: 'grocery_convenience',
+    categoryLabel: '超市 & 藥妝',
+    tags: ["台塑蔬菜", "台塑生機", "台塑生醫門市"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'formosa',
+      schemeName: '台塑家',
+      rate: 3.3,
+      note: '切換「台塑家」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'general',
+      schemeName: '一般消費',
+      rate: 1.0,
+      note: '一般消費享 1.0%'
+    },
+  },
+  {
+    id: 'formosa-shopping-online',
+    name: '台塑購物網',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["台塑購物網", "台塑生醫網購", "線上購物"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'formosa',
+      schemeName: '台塑家',
+      rate: 3.3,
+      note: '切換「台塑家」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'general',
+      schemeName: '一般消費',
+      rate: 1.0,
+      note: '一般消費享 1.0%'
+    },
+  },
+  {
+    id: 'hilife-convenience-tw',
+    name: '萊爾富實體門市 (Hi-Life)',
+    category: 'grocery_convenience',
+    categoryLabel: '超市 & 藥妝',
+    tags: ["萊爾富", "hi-life", "hilife", "便利商店"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'formosa',
+      schemeName: '台塑家',
+      rate: 3.3,
+      note: '切換「台塑家」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3%'
+    },
   }
 ];

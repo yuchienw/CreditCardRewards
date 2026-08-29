@@ -15,7 +15,8 @@ import {
   ChevronDown,
   ChevronUp,
   AlertTriangle,
-  AlertOctagon
+  AlertOctagon,
+  Heart
 } from 'lucide-react';
 
 interface MerchantDecisionCardProps {
@@ -24,6 +25,8 @@ interface MerchantDecisionCardProps {
   onOpenSchemeModal: () => void;
   onOpenSourceModal: () => void;
   onOpenExpiryAlertModal?: () => void;
+  isFavorite?: boolean;
+  onToggleFavorite?: () => void;
 }
 
 export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
@@ -32,6 +35,8 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   onOpenSchemeModal,
   onOpenSourceModal,
   onOpenExpiryAlertModal,
+  isFavorite = false,
+  onToggleFavorite,
 }) => {
   const [showAllPathways, setShowAllPathways] = useState(true);
   const decision = evaluateBestCard(merchant, context);
@@ -97,9 +102,24 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
         </div>
 
         <div className="flex items-center space-x-2">
+          {onToggleFavorite && (
+            <button
+              onClick={onToggleFavorite}
+              className={`inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl transition-all border cursor-pointer ${
+                isFavorite
+                  ? 'bg-rose-500/20 text-rose-300 border-rose-400/40 hover:bg-rose-500/30'
+                  : 'bg-white/10 text-slate-300 border-white/15 hover:bg-white/20 hover:text-rose-300'
+              }`}
+              title={isFavorite ? '從常用通路移除' : '加入常用通路'}
+            >
+              <Heart className={`w-3.5 h-3.5 ${isFavorite ? 'fill-rose-500 text-rose-400' : ''}`} />
+              <span className="text-xs font-semibold">{isFavorite ? '已加入常用' : '加入常用'}</span>
+            </button>
+          )}
+
           <button
             onClick={onOpenSourceModal}
-            className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-xs font-medium text-amber-200 transition-colors border border-amber-400/30"
+            className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-xs font-medium text-amber-200 transition-colors border border-amber-400/30 cursor-pointer"
             title="查看此權益的官方原始出處與公告"
           >
             <ShieldCheck className="w-3.5 h-3.5 text-amber-300" />
@@ -108,7 +128,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
 
           <button
             onClick={onOpenSchemeModal}
-            className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-medium text-indigo-100 transition-colors border border-white/15"
+            className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-medium text-indigo-100 transition-colors border border-white/15 cursor-pointer"
           >
             <Layers className="w-3.5 h-3.5" />
             <span>方案總表</span>

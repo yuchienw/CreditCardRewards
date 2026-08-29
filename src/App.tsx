@@ -38,6 +38,28 @@ export function App() {
   const [isExpiryAlertOpen, setIsExpiryAlertOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
+  // ❤️ 使用者常用通路 (支援 LocalStorage 持久化)
+  const [favorites, setFavorites] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem('cc_favorites');
+      return saved ? JSON.parse(saved) : ['playstation', 'shopee-tw', 'px-mart', '50-lan', 'momo-shop', 'uber-eats-tw', 'uncle-shawn-1'];
+    } catch {
+      return ['playstation', 'shopee-tw', 'px-mart', '50-lan', 'momo-shop', 'uber-eats-tw', 'uncle-shawn-1'];
+    }
+  });
+
+  const toggleFavorite = (merchantId: string) => {
+    setFavorites((prev) => {
+      const next = prev.includes(merchantId)
+        ? prev.filter((id) => id !== merchantId)
+        : [...prev, merchantId];
+      try {
+        localStorage.setItem('cc_favorites', JSON.stringify(next));
+      } catch {}
+      return next;
+    });
+  };
+
   // 錨點 Refs
   const resultSectionRef = useRef<HTMLDivElement>(null);
   const searchSectionRef = useRef<HTMLDivElement>(null);
@@ -206,6 +228,8 @@ export function App() {
             onSearchChange={setSearchQuery}
             selectedCategory={selectedCategory}
             onSelectCategory={setSelectedCategory}
+            favorites={favorites}
+            onToggleFavorite={toggleFavorite}
           />
         </section>
 
@@ -226,6 +250,8 @@ export function App() {
             onOpenSchemeModal={() => setIsSchemeOpen(true)}
             onOpenSourceModal={() => setIsSourceOpen(true)}
             onOpenExpiryAlertModal={() => setIsExpiryAlertOpen(true)}
+            isFavorite={favorites.includes(activeMerchant.id)}
+            onToggleFavorite={() => toggleFavorite(activeMerchant.id)}
           />
         </section>
       </main>

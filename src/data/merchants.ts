@@ -806,30 +806,149 @@ export const MERCHANTS: Merchant[] = [
     },
     tips: '買衣服兩張卡皆享 3.3%（CUBE 樂饗購 / Richart 大筆刷）；生日月若在指定特店則 CUBE「慶生月」10% 最強！'
   },
+  // ================= 百貨 & 購物中心 (獨立拆分) =================
   {
-    id: 'department-stores',
-    name: '新光三越 / SOGO / 遠東百貨 / 微風 / 台北101',
+    id: 'shinkong-mitsukoshi',
+    name: '新光三越 (Shin Kong Mitsukoshi - 含 skm pay)',
     category: 'department_fashion',
-    categoryLabel: '百貨 & 服飾',
-    tags: ['百貨', '專櫃', '化妝品', '微風', '新光', 'sogo', '遠百', '101'],
+    categoryLabel: '百貨 & 購物',
+    tags: ['新光三越', '新光', 'skmpay', '百貨', '信義新天地', '南西新光', '台中新光', '台南新天地'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (生日月可切慶生月)',
+      schemeName: '樂饗購 (生日月可切「慶生月」10%)',
       rate: 3.3,
       isBirthdaySpecial: true,
-      note: '切換「樂饗購」百貨享 3.3%！生日月特店高達 10%'
+      note: '切換「樂饗購」享 3.0%~3.3%！🎂 8月生日當月切換「慶生月」指定特店享 10% 小樹點！'
     },
     richart: {
       scheme: 'pay',
       schemeName: 'Pay 著刷 (台新Pay 3.8%) / 大筆刷 (3.3%)',
       rate: 3.8,
       payMethod: 'taishin_pay',
-      note: '在新光三越使用台新 Pay 享最高 3.8%！直刷切換「大筆刷」享 3.3%'
+      note: '在新光三越櫃位打開「台新 Pay」綁 Richart 刷享高達 3.8%！或直刷切換「大筆刷」享 3.3%'
     },
-    tips: '逛新光三越使用【台新 Pay】綁 Richart 卡拿 3.8%；其他百貨專櫃刷【CUBE 卡】（樂饗購 3.3%）或 Richart（大筆刷 3.3%）！'
+    tips: '新光三越最神刷法：平常用【台新 Pay】綁 Richart 卡（Pay 著刷）享 3.8% 台新 Point；若在 8 月生日當月，則刷 CUBE 卡切換【慶生月】享最高 10% 小樹點！'
+  },
+  {
+    id: 'sogo-department',
+    name: '遠東 SOGO 百貨 (忠孝 / 復興 / 敦化 / 天母 / 中壢 / 新竹 / 高雄)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 購物',
+    tags: ['sogo', '遠東sogo', '太平洋sogo', '復興sogo', '忠孝sogo', '天母sogo', '百貨'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (生日月可切「慶生月」10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」享 3.0%~3.3%！🎂 8月生日當月切換「慶生月」專屬加碼最高 10%！'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷 (指定百貨)',
+      rate: 3.3,
+      note: 'Richart Life 切換「大筆刷」享 3.3% 台新 Point'
+    },
+    tips: '在 SOGO 百貨：生日當月首選 CUBE 卡【慶生月】10%！平日兩張卡切換對應方案（CUBE 樂饗購 3.3% / Richart 大筆刷 3.3%）皆享 3.3% 高回饋。'
+  },
+  {
+    id: 'feds-department',
+    name: '遠東百貨 (遠百信義 A13 / 板橋大遠百 / 遠百竹北 / Top City 台中大遠百)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 購物',
+    tags: ['遠百', '遠東百貨', '大遠百', 'a13', '信義a13', '板橋大遠百', '竹北遠百', 'top city'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (生日月可切「慶生月」10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」享 3.0%~3.3%！🎂 生日月切換「慶生月」享 10%'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷 (指定百貨)',
+      rate: 3.3,
+      note: 'Richart Life 切換「大筆刷」享 3.3%'
+    },
+    tips: '逛遠東百貨：生日月刷 CUBE 卡【慶生月】享 10%；平日刷 CUBE「樂饗購」或 Richart「大筆刷」均享 3.3%。'
+  },
+  {
+    id: 'taipei-101',
+    name: '台北 101 購物中心 (Taipei 101 Mall)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 購物',
+    tags: ['101', '台北101', 'taipei 101', '精品', '觀景台', '信義區'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (生日月可切「慶生月」10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」享 3.0%~3.3%！🎂 生日月切換「慶生月」享 10%'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷 (指定百貨)',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+    tips: '在 101 購物或用餐：生日當月刷 CUBE【慶生月】10% 最划算；平日刷 CUBE「樂饗購」3.3% 或 Richart「大筆刷」3.3%。'
+  },
+  {
+    id: 'breeze-center',
+    name: '微風廣場 / 微風信義 / 微風南山 / 微風松高 / 微風台北車站',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 購物',
+    tags: ['微風', '微風廣場', '微風信義', '微風南山', '微風松高', '微風北車', 'breeze'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (生日月可切「慶生月」10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」享 3.0%~3.3%！🎂 生日月切換「慶生月」享 10%'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷 (指定百貨)',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    },
+    tips: '逛微風各館：生日月刷 CUBE「慶生月」10%；平日刷 CUBE「樂饗購」或 Richart「大筆刷」皆享 3.3%。'
+  },
+  {
+    id: 'lalaport-mitsui',
+    name: 'Mitsui Shopping Park LaLaport (南港 / 台中) / 統一時代百貨 / 京站',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 購物',
+    tags: ['lalaport', '南港lalaport', '台中lalaport', '統一時代', '夢時代', '京站', '三創'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.0%~3.3%'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷 (指定百貨)',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    }
   },
   {
     id: 'ikea-home',

@@ -1,8 +1,8 @@
 import type { Merchant } from '../types/merchant';
 
 const TAISHIN_OFFICIAL_URL = 'https://mkp.taishinbank.com.tw/TsCms/marketing/expose/WM_20251216135624463/index.html';
-const CATHAY_OFFICIAL_URL = 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/';
-const CATHAY_BIRTHDAY_URL = 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/birthday/';
+const CATHAY_OFFICIAL_URL = 'https://www.cathay-cube.com.tw/cathaybk/personal/product/credit-card/cards/cube-list';
+const CATHAY_BIRTHDAY_URL = 'https://www.cathay-cube.com.tw/cathaybk/personal/product/credit-card/cards/cube-list';
 
 export const MERCHANTS: Merchant[] = [
   // ================= 遊戲 & 影音串流 =================

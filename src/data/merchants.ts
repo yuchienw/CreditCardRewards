@@ -922,6 +922,54 @@ export const MERCHANTS: Merchant[] = [
   // 🍲 火鍋、燒肉、特色餐飲、王品與瓦城集團各獨立餐廳
   // =========================================================================
   {
+    id: 'chen-ayi-hotpot-hsinchu',
+    name: '陳阿姨火鍋灶咖 (新竹總店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['陳阿姨', '陳阿姨火鍋', '陳阿姨火鍋灶咖', '新竹火鍋', '大叔富弟', '經國路火鍋', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+    tips: '吃陳阿姨火鍋灶咖（新竹總店，Uncle Shawn 旗下品牌）：在 8 月生日當月必刷【國泰 CUBE 卡】切換【慶生月】享 10% 小樹點！平日刷 3.3%。'
+  },
+  {
+    id: 'chen-ayi-hotpot-zhubei',
+    name: '陳阿姨火鍋灶咖 (竹北中正東店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['陳阿姨', '陳阿姨火鍋', '陳阿姨火鍋灶咖', '竹北火鍋', '大叔富弟', '中正東路', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+    tips: '吃陳阿姨火鍋灶咖（竹北店）：在 8 月生日當月必刷【國泰 CUBE 卡】切換【慶生月】享 10% 小樹點！平日刷 3.3%。'
+  },
+  {
     id: 'kanpai-yakiniku',
     name: '乾杯燒肉居酒屋',
     category: 'dining_delivery',

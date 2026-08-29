@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import type { Merchant } from '../types/merchant';
+import type { Merchant, UserContext } from '../types/merchant';
 import { checkValidity } from '../utils/validityChecker';
 import { 
   Gamepad2, 
@@ -25,6 +25,7 @@ interface QuickMerchantGridProps {
   onSelectCategory: (cat: string) => void;
   favorites: string[];
   onToggleFavorite: (id: string) => void;
+  context: UserContext;
 }
 
 const BASE_CATEGORY_TABS = [
@@ -49,7 +50,28 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
   onSelectCategory,
   favorites,
   onToggleFavorite,
+  context,
 }) => {
+  // 動態計算當前情境下國泰 CUBE 卡的實質回饋率（包含壽星月 10% 與 Lv1/Lv2/Lv3 切換）
+  const getEffectiveCubeRate = (m: Merchant) => {
+    if (context.isCurrentMonthBirthday && m.cube.isBirthdaySpecial) {
+      return 10.0;
+    }
+    if (m.cube.rate === 3.3 || m.cube.rate === 3.0 || m.cube.rate === 2.0) {
+      if (context.cubeLevel === 'level1') return 2.0;
+      if (context.cubeLevel === 'level2') return 3.0;
+      if (context.cubeLevel === 'level3') return 3.3;
+    }
+    return m.cube.rate;
+  };
+
+  // 動態計算當前情境下台新 Richart 卡的實質回饋率（包含平日/假日切換）
+  const getEffectiveRichartRate = (m: Merchant) => {
+    if (m.richart.scheme === 'weekend') {
+      return context.isWeekend ? 2.0 : 1.0;
+    }
+    return m.richart.rate;
+  };
   const filteredMerchants = useMemo(() => {
     return merchants
       .filter((m) => {
@@ -283,11 +305,11 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
                 </span>
                 <div className="flex items-center space-x-1.5 text-xs font-black">
                   <span className={isSelected ? 'text-emerald-300' : 'text-emerald-600'}>
-                    {merchant.cube.rate}%
+                    {getEffectiveCubeRate(merchant)}%
                   </span>
                   <span className={isSelected ? 'text-white/40' : 'text-slate-300'}>|</span>
                   <span className={isSelected ? 'text-rose-300' : 'text-rose-600'}>
-                    {merchant.richart.rate}%
+                    {getEffectiveRichartRate(merchant)}%
                   </span>
                 </div>
               </div>

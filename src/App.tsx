@@ -241,6 +241,7 @@ export function App() {
             onSelectCategory={setSelectedCategory}
             favorites={favorites}
             onToggleFavorite={toggleFavorite}
+            context={context}
           />
         </section>
 

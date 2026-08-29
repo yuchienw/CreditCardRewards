@@ -922,6 +922,78 @@ export const MERCHANTS: Merchant[] = [
   // 🍲 火鍋、燒肉、特色餐飲、王品與瓦城集團各獨立餐廳
   // =========================================================================
   {
+    id: 'uncle-shawn-taipei-1',
+    name: 'UNCLE SHAWN 燒肉餐酒館 (台北一號店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['uncle shawn', 'uncleshawn', 'uncle shawn 燒肉', '大叔燒肉', '敦南燒肉', '東區燒肉', '慶生燒肉', '大安區'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+    tips: '吃 UNCLE SHAWN 燒肉（台北一號店）在 8 月生日當月必刷【國泰 CUBE 卡】切換【慶生月】享 10% 小樹點（門市另招待壽星小菜與肉品）！平日切換樂饗購或刷 Richart 好饗刷享 3.3%。'
+  },
+  {
+    id: 'uncle-shawn-taipei-2',
+    name: 'UNCLE SHAWN 燒肉餐酒館 (台北二號店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['uncle shawn', 'uncleshawn', 'uncle shawn 燒肉', '大叔燒肉', '市民大道燒肉', '東區燒肉', '慶生燒肉'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+    tips: '吃 UNCLE SHAWN 燒肉（台北二號店）在 8 月生日當月必刷【國泰 CUBE 卡】切換【慶生月】享 10% 小樹點！平日刷 3.3%。'
+  },
+  {
+    id: 'uncle-shawn-hsinchu',
+    name: 'UNCLE SHAWN 燒肉餐酒館 (新竹旗艦店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['uncle shawn', 'uncleshawn', '新竹燒肉', '新竹餐酒館', '新竹大叔燒肉', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '吃 UNCLE SHAWN 燒肉（新竹店）在 8 月生日當月必刷【國泰 CUBE 卡】切換【慶生月】享 10% 小樹點！平日刷 3.3%。'
+  },
+  {
     id: 'er-ben-song',
     name: '二本松涮涮屋 (頂級火鍋)',
     category: 'dining_delivery',

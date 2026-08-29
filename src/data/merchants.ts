@@ -144,6 +144,29 @@ export const MERCHANTS: Merchant[] = [
       note: '切換「數趣刷」3.3%'
     }
   },
+  {
+    id: 'chatgpt-ai',
+    name: 'ChatGPT / Claude / Notion / Canva (AI訂閱)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['ai', 'chatgpt', 'openai', 'claude', 'notion', 'canva', 'perplexity'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: 'CUBE 切換「玩數位」AI 服務享 3.3%'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷 (AI服務)',
+      rate: 3.3,
+      note: 'Richart 切換「數趣刷」AI 服務享 3.3%'
+    },
+    tips: '訂閱 ChatGPT Plus、Claude Pro 等 AI 工具，兩張卡切換對應方案皆享 3.3%！'
+  },
 
   // ================= 聚會火鍋 & 手搖飲 (台新 Chill 刷 10%) =================
   {
@@ -358,6 +381,28 @@ export const MERCHANTS: Merchant[] = [
     },
     tips: '淘寶屬於海外外幣交易，Richart 卡切換【玩旅刷】享 3.3%，略勝 CUBE「玩數位」3.0%！'
   },
+  {
+    id: 'books-com-tw',
+    name: '博客來網路書店 / 誠品線上',
+    category: 'ecommerce',
+    categoryLabel: '網購電商',
+    tags: ['買書', '書店', '博客來', '誠品', '文創'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位 (或樂饗購誠品)',
+      rate: 3.3,
+      note: '博客來切「玩數位」3.3%，誠品生活切「樂饗購」3.3%'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷 (或大筆刷誠品)',
+      rate: 3.3,
+      note: '博客來切「數趣刷」3.3%，誠品切「大筆刷」3.3%'
+    }
+  },
 
   // ================= 美食外送 & 餐飲 =================
   {
@@ -408,10 +453,10 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'starbucks',
-    name: '星巴克 (Starbucks)',
+    name: '星巴克 (Starbucks) / 路易莎 / 客美多',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
-    tags: ['咖啡', '下午茶', '飲品', 'starbucks'],
+    tags: ['咖啡', '下午茶', '飲品', 'starbucks', '路易莎', 'louisa'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -427,7 +472,53 @@ export const MERCHANTS: Merchant[] = [
       rate: 3.3,
       note: '切換「好饗刷」全台餐飲 3.3%'
     },
-    tips: '喝星巴克兩張卡切換對應方案（CUBE 樂饗購 / Richart 好饗刷）均享 3.3%！'
+    tips: '喝咖啡兩張卡切換對應方案（CUBE 樂饗購 / Richart 好饗刷）均享 3.3%！'
+  },
+  {
+    id: 'fast-food',
+    name: '麥當勞 / 肯德基 / 摩斯漢堡 / 漢堡王',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['速食', '麥當勞', '肯德基', '摩斯', '漢堡王', '炸雞', '漢堡'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」餐飲享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (或台新Pay 3.8%)',
+      rate: 3.8,
+      note: '在麥當勞可用台新Pay享 3.8%，其他速食切換「好饗刷」享 3.3%'
+    },
+    tips: '在麥當勞用【台新 Pay】綁 Richart 卡拿 3.8%；其他速食店兩張切換對應方案皆為 3.3%！'
+  },
+  {
+    id: 'sushi-chain',
+    name: '壽司郎 / 藏壽司 / 爭鮮 / 瓦城 / 王品集團',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['壽司', '壽司郎', '藏壽司', '爭鮮', '瓦城', '王品', '陶板屋', '西堤'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (生日月可切慶生月)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」餐飲享 3.3%！生日月指定特店 10%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: 'Richart 切換「好饗刷」享 3.3%'
+    }
   },
 
   // ================= 旅遊 & 交通 =================
@@ -572,6 +663,29 @@ export const MERCHANTS: Merchant[] = [
     tips: '🔥 去全聯買菜強烈建議刷【國泰 CUBE 卡】（切換集精選 2%~3%），台新卡在全聯門市直刷無回饋！'
   },
   {
+    id: 'costco',
+    name: 'Costco 好市多 (需聯名卡/一般消費)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['好市多', 'costco', '量販', '大賣場'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'general',
+      schemeName: '非富邦聯名卡無法直刷 (0%)',
+      rate: 0.0,
+      note: '好市多門市僅限富邦Costco聯名卡或現金結帳'
+    },
+    richart: {
+      scheme: 'general',
+      schemeName: '門市無法直刷 (0%)',
+      rate: 0.0,
+      note: '好市多線上購物若有特約則視一般消費'
+    },
+    tips: '好市多實體門市僅能使用台北富邦 Costco 聯名卡或現金結帳，CUBE 與 Richart 皆無法在實體門市刷卡！'
+  },
+  {
     id: 'carrefour',
     name: '家樂福 (Carrefour) / 大買家 / 唐吉訶德 / LOPIA',
     category: 'grocery_convenience',
@@ -617,6 +731,29 @@ export const MERCHANTS: Merchant[] = [
       note: '全家與 7-11 使用台新 Pay 享最高 3.8%！'
     },
     tips: '超商結帳最神刷法：在全家或 7-11 打開【台新 Pay】綁 Richart 卡（Pay 著刷）拿 3.8%！'
+  },
+  {
+    id: 'pharmacy',
+    name: '寶雅 (POYA) / 康是美 / 屈臣氏 / 大樹藥局',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['寶雅', '康是美', '屈臣氏', '大樹藥局', '藥妝', '美妝', '生活用品'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (或集精選康是美)',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷 (藥妝藥局 3.3%) / 康是美台新Pay (3.8%)',
+      rate: 3.8,
+      note: '康是美用台新Pay享 3.8%，其他藥妝切換「天天刷」享 3.3%'
+    },
+    tips: '買藥妝保養品：在康是美用【台新 Pay】綁 Richart 卡拿 3.8%；寶雅與屈臣氏刷兩張卡皆享 3.3%！'
   },
 
   // ================= 百貨 & 日系名店 =================
@@ -668,6 +805,29 @@ export const MERCHANTS: Merchant[] = [
       note: '在新光三越使用台新 Pay 享最高 3.8%！直刷切換「大筆刷」享 3.3%'
     },
     tips: '逛新光三越使用【台新 Pay】綁 Richart 卡拿 3.8%；其他百貨專櫃刷【CUBE 卡】（樂饗購 3.3%）或 Richart（大筆刷 3.3%）！'
+  },
+  {
+    id: 'ikea-home',
+    name: 'IKEA / 特力屋 / HOLA / 宜得利家居',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ['ikea', '特力屋', 'hola', '宜得利', '家具', '居家裝修'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: 'CUBE 切換「樂饗購」居家百貨享 3.3%'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷 (或 IKEA 台新Pay 3.8%)',
+      rate: 3.8,
+      note: 'IKEA 用台新 Pay 享 3.8%，其他特力屋/宜得利切「大筆刷」享 3.3%'
+    },
+    tips: '在 IKEA 結帳用【台新 Pay】綁 Richart 卡享 3.8%；特力屋與宜得利刷兩張卡皆享 3.3%！'
   },
 
   // ================= 一般通用消費 =================

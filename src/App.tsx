@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { MERCHANTS } from './data/merchants';
 import type { Merchant, UserContext } from './types/merchant';
 import { TopContextBar } from './components/TopContextBar';
@@ -19,29 +19,55 @@ export function App() {
   });
 
   // 目前選取的通路（預設選中 PlayStation）
-  const [selectedMerchant, setSelectedMerchant] = useState<Merchant>(
-    MERCHANTS.find((m) => m.id === 'playstation') || MERCHANTS[0]
-  );
-
+  const [selectedMerchantId, setSelectedMerchantId] = useState<string>('playstation');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isSchemeOpen, setIsSchemeOpen] = useState(false);
   const [isSourceOpen, setIsSourceOpen] = useState(false);
 
-  // 當搜尋字串精準符合某個通路時，自動切換該通路
-  const handleSearchChange = (q: string) => {
-    setSearchQuery(q);
-    if (q.trim()) {
+  // 根據搜尋字串或選取的 ID 動態計算出當前的 Merchant
+  const activeMerchant = useMemo<Merchant>(() => {
+    // 1. 若有搜尋字串
+    if (searchQuery.trim()) {
+      const q = searchQuery.trim().toLowerCase();
       const match = MERCHANTS.find(
         (m) =>
-          m.name.toLowerCase().includes(q.toLowerCase()) ||
-          m.tags.some((t) => t.toLowerCase() === q.toLowerCase().trim())
+          m.name.toLowerCase().includes(q) ||
+          m.tags.some((t) => t.toLowerCase().includes(q))
       );
       if (match) {
-        setSelectedMerchant(match);
+        return match;
       }
+
+      // 若兩張卡都不適用特定加碼，自動生成「一般消費」判定
+      return {
+        id: `custom-${searchQuery}`,
+        name: `${searchQuery.trim()}（一般消費）`,
+        category: 'general',
+        categoryLabel: '一般消費',
+        tags: [searchQuery.trim()],
+        validUntil: '2026/12/31',
+        lastVerifiedAt: '2026/08/29',
+        cube: {
+          scheme: 'general',
+          schemeName: '一般消費',
+          rate: 0.3,
+          note: '未在 CUBE 特約加碼清單，適用一般消費 0.3%（若切換「固定回饋」方案則 1.2%）'
+        },
+        richart: {
+          scheme: 'weekend',
+          schemeName: '假日刷 (週末2.0%) / 平日 1.0%',
+          rate: 2.0,
+          note: '週末六日一般消費 2.0% / 平日 1.0%'
+        },
+        tips: `「${searchQuery.trim()}」未在雙卡特約加碼名單中：週末六日刷【台新 Richart 卡】切換【假日刷】享 2.0% 台新 Point，平日刷 Richart 卡享 1.0%，均優於 CUBE 的 0.3%！`
+      };
     }
-  };
+
+    // 2. 若無搜尋字串，返回選取的 Merchant
+    const found = MERCHANTS.find((m) => m.id === selectedMerchantId);
+    return found || MERCHANTS[0];
+  }, [searchQuery, selectedMerchantId]);
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-100 text-slate-900 font-sans">
@@ -82,43 +108,49 @@ export function App() {
         </div>
       </header>
 
-      {/* Top Context Switcher (8月生日月 / 週末假日) */}
+      {/* Top Context Switcher (CUBE Level, 8月生日月, 週末假日) */}
       <TopContextBar context={context} onUpdateContext={setContext} />
 
       {/* Main Container */}
       <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">
-        {/* Primary Decision Card */}
-        <section>
-          <MerchantDecisionCard
-            merchant={selectedMerchant}
-            context={context}
-            onOpenSchemeModal={() => setIsSchemeOpen(true)}
-            onOpenSourceModal={() => setIsSourceOpen(true)}
-          />
-        </section>
-
-        {/* Quick Merchant Selection Grid & Search */}
+        {/* 上方區塊：查詢視窗與常用通路按鈕 */}
         <section className="space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider">
-              點擊通路直接查詢（或打字搜尋）：
+              🔍 查詢通路（輸入任何店家或點擊常用按鈕）：
             </h3>
             <span className="text-xs text-slate-500">
-              共 {MERCHANTS.length} 個常用精選特店
+              共 {MERCHANTS.length} 個精選特店 • 支援任意店家一般消費
             </span>
           </div>
 
           <QuickMerchantGrid
             merchants={MERCHANTS}
-            selectedMerchantId={selectedMerchant.id}
+            selectedMerchantId={searchQuery.trim() ? '' : selectedMerchantId}
             onSelectMerchant={(m) => {
-              setSelectedMerchant(m);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              setSearchQuery('');
+              setSelectedMerchantId(m.id);
             }}
             searchQuery={searchQuery}
-            onSearchChange={handleSearchChange}
+            onSearchChange={setSearchQuery}
             selectedCategory={selectedCategory}
             onSelectCategory={setSelectedCategory}
+          />
+        </section>
+
+        {/* 下方區塊：查詢結果 (決策卡片) */}
+        <section className="space-y-2 pt-2">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider">
+              🎯 最佳刷卡決策結果：
+            </h3>
+          </div>
+
+          <MerchantDecisionCard
+            merchant={activeMerchant}
+            context={context}
+            onOpenSchemeModal={() => setIsSchemeOpen(true)}
+            onOpenSourceModal={() => setIsSourceOpen(true)}
           />
         </section>
       </main>

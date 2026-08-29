@@ -28,9 +28,10 @@
 ## 📌 1. 唯一權威官方資料源 (Single Source of Truth)
 - **國泰 CUBE 卡官方權益網址（一律以此頁面為唯一標準）**：
   `https://www.cathay-cube.com.tw/cathaybk/personal/product/credit-card/cards/cube-list?Cub_ProjectCode=DBB4100001`
-  - 凡是出現在此頁面內之所有權益方案（`玩數位`、`樂饗購`、`趣旅行`、`集精選`、`慶生月`、`台塑家`、`全支付`、`固定回饋`），100% 必須完整收錄於系統資料庫中。
-- **台新 Richart 卡官方權益網址**：
-  `https://richart.tw/TSDIB_RAW_URL/C1/TS02/TS0201/TS020101?source=richart`
+  - 涵蓋方案：`玩數位`、`樂饗購`、`趣旅行`、`集精選`、`慶生月`、`台塑家`、`全支付`、`固定回饋`。
+- **台新 Richart 卡官方權益網址（一律以此頁面為唯一標準）**：
+  `https://mkp.taishinbank.com.tw/TsCms/marketing/expose/WM_20251216135624463/index.html?gad_campaignid=22054035743`
+  - 涵蓋方案：`Chill 刷 (10%/5%/3.3%)`、`Pay 著刷 (3.8%/2.3%)`、`天天刷 (3.3%)`、`大筆刷 (3.3%)`、`好饗刷 (3.3%)`、`數趣刷 (3.3%)`、`玩旅刷 (3.3%)`、`假日刷 (2.0%)`。
 
 ---
 

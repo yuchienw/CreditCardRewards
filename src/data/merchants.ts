@@ -10875,5 +10875,586 @@ export const MERCHANTS: Merchant[] = [
       rate: 3.3,
       note: '切換「天天刷」享 3.3%'
     },
+  },
+  {
+    id: 'ding-ge-tea',
+    name: '叮哥茶飲 (台東手搖之光)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["叮哥茶飲", "叮哥", "台東手搖", "初鹿鮮奶茶", "chill"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (日常續命 10%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    },
+    tips: '喝叮哥茶飲必刷【台新 Richart 卡】切換【Chill 刷】享 10% 回饋！',
+  },
+  {
+    id: 'fanme-kpop',
+    name: 'FANME (追星周邊平台)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["fanme", "kpop", "韓星周邊", "應援", "chill"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (應援追星 5%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    },
+  },
+  {
+    id: 'nol-ticket',
+    name: 'NOL (NOL Ticket 韓國售票)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ["nol", "nol ticket", "韓國門票", "演唱會", "chill"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (應援追星 5%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    },
+  },
+  {
+    id: 'straight-a-apple',
+    name: 'Straight A (校園 Apple 授權店)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["straight a", "studio a", "校園教育價", "apple經銷"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (數位外掛 3.3%)',
+      rate: 3.3,
+      isChillSpecial: true,
+      note: '切換「Chill 刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'insta360-camera',
+    name: 'Insta360 (全景相機官網/門市)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["insta360", "全景相機", "運動相機", "x4", "ace pro"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (數位外掛 3.3%)',
+      rate: 3.3,
+      isChillSpecial: true,
+      note: '切換「Chill 刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'gopro-camera',
+    name: 'GoPro (運動相機官網/專賣)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["gopro", "hero12", "hero13", "運動相機", "極限攝影"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (數位外掛 3.3%)',
+      rate: 3.3,
+      isChillSpecial: true,
+      note: '切換「Chill 刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'onitsuka-tiger-shoes',
+    name: 'Onitsuka Tiger (鬼塚虎日本復古慢跑鞋)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["鬼塚虎", "onitsuka tiger", "mexico 66", "日本潮鞋", "chill"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (運動品牌 5%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    },
+  },
+  {
+    id: 'salomon-running',
+    name: 'Salomon (薩洛蒙戶外越野鞋)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["salomon", "薩洛蒙", "xt-6", "越野跑鞋", "山系穿搭", "chill"],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (運動品牌 5%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    },
+  },
+  {
+    id: 'smart-daily-life',
+    name: '智生活 (社區管理與智慧繳費)',
+    category: 'grocery_convenience',
+    categoryLabel: '超市 & 藥妝',
+    tags: ["智生活", "社區繳費", "管理費", "包裹通知"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'general',
+      schemeName: '一般消費',
+      rate: 0.3,
+      note: '一般消費 0.3%'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'dudufang-parking',
+    name: '嘟嘟房停車場 (中興電工)',
+    category: 'travel_traffic',
+    categoryLabel: '交通 & 叫車',
+    tags: ["嘟嘟房", "嘟嘟房停車", "停車費", "市區停車"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」享 3.0% 小樹點'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'tixcraft-ticket',
+    name: '拓元售票系統 (tixCraft)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["拓元", "拓元售票", "演唱會搶票", "tixcraft", "大巨蛋門票"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'kktix-ticket',
+    name: 'KKTIX 售票平台',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ["kktix", "kktix售票", "售票系統", "見面會門票"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'sat-knowledge-course',
+    name: '知識衛星 (SAT. Knowledge 線上課程)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["知識衛星", "sat knowledge", "線上課程", "進修學習"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'amazing-talker-course',
+    name: 'AmazingTalker (線上家教一對一)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["amazingtalker", "線上英文", "外語家教", "語言學習"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'tutor-abc-course',
+    name: 'TutorABC (線上英語真人互動)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["tutorabc", "tutor abc", "線上英文", "真人外教"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'hahow-course',
+    name: 'Hahow 好學校 (線上跨領域學習)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["hahow", "好學校", "線上課程", "設計插畫", "程式學習"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'pressplay-academy',
+    name: 'PressPlay Academy (PPA 知識訂閱課程)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["pressplay", "ppa", "知識訂閱", "線上課程", "投資理財課"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'shein-online',
+    name: 'SHEIN (全球時尚流行服飾)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["shein", "希音", "快時尚", "海外網購"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'farfetch-luxury',
+    name: 'Farfetch (全球精品買手店平台)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["farfetch", "精品網購", "歐洲精品", "奢侈品海淘"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'olive-young-global',
+    name: 'Olive Young (韓國藥妝直郵官網)',
+    category: 'ecommerce',
+    categoryLabel: '線上網購',
+    tags: ["olive young", "oliveyoung", "韓國藥妝", "韓系美妝直郵"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'airsim-roam',
+    name: 'AIRSIM (無國界上網卡)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["airsim", "airsim roam", "出國網卡", "esim", "出國上網"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'wowpass-korea',
+    name: 'WOWPASS (韓國預付交通卡)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["wowpass", "韓國交通卡", "韓國刷卡", "t-money"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'galilee-tours',
+    name: '加利利旅行社 (Galilee Tours 歐洲頂級蜜月)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["加利利", "加利利旅行社", "歐洲蜜月", "頂級團", "奧捷團"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'see-mark-travel',
+    name: '喜鴻假期 (喜鴻旅行社)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["喜鴻假期", "喜鴻旅行社", "日本跟團", "海島渡假"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'sunday-tour',
+    name: '行健旅遊 (行健旅行社 中東歐美專業)',
+    category: 'travel_traffic',
+    categoryLabel: '海外 & 訂房',
+    tags: ["行健旅遊", "行健旅行社", "長程線專家", "歐洲旅遊", "土耳其旅遊"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3% 台新 Point'
+    },
+  },
+  {
+    id: 'nitori-furniture',
+    name: '宜得利家居 (NITORI 日本家具)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ["宜得利", "nitori", "日本家具", "日系家飾", "涼感被"],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3% 小樹點'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3% 台新 Point'
+    },
   }
 ];

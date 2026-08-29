@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Merchant } from '../types/merchant';
+import { checkValidity } from '../utils/validityChecker';
 import { 
   Gamepad2, 
   Smartphone, 
@@ -67,7 +68,7 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="搜尋通路 (例如: PlayStation, LINE Pay, 蝦皮, 全聯, 日本, 外送)..."
+            placeholder="搜尋通路 (例如: 50嵐, adidas, PlayStation, LINE Pay, 蝦皮, 全聯, 新光三越)..."
             className="w-full px-3 py-2.5 bg-transparent border-none text-slate-900 placeholder:text-slate-400 focus:outline-hidden font-medium text-sm sm:text-base"
           />
           {searchQuery && (
@@ -109,24 +110,39 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5">
         {filteredMerchants.map((merchant) => {
           const isSelected = selectedMerchantId === merchant.id;
+          const validity = checkValidity(merchant.validUntil);
           return (
             <button
               key={merchant.id}
               onClick={() => onSelectMerchant(merchant)}
-              className={`p-3 rounded-2xl text-left transition-all border flex flex-col justify-between group ${
+              className={`p-3 rounded-2xl text-left transition-all border flex flex-col justify-between group relative overflow-hidden ${
                 isSelected
                   ? 'bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-600/20 ring-2 ring-indigo-600 ring-offset-2'
                   : 'bg-white text-slate-800 border-slate-200/90 hover:border-indigo-300 hover:bg-indigo-50/30 shadow-xs'
               }`}
             >
               <div>
-                <span
-                  className={`text-[10px] font-bold uppercase tracking-wider ${
-                    isSelected ? 'text-indigo-200' : 'text-slate-700'
-                  }`}
-                >
-                  {merchant.categoryLabel}
-                </span>
+                <div className="flex items-center justify-between gap-1">
+                  <span
+                    className={`text-[10px] font-bold uppercase tracking-wider ${
+                      isSelected ? 'text-indigo-200' : 'text-slate-700'
+                    }`}
+                  >
+                    {merchant.categoryLabel}
+                  </span>
+
+                  {validity.status === 'expired' && (
+                    <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-rose-500 text-white font-bold animate-pulse">
+                      已逾期
+                    </span>
+                  )}
+                  {validity.status === 'expiring_soon' && (
+                    <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-amber-200 text-amber-900 font-bold">
+                      即將到期
+                    </span>
+                  )}
+                </div>
+
                 <div className="font-bold text-xs sm:text-sm mt-0.5 line-clamp-1">
                   {merchant.name}
                 </div>
@@ -134,10 +150,10 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
 
               <div className="mt-3 flex items-center justify-between text-[11px] pt-1.5 border-t border-current/10">
                 <span className={isSelected ? 'text-indigo-200' : 'text-slate-700'}>
-                  雙卡比較
+                  至 {merchant.validUntil.slice(5)}
                 </span>
                 <span className="font-extrabold text-xs">
-                  {isSelected ? '已選取 🎯' : '點擊速查 →'}
+                  {isSelected ? '已選取 🎯' : '查看 →'}
                 </span>
               </div>
             </button>

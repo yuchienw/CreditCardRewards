@@ -1,5 +1,9 @@
 import type { Merchant } from '../types/merchant';
 
+const TAISHIN_OFFICIAL_URL = 'https://mkp.taishinbank.com.tw/TsCms/marketing/expose/WM_20251216135624463/index.html';
+const CATHAY_OFFICIAL_URL = 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/';
+const CATHAY_BIRTHDAY_URL = 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/birthday/';
+
 export const MERCHANTS: Merchant[] = [
   // ================= 遊戲 & 影音串流 =================
   {
@@ -10,21 +14,21 @@ export const MERCHANTS: Merchant[] = [
     tags: ['psn', 'ps5', 'ps4', '索尼', '主機遊戲', 'sony', 'playstation'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/birthday/',
+    officialSourceUrl: CATHAY_BIRTHDAY_URL,
     cube: {
       scheme: 'digital',
-      schemeName: '玩數位 (生日月可切慶生月)',
+      schemeName: '玩數位 (生日月切換「慶生月」享 10%)',
       rate: 3.3,
       isBirthdaySpecial: true,
-      note: '生日月切換「慶生月」特店享 10%！平日切換「玩數位」享 3.3%'
+      note: '🎂 生日月切換「慶生月」享最高 10% 小樹點！平日切換「玩數位」享 3.3%'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷',
+      schemeName: '數趣刷 (遊戲影音)',
       rate: 3.3,
-      note: 'Richart Life 切換「數趣刷」享 3.3% 台新 Point'
+      note: '切換「數趣刷」享 3.3% 台新 Point'
     },
-    tips: '生日月強烈推薦使用國泰 CUBE 卡切換【慶生月】方案拿滿 10% 小樹點！平日刷兩張卡（CUBE玩數位 3.3% / Richart數趣刷 3.3%）皆享 3.3%。'
+    tips: '若在 8 月生日當月購買 PS 遊戲或課金，首選【國泰 CUBE 卡】切換【慶生月】方案拿滿 10% 回饋！平日刷兩張卡（CUBE玩數位 3.3% / Richart數趣刷 3.3%）皆享 3.3%。'
   },
   {
     id: 'nintendo',
@@ -34,21 +38,21 @@ export const MERCHANTS: Merchant[] = [
     tags: ['switch', '任天堂', 'eshop', '瑪利歐', '薩爾達', '主機遊戲', 'nintendo'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/birthday/',
+    officialSourceUrl: CATHAY_BIRTHDAY_URL,
     cube: {
       scheme: 'digital',
-      schemeName: '玩數位 (生日月可切慶生月)',
+      schemeName: '玩數位 (生日月切換「慶生月」享 10%)',
       rate: 3.3,
       isBirthdaySpecial: true,
-      note: '生日月切換「慶生月」特店享 10%！平日切換「玩數位」享 3.3%'
+      note: '🎂 生日月切換「慶生月」特店享 10%！平日切換「玩數位」享 3.3%'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷',
+      schemeName: '數趣刷 (遊戲影音)',
       rate: 3.3,
-      note: '切換「數趣刷」遊戲影音享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point'
     },
-    tips: '買 Switch 數位遊戲，生日月選 CUBE【慶生月】享 10%；平日兩張卡切換對應方案皆為 3.3%。'
+    tips: '買 Switch 遊戲，生日月強推 CUBE【慶生月】10%；平日兩張卡切換對應方案皆為 3.3%。'
   },
   {
     id: 'steam',
@@ -58,18 +62,18 @@ export const MERCHANTS: Merchant[] = [
     tags: ['pc', 'steam', 'valve', '特賣', '遊戲平台'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/cg021/card001/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
       schemeName: '玩數位',
       rate: 3.3,
-      note: 'CUBE App 切換「玩數位」'
+      note: 'CUBE App 切換「玩數位」享 3.3%'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷',
+      schemeName: '數趣刷 (遊戲影音)',
       rate: 3.3,
-      note: 'Richart Life 切換「數趣刷」'
+      note: 'Richart Life 切換「數趣刷」享 3.3%'
     },
     tips: 'Steam 平台購買遊戲，CUBE「玩數位」與 Richart「數趣刷」回饋率相同（皆為 3.3%）。'
   },
@@ -81,7 +85,30 @@ export const MERCHANTS: Merchant[] = [
     tags: ['影集', '追劇', '訂閱', '串流', 'netflix'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷 (或 Chill刷 5%)',
+      rate: 3.3,
+      note: 'Richart 切換「數趣刷」享 3.3%（限時 Chill 刷熬夜追更享 5%）'
+    },
+    tips: '串流訂閱兩張卡皆享 3.3%（CUBE 玩數位 / Richart 數趣刷）。'
+  },
+  {
+    id: 'spotify',
+    name: 'Spotify / YouTube Premium',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['音樂', '串流', 'youtube', '無廣告', '訂閱', 'spotify'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
       schemeName: '玩數位',
@@ -93,29 +120,6 @@ export const MERCHANTS: Merchant[] = [
       schemeName: '數趣刷',
       rate: 3.3,
       note: '切換「數趣刷」享 3.3%'
-    },
-    tips: '每月固定扣款串流服務，兩張卡只要切換到對應方案（玩數位 / 數趣刷）均享 3.3% 回饋。'
-  },
-  {
-    id: 'spotify',
-    name: 'Spotify / YouTube Premium',
-    category: 'game_stream',
-    categoryLabel: '遊戲 & 影音',
-    tags: ['音樂', '串流', 'youtube', '無廣告', '訂閱', 'spotify'],
-    validUntil: '2026/12/31',
-    lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
-    cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」'
-    },
-    richart: {
-      scheme: 'digital_fun',
-      schemeName: '數趣刷',
-      rate: 3.3,
-      note: '切換「數趣刷」'
     }
   },
   {
@@ -126,7 +130,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['漫威', '皮克斯', '星際大戰', '串流', 'disney'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
       schemeName: '玩數位',
@@ -141,6 +145,56 @@ export const MERCHANTS: Merchant[] = [
     }
   },
 
+  // ================= 聚會火鍋 & 手搖飲 (台新 Chill 刷 10%) =================
+  {
+    id: 'hotpot-bbq',
+    name: '詹記麻辣火鍋 / 萬客什鍋 / 海底撈 / 屋馬燒肉 / 茶六',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['火鍋', '燒肉', '海底撈', '屋馬', '茶六', '詹記', '萬客', '聚餐'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: 'CUBE App 切換「樂饗購」餐飲享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (歡聚微醺)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 Richart Life 切換「Chill 刷」指定火鍋/燒肉享狂飆 10% 回饋！'
+    },
+    tips: '🔥 吃詹記、海底撈、屋馬、茶六、萬客什鍋時，務必開【台新 Richart 卡】切換【Chill 刷】方案拿滿 10% 台新 Point！'
+  },
+  {
+    id: 'drinks-tea',
+    name: '50嵐 / 得正 / 五桐號 / 龜記 / CAFE!N / %Arabica',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['手搖飲', '飲料', '咖啡', '50嵐', '得正', '五桐號', '龜記', 'cafein'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (日常續命)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 Richart Life 切換「Chill 刷」指定手搖飲/咖啡享 10% 神回饋！'
+    },
+    tips: '買 50嵐、得正、五桐號、龜記手搖飲，刷【台新 Richart 卡】切換【Chill 刷】享 10% 最狂回饋！'
+  },
+
   // ================= 行動支付 =================
   {
     id: 'line-pay',
@@ -150,12 +204,12 @@ export const MERCHANTS: Merchant[] = [
     tags: ['linepay', '掃碼', '行動支付', '超商', '手搖', '連線'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/cg021/card001/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'general',
       schemeName: '一般消費 (大部分特店無加碼)',
       rate: 0.3,
-      note: 'CUBE 卡綁定 LINE Pay 在非指定加碼通路通常僅列 0.3%'
+      note: 'CUBE 卡綁定 LINE Pay 在非指定特店僅 0.3%'
     },
     richart: {
       scheme: 'pay',
@@ -168,13 +222,13 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'taishin-pay',
-    name: '台新 Pay (全家/超商/新光三越/特約)',
+    name: '台新 Pay (全家/7-11/新光三越/康是美/IKEA)',
     category: 'mobile_pay',
     categoryLabel: '行動支付',
-    tags: ['taishinpay', '全家', '掃碼支付', '新光三越', '台新pay'],
+    tags: ['taishinpay', '全家', '7-11', '掃碼支付', '新光三越', 'ikea', '康是美'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/cg021/card001/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'general',
       schemeName: '一般消費',
@@ -186,54 +240,9 @@ export const MERCHANTS: Merchant[] = [
       schemeName: 'Pay 著刷 (台新 Pay)',
       rate: 3.8,
       payMethod: 'taishin_pay',
-      note: 'Richart Life 切換「Pay 著刷」並使用台新 Pay 享高達 3.8% 回饋！'
+      note: 'Richart Life 切換「Pay 著刷」使用台新 Pay 享高達 3.8% 回饋！'
     },
-    tips: '🔥 能使用「台新 Pay」的地方（如全家、新光三越），Richart 卡切換【Pay 著刷】享 3.8% 最頂回饋！'
-  },
-  {
-    id: 'px-pay-plus',
-    name: '全盈+PAY (全盈支付)',
-    category: 'mobile_pay',
-    categoryLabel: '行動支付',
-    tags: ['全盈', '全家', '行動支付'],
-    validUntil: '2026/12/31',
-    lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/cg021/card001/',
-    cube: {
-      scheme: 'general',
-      schemeName: '一般消費',
-      rate: 0.3,
-      note: '0.3%'
-    },
-    richart: {
-      scheme: 'pay',
-      schemeName: 'Pay 著刷 (全盈+PAY)',
-      rate: 2.3,
-      note: '享 2.3% 回饋'
-    }
-  },
-  {
-    id: 'jko-pay',
-    name: '街口支付 (JKOPAY)',
-    category: 'mobile_pay',
-    categoryLabel: '行動支付',
-    tags: ['街口', '掃碼', '外送', '繳費', 'jko'],
-    validUntil: '2026/12/31',
-    lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/cg021/card001/',
-    cube: {
-      scheme: 'general',
-      schemeName: '一般消費',
-      rate: 0.3,
-      note: '0.3%'
-    },
-    richart: {
-      scheme: 'weekend',
-      schemeName: '假日刷 (週末六日)',
-      rate: 2.0,
-      note: '週末六日切換「假日刷」街口支付享 2.0%！平日 0.5%~1.0%'
-    },
-    tips: '街口支付在週末假日結帳時，使用台新 Richart 卡（假日刷）享 2.0% 台新 Point。'
+    tips: '🔥 能使用「台新 Pay」的地方（全家、7-11、新光三越、康是美、IKEA），Richart 卡切換【Pay 著刷】享 3.8% 最頂回饋！'
   },
 
   // ================= 網購電商 =================
@@ -245,18 +254,18 @@ export const MERCHANTS: Merchant[] = [
     tags: ['網購', '電商', '蝦皮直送', '蝦皮拍賣', '免運', 'shopee'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
       schemeName: '玩數位',
       rate: 3.3,
-      note: '切換「玩數位」享 3.0%~3.3%'
+      note: 'CUBE 切換「玩數位」享 3.3%'
     },
     richart: {
       scheme: 'digital_fun',
       schemeName: '數趣刷',
       rate: 3.3,
-      note: '切換「數趣刷」指定網購享 3.3%'
+      note: 'Richart 切換「數趣刷」享 3.3%'
     },
     tips: '蝦皮購物兩張卡回饋率相同（皆為 3.3%），CUBE 切「玩數位」、Richart 切「數趣刷」即可。'
   },
@@ -268,7 +277,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['momo', '富邦媒', '網購', '24h'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
       schemeName: '玩數位',
@@ -283,28 +292,6 @@ export const MERCHANTS: Merchant[] = [
     }
   },
   {
-    id: 'pchome',
-    name: 'PChome 24h 購物',
-    category: 'ecommerce',
-    categoryLabel: '網購電商',
-    tags: ['pchome', '3c', '24h'],
-    validUntil: '2026/12/31',
-    lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
-    cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」'
-    },
-    richart: {
-      scheme: 'digital_fun',
-      schemeName: '數趣刷',
-      rate: 3.3,
-      note: '切換「數趣刷」'
-    }
-  },
-  {
     id: 'coupang',
     name: '酷澎 (Coupang)',
     category: 'ecommerce',
@@ -312,18 +299,40 @@ export const MERCHANTS: Merchant[] = [
     tags: ['酷澎', '火箭跨境', '韓國網購', '火箭速配', 'coupang'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
       schemeName: '玩數位',
       rate: 3.3,
-      note: '切換「玩數位」'
+      note: '切換「玩數位」3.3%'
     },
     richart: {
       scheme: 'digital_fun',
       schemeName: '數趣刷',
       rate: 3.3,
-      note: '切換「數趣刷」'
+      note: '切換「數趣刷」3.3%'
+    }
+  },
+  {
+    id: 'pchome',
+    name: 'PChome 24h 購物',
+    category: 'ecommerce',
+    categoryLabel: '網購電商',
+    tags: ['pchome', '3c', '24h'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」3.3%'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷',
+      rate: 3.3,
+      note: '切換「數趣刷」3.3%'
     }
   },
   {
@@ -334,7 +343,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['大陸網購', '海外網購', '集運', 'taobao'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
       schemeName: '玩數位',
@@ -345,9 +354,9 @@ export const MERCHANTS: Merchant[] = [
       scheme: 'travel',
       schemeName: '玩旅刷 (海外線上)',
       rate: 3.3,
-      note: '切換「玩旅刷」海外消費享 3.3%'
+      note: 'Richart Life 切換「玩旅刷」海外消費享 3.3%'
     },
-    tips: '淘寶屬於海外交易，Richart 卡切換【玩旅刷】享 3.3%，略勝 CUBE「玩數位」3.0%！'
+    tips: '淘寶屬於海外外幣交易，Richart 卡切換【玩旅刷】享 3.3%，略勝 CUBE「玩數位」3.0%！'
   },
 
   // ================= 美食外送 & 餐飲 =================
@@ -359,7 +368,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['外送', '便當', '飲料', '生鮮雜貨', 'ubereats'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/birthday/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
       schemeName: '樂饗購 (生日月可切慶生月)',
@@ -371,9 +380,9 @@ export const MERCHANTS: Merchant[] = [
       scheme: 'dining',
       schemeName: '好饗刷',
       rate: 3.3,
-      note: 'Richart Life 切換「好饗刷」外送享 3.3%'
+      note: 'Richart Life 切換「好饗刷」外送平台享 3.3%'
     },
-    tips: '叫外送平日兩張皆為 3.3%（CUBE 樂饗購 / Richart 好饗刷）；8 月生日月若 CUBE 慶生特店有 Uber Eats 則可衝 10%！'
+    tips: '叫外送平日兩張皆為 3.3%（CUBE 樂饗購 / Richart 好饗刷）；8 月生日月若 CUBE 慶生特店加碼則可衝 10%！'
   },
   {
     id: 'foodpanda',
@@ -383,7 +392,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['外送', '熊貓', '生鮮', '熊貓超市', 'foodpanda'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
       schemeName: '樂饗購',
@@ -394,7 +403,7 @@ export const MERCHANTS: Merchant[] = [
       scheme: 'dining',
       schemeName: '好饗刷',
       rate: 3.3,
-      note: '切換「好饗刷」享 3.3%'
+      note: '切換「好饗刷」外送平台享 3.3%'
     }
   },
   {
@@ -405,7 +414,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['咖啡', '下午茶', '飲品', 'starbucks'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
       schemeName: '樂饗購 (或集精選)',
@@ -420,30 +429,6 @@ export const MERCHANTS: Merchant[] = [
     },
     tips: '喝星巴克兩張卡切換對應方案（CUBE 樂饗購 / Richart 好饗刷）均享 3.3%！'
   },
-  {
-    id: 'restaurant-domestic',
-    name: '全台實體餐廳 / 聚餐 / 飯店Buffet / 燒肉火鍋',
-    category: 'dining_delivery',
-    categoryLabel: '外送 & 餐飲',
-    tags: ['餐飲', '火鍋', '燒肉', '聚餐', '王品', '響食天堂', '瓦城'],
-    validUntil: '2026/12/31',
-    lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/birthday/',
-    cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購 (生日月可切慶生月)',
-      rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '切換「樂饗購」實體餐飲享 3.3%！生日月指定特店高達 10%'
-    },
-    richart: {
-      scheme: 'dining',
-      schemeName: '好饗刷',
-      rate: 3.3,
-      note: 'Richart Life 切換「好饗刷」全台實體餐廳 3.3%'
-    },
-    tips: '外出聚餐兩張卡皆為 3.3%（CUBE 樂饗購 / Richart 好饗刷）；8 月生日慶生若在 CUBE 指定名店享 10% 小樹點！'
-  },
 
   // ================= 旅遊 & 交通 =================
   {
@@ -454,7 +439,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['日本', '日幣', '出國', '東京', '大阪', '藥妝', '電器', 'biccamera'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'japan',
       schemeName: '日本賞 (或趣旅行)',
@@ -463,44 +448,21 @@ export const MERCHANTS: Merchant[] = [
     },
     richart: {
       scheme: 'travel',
-      schemeName: '玩旅刷 (海外實體)',
+      schemeName: '玩旅刷 (或台新Pay+免手續費)',
       rate: 3.3,
-      note: 'Richart Life 切換「玩旅刷」海外消費享 3.3%'
+      note: 'Richart Life 切換「玩旅刷」海外消費享 3.3%（在 Lawson / BicCamera 用台新Pay+ 再享免 1.5% 手續費）'
     },
-    tips: '去日本實體門市結帳，切換 CUBE 卡【日本賞】享 3.5% 無上限，勝過 Richart「玩旅刷」的 3.3%！'
-  },
-  {
-    id: 'overseas-general',
-    name: '國外實體刷卡 / 海外線上外幣 (非日本)',
-    category: 'travel_traffic',
-    categoryLabel: '旅遊 & 交通',
-    tags: ['國外', '歐美', '韓國', '泰國', '外幣', '美金', '出國'],
-    validUntil: '2026/12/31',
-    lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
-    cube: {
-      scheme: 'travel',
-      schemeName: '趣旅行',
-      rate: 3.3,
-      note: '切換「趣旅行」國外實體享 3.3% 無上限'
-    },
-    richart: {
-      scheme: 'travel',
-      schemeName: '玩旅刷',
-      rate: 3.3,
-      note: '切換「玩旅刷」海外實體與線上交易享 3.3%'
-    },
-    tips: '國外一般刷卡，CUBE「趣旅行」與 Richart「玩旅刷」皆為 3.3% 回饋！'
+    tips: '日本實體刷卡首選 CUBE 卡【日本賞】享 3.5% 無上限！若在 BicCamera / Lawson 也可用 Richart 卡綁【台新 Pay+】免 1.5% 海外手續費！'
   },
   {
     id: 'high-speed-rail',
-    name: '台灣高鐵 (TSR)',
+    name: '台灣高鐵 (TSR) / 臺鐵',
     category: 'travel_traffic',
     categoryLabel: '旅遊 & 交通',
-    tags: ['高鐵', '車票', '返鄉', '出差'],
+    tags: ['高鐵', '台鐵', '火車', '車票', '返鄉', '出差'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'travel',
       schemeName: '趣旅行',
@@ -509,34 +471,57 @@ export const MERCHANTS: Merchant[] = [
     },
     richart: {
       scheme: 'everyday',
-      schemeName: '天天刷 (交通)',
+      schemeName: '天天刷 (通勤交通)',
       rate: 3.3,
-      note: '切換「天天刷」交通通路享 3.3%'
+      note: 'Richart Life 切換「天天刷」高鐵/臺鐵享 3.3%'
     },
-    tips: '買高鐵車票兩張卡皆享 3.3%（CUBE 趣旅行 / Richart 天天刷）。'
+    tips: '搭高鐵或臺鐵兩張卡皆享 3.3%（CUBE 趣旅行 / Richart 天天刷）。'
   },
   {
-    id: 'cpc-gas',
-    name: '台灣中油直營 / 加油站 (台塑/全國)',
+    id: 'uber-taxi',
+    name: 'Uber 叫車 / 台灣大車隊 / LINE GO / yoxi',
     category: 'travel_traffic',
     categoryLabel: '旅遊 & 交通',
-    tags: ['中油', '加油', '開車', '機車', '油錢', '台塑'],
+    tags: ['計程車', '叫車', 'uber', '55688', 'linego', 'yoxi'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/cg021/card001/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'selected',
-      schemeName: '集精選 (或台塑家)',
-      rate: 3.0,
-      note: '中油直營切「集精選」2%~3%，台塑加油站切「台塑家」3%'
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」享 3.3%'
     },
     richart: {
       scheme: 'everyday',
-      schemeName: '天天刷 (加油)',
+      schemeName: '天天刷 (通勤交通)',
       rate: 3.3,
-      note: 'Richart Life 切換「天天刷」加油站享 3.3%'
+      note: 'Richart 切換「天天刷」計程車叫車享 3.3%'
     },
-    tips: '加油首選【台新 Richart 卡】（切換天天刷享 3.3%），略勝 CUBE 集精選 (2.0%~3.0%)！'
+    tips: '叫車兩張卡皆享 3.3%（CUBE 趣旅行 / Richart 天天刷）。'
+  },
+  {
+    id: 'cpc-gas',
+    name: '台灣中油直營 / 全國加油站 / 充電樁',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['中油', '加油', '開車', '機車', '油錢', '全國加油', '充電'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 3.0,
+      note: '切換「集精選」中油直營享 2.0%~3.0%'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷 (加油充電)',
+      rate: 3.3,
+      note: 'Richart Life 切換「天天刷」中油直營/全國加油/充電站享 3.3%'
+    },
+    tips: '加油充電首選【台新 Richart 卡】（切換天天刷享 3.3%），略勝 CUBE 集精選 (2.0%~3.0%)！'
   },
   {
     id: 'klook-agoda',
@@ -546,7 +531,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['機票', '訂房', '長榮', '華航', '星宇', '票券', '行程', 'agoda', 'klook'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'travel',
       schemeName: '趣旅行',
@@ -555,9 +540,9 @@ export const MERCHANTS: Merchant[] = [
     },
     richart: {
       scheme: 'travel',
-      schemeName: '玩旅刷',
+      schemeName: '玩旅刷 (航空公司/訂房)',
       rate: 3.3,
-      note: '切換「玩旅刷」航空公司與訂房平台享 3.3%'
+      note: 'Richart 切換「玩旅刷」航空公司與訂房平台享 3.3%'
     },
     tips: '買機票或訂房兩張卡皆享 3.3%（CUBE 趣旅行 / Richart 玩旅刷），CUBE 刷機票附帶高額旅平險。'
   },
@@ -571,7 +556,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['全聯', '生鮮', '全支付', 'pxpay', '超市'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'selected',
       schemeName: '集精選',
@@ -579,22 +564,22 @@ export const MERCHANTS: Merchant[] = [
       note: '切換「集精選」方案享 2.0%~3.0% (實體卡/感應/全支付)'
     },
     richart: {
-      scheme: 'everyday',
-      schemeName: '天天刷 (或全聯實體0%)',
+      scheme: 'general',
+      schemeName: '一般門市直刷無回饋 (0%)',
       rate: 0.0,
-      note: '台新卡在全聯門市一般直刷通常為非一般消費 (0%)，需確認全支付加碼'
+      note: '台新卡在全聯門市一般刷卡為非一般消費 (0%)'
     },
-    tips: '🔥 去全聯買菜強烈建議刷【國泰 CUBE 卡】（切換集精選 2%~3%），台新卡在全聯通常無一般消費回饋！'
+    tips: '🔥 去全聯買菜強烈建議刷【國泰 CUBE 卡】（切換集精選 2%~3%），台新卡在全聯門市直刷無回饋！'
   },
   {
     id: 'carrefour',
-    name: '家樂福 (Carrefour)',
+    name: '家樂福 (Carrefour) / 大買家 / 唐吉訶德 / LOPIA',
     category: 'grocery_convenience',
     categoryLabel: '量販 & 超商',
-    tags: ['量販', '超市', '生活用品', '家樂福'],
+    tags: ['量販', '超市', '生活用品', '家樂福', 'lopia', '唐吉訶德'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'selected',
       schemeName: '集精選',
@@ -603,21 +588,21 @@ export const MERCHANTS: Merchant[] = [
     },
     richart: {
       scheme: 'everyday',
-      schemeName: '天天刷 (量販)',
+      schemeName: '天天刷 (日常採買)',
       rate: 3.3,
-      note: 'Richart Life 切換「天天刷」量販店享 3.3%'
+      note: 'Richart Life 切換「天天刷」量販超市享 3.3%'
     },
-    tips: '逛家樂福量販店，刷【台新 Richart 卡】（切換天天刷享 3.3%）回饋率最高！'
+    tips: '逛家樂福、唐吉訶德、LOPIA，刷【台新 Richart 卡】（切換天天刷享 3.3%）回饋率最高！'
   },
   {
     id: 'seven-eleven',
-    name: '7-ELEVEN / 全家便利商店 (超商)',
+    name: '全家便利商店 / 7-ELEVEN (超商)',
     category: 'grocery_convenience',
     categoryLabel: '量販 & 超商',
     tags: ['7-11', '全家', '超商', '便利商店', '咖啡', 'seven'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/cg021/card001/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'selected',
       schemeName: '集精選',
@@ -629,21 +614,21 @@ export const MERCHANTS: Merchant[] = [
       schemeName: 'Pay 著刷 (台新Pay 3.8%) / 天天刷 (3.3%)',
       rate: 3.8,
       payMethod: 'taishin_pay',
-      note: '在全家使用台新 Pay 享最高 3.8%！或切換「天天刷」超商享 3.3%'
+      note: '全家與 7-11 使用台新 Pay 享最高 3.8%！'
     },
-    tips: '超商結帳最神刷法：在全家打開【台新 Pay】綁 Richart 卡（Pay 著刷）拿 3.8%！'
+    tips: '超商結帳最神刷法：在全家或 7-11 打開【台新 Pay】綁 Richart 卡（Pay 著刷）拿 3.8%！'
   },
 
   // ================= 百貨 & 日系名店 =================
   {
     id: 'uniqlo-gu-muji',
-    name: 'UNIQLO / GU / 無印良品 (MUJI)',
+    name: 'UNIQLO / GU / ZARA / NET / lululemon',
     category: 'department_fashion',
     categoryLabel: '百貨 & 服飾',
-    tags: ['服飾', '衣服', '日系', '無印', 'uniqlo', 'gu', 'muji'],
+    tags: ['服飾', '衣服', '日系', '無印', 'uniqlo', 'gu', 'zara', 'net', 'lululemon'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.cathaybk.com.tw/cathaybk/personal/credit-card/cards/cube/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
       schemeName: '樂饗購 (生日月可切慶生月)',
@@ -661,13 +646,13 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'department-stores',
-    name: '新光三越 / SOGO / 遠東百貨 / 微風',
+    name: '新光三越 / SOGO / 遠東百貨 / 微風 / 台北101',
     category: 'department_fashion',
     categoryLabel: '百貨 & 服飾',
-    tags: ['百貨', '專櫃', '化妝品', '微風', '新光', 'sogo', '遠百'],
+    tags: ['百貨', '專櫃', '化妝品', '微風', '新光', 'sogo', '遠百', '101'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/cg021/card001/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
       schemeName: '樂饗購 (生日月可切慶生月)',
@@ -694,7 +679,7 @@ export const MERCHANTS: Merchant[] = [
     tags: ['其他', '一般', '無腦刷', '雜項'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: 'https://www.taishinbank.com.tw/TSB/personal/credit/intro/overview/cg021/card001/',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'general',
       schemeName: '一般消費 (或固定回饋 1.2%)',

@@ -4148,7 +4148,7 @@ export const MERCHANTS: Merchant[] = [
       scheme: 'dining',
       schemeName: '樂饗購 (🎂生日月特店最高 10%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
+      
       note: '切換「樂饗購」享 3.3% / 生日月官方特店享 10%'
     },
     richart: {
@@ -4223,7 +4223,7 @@ export const MERCHANTS: Merchant[] = [
       scheme: 'dining',
       schemeName: '樂饗購 (🎂生日月慶生月 10%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
+      
       note: '切換「樂饗購」享 3.0%~3.3%！🎂 8月生日當月切換「慶生月」專屬加碼最高 10%！'
     },
     richart: {
@@ -4247,7 +4247,7 @@ export const MERCHANTS: Merchant[] = [
       scheme: 'dining',
       schemeName: '樂饗購 (🎂生日月慶生月 10%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
+      
       note: '切換「樂饗購」享 3.0%~3.3%！🎂 生日月切換「慶生月」享 10%'
     },
     richart: {
@@ -4271,7 +4271,7 @@ export const MERCHANTS: Merchant[] = [
       scheme: 'dining',
       schemeName: '樂饗購 (🎂生日月慶生月 10%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
+      
       note: '切換「樂饗購」享 3.0%~3.3%！🎂 生日月切換「慶生月」享 10%'
     },
     richart: {
@@ -4295,7 +4295,7 @@ export const MERCHANTS: Merchant[] = [
       scheme: 'dining',
       schemeName: '樂饗購 (🎂生日月慶生月 10%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
+      
       note: '切換「樂饗購」享 3.0%~3.3%！🎂 生日月切換「慶生月」享 10%'
     },
     richart: {
@@ -6550,21 +6550,20 @@ export const MERCHANTS: Merchant[] = [
     tags: ['威秀', '威秀影城', '電影票', 'imax', '信義威秀', '板橋威秀'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
-      rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特約加碼通路，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'dining',
-      schemeName: '好饗刷 (購票娛樂 3.3%)',
+      schemeName: '好饗刷 (購票娛樂 3.3%) / 平日 7 折',
       rate: 3.3,
-      note: '切換「好饗刷」享 3.3% 台新 Point'
+      note: '切換「好饗刷」享 3.3% 台新 Point；週一至週四購票享 2D 全票 7 折！'
     },
-    tips: '看電影在 8 月生日當月刷 CUBE 卡【慶生月】享 10% 超高回饋！平日刷 3.3%。'
+    tips: '威秀影城非 CUBE 加碼通路（僅 0.3%）。推薦刷【台新 Richart 卡】切換【好饗刷】享 3.3% 回饋，週一至週四購票更享 7 折專屬優惠！'
   },
   {
     id: 'ambassador-theatres',
@@ -6574,20 +6573,20 @@ export const MERCHANTS: Merchant[] = [
     tags: ['國賓影城', '國賓', '電影票', '看電影'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
-      rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特約加碼通路，享一般消費 0.3%'
     },
     richart: {
       scheme: 'dining',
       schemeName: '好饗刷 (購票娛樂 3.3%)',
       rate: 3.3,
-      note: '切換「好饗刷」享 3.3%'
-    }
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+    tips: '國賓影城非 CUBE 特店（僅 0.3%），建議刷【台新 Richart 卡】切換【好饗刷】享 3.3% 回饋！'
   },
   {
     id: 'showtimes-cinemas',
@@ -8723,10 +8722,10 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      schemeName: '樂饗購 (3.3%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+      
+      note: '平日切換「樂饗購」享 3.3%'
     },
     richart: {
       scheme: 'chill',
@@ -8747,10 +8746,10 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      schemeName: '樂饗購 (3.3%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+      
+      note: '平日切換「樂饗購」享 3.3%'
     },
     richart: {
       scheme: 'dining',
@@ -8771,10 +8770,10 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      schemeName: '樂饗購 (3.3%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+      
+      note: '平日切換「樂饗購」享 3.3%'
     },
     richart: {
       scheme: 'dining',
@@ -8795,10 +8794,10 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'travel',
-      schemeName: '趣旅行 (🎂官方慶生特店 10%)',
+      schemeName: '趣旅行 (3.3%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「趣旅行」享 3.3%'
+      
+      note: '平日切換「趣旅行」享 3.3%'
     },
     richart: {
       scheme: 'travel',
@@ -9962,10 +9961,10 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      schemeName: '樂饗購 (3.3%)',
       rate: 3.3,
-      isBirthdaySpecial: true,
-      note: '🎂 8月生日月切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+      
+      note: '平日切換「樂饗購」享 3.3%'
     },
     richart: {
       scheme: 'chill',

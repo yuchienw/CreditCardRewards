@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { Merchant, UserContext } from '../types/merchant';
 import { evaluateBestCard } from '../utils/decisionEngine';
 import { 
@@ -9,7 +9,10 @@ import {
   Layers, 
   ExternalLink,
   Clock,
-  ShieldCheck
+  ShieldCheck,
+  Zap,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 
 interface MerchantDecisionCardProps {
@@ -25,6 +28,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   onOpenSchemeModal,
   onOpenSourceModal,
 }) => {
+  const [showAllPathways, setShowAllPathways] = useState(true);
   const decision = evaluateBestCard(merchant, context);
   const isCubeWinner = decision.winnerCard === 'cube';
   const isRichartWinner = decision.winnerCard === 'richart';
@@ -88,7 +92,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
                   }`}
                 >
                   <Trophy className="w-3.5 h-3.5" />
-                  <span>{isTie ? '雙卡並列最優' : '最佳推薦卡片'}</span>
+                  <span>{isTie ? '雙卡並列最優' : '當前條件最佳直刷推薦'}</span>
                 </span>
 
                 {context.isCurrentMonthBirthday && merchant.cube.isBirthdaySpecial && isCubeWinner && (
@@ -140,8 +144,60 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
           )}
         </div>
 
+        {/* ⚡ 達人情境加碼刷法攻略 (Multi-Scenario Pathways) */}
+        <div className="bg-linear-to-br from-indigo-50/90 via-slate-50 to-amber-50/50 rounded-2xl border border-indigo-200/80 p-5 space-y-3 shadow-xs">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="p-1 rounded-lg bg-indigo-600 text-white">
+                <Zap className="w-4 h-4" />
+              </div>
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base">
+                ⚡ 聰明刷法情境通道（依結帳地點與支付方式）：
+              </h4>
+            </div>
+            <button
+              onClick={() => setShowAllPathways(!showAllPathways)}
+              className="text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center space-x-1"
+            >
+              <span>{showAllPathways ? '收合' : '展開'}</span>
+              {showAllPathways ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+            </button>
+          </div>
+
+          <p className="text-xs text-slate-600">
+            即使此品牌非獨立加碼通路，只要透過以下結帳情境或支付方式，依然可享有超高回饋：
+          </p>
+
+          {showAllPathways && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+              {decision.pathways.map((path, idx) => (
+                <div
+                  key={idx}
+                  className="p-3 bg-white rounded-xl border border-slate-200/80 shadow-xs flex items-start space-x-3 hover:border-indigo-300 transition-colors"
+                >
+                  <span className="text-xl shrink-0 mt-0.5">{path.icon}</span>
+                  <div className="space-y-1 text-xs flex-1">
+                    <div className="flex items-center justify-between gap-1">
+                      <span className="font-bold text-slate-900">{path.title}</span>
+                      <span className="font-extrabold text-indigo-600 shrink-0 bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-100">
+                        {path.highlightText}
+                      </span>
+                    </div>
+                    <div className="text-[11px] text-slate-600 leading-snug">
+                      👉 <strong>{path.cardName}</strong>（{path.schemeName}）
+                    </div>
+                    <div className="text-[10px] text-slate-700 leading-tight">
+                      {path.note}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
         {/* Side-by-Side Comparison of both cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
           {/* CUBE Card box */}
           <div
             className={`p-4 rounded-2xl border transition-all ${

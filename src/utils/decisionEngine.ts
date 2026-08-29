@@ -1,6 +1,22 @@
 import type { Merchant, UserContext, BestCardResult } from '../types/merchant';
 
-export function evaluateBestCard(merchant: Merchant, context: UserContext): BestCardResult {
+export interface StrategyPathway {
+  icon: string;
+  title: string;
+  condition: string;
+  recommendedCard: 'cube' | 'richart';
+  cardName: string;
+  schemeName: string;
+  rate: number;
+  highlightText: string;
+  note: string;
+}
+
+export interface EnhancedDecisionResult extends BestCardResult {
+  pathways: StrategyPathway[];
+}
+
+export function evaluateBestCard(merchant: Merchant, context: UserContext): EnhancedDecisionResult {
   // 1. 計算國泰 CUBE 卡在該條件下的實際回饋率
   let cubeRate = merchant.cube.rate;
   let cubeSchemeName = merchant.cube.schemeName;
@@ -48,9 +64,66 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
     }
   }
 
-  // 3. 判定勝出者
+  // 3. 計算該商家的多情境刷法攻略 (Pathways / Strategies)
+  const pathways: StrategyPathway[] = [];
+
+  // 攻略 A: 百貨專櫃 + 生日月 (10.0%)
+  pathways.push({
+    icon: '🎂',
+    title: '生日當月 ＋ 百貨專櫃門市結帳',
+    condition: '在百貨專櫃結帳且為壽星月份',
+    recommendedCard: 'cube',
+    cardName: '國泰 CUBE 卡',
+    schemeName: '慶生月',
+    rate: 10.0,
+    highlightText: '最高 10.0% 小樹點',
+    note: '若該品牌設櫃於指定百貨（如新光三越、SOGO、遠百），生日當月切換 CUBE「慶生月」最高享 10%！'
+  });
+
+  // 攻略 B: 百貨專櫃 / Outlet 日常結帳 (3.3% ~ 3.8%)
+  pathways.push({
+    icon: '🏢',
+    title: '百貨專櫃門市 / Outlet 結帳',
+    condition: '門市位於新光三越、SOGO、遠百、微風、三井Outlet',
+    recommendedCard: 'richart',
+    cardName: '台新 Richart 卡 / CUBE 卡',
+    schemeName: '新光台新Pay (3.8%) / CUBE樂饗購 (3.3%) / Richart大筆刷 (3.3%)',
+    rate: 3.8,
+    highlightText: '3.3% ~ 3.8%',
+    note: '在新光三越用「台新 Pay」綁 Richart 刷享 3.8%；其他百貨專櫃刷 CUBE「樂饗購」或 Richart「大筆刷」享 3.3%！'
+  });
+
+  // 攻略 C: 綁定 LINE Pay 行動支付結帳 (2.3%)
+  pathways.push({
+    icon: '📲',
+    title: '使用 LINE Pay 掃碼結帳',
+    condition: '店家支援 LINE Pay 行動支付',
+    recommendedCard: 'richart',
+    cardName: '台新 Richart 卡',
+    schemeName: 'Pay 著刷 (LINE Pay)',
+    rate: 2.3,
+    highlightText: '2.3% 台新 Point',
+    note: '只要店家支援 LINE Pay，改用 Richart 卡切換「Pay 著刷」保底享有 2.3%！'
+  });
+
+  // 攻略 D: 週末六日結帳 (2.0%)
+  pathways.push({
+    icon: '🌴',
+    title: '選在週末六日結帳（實體店面 / 官網）',
+    condition: '週六或週日消費',
+    recommendedCard: 'richart',
+    cardName: '台新 Richart 卡',
+    schemeName: '假日刷',
+    rate: 2.0,
+    highlightText: '2.0% 台新 Point',
+    note: '一般獨立門市或官網直刷，選在週六週日刷 Richart 卡切換「假日刷」，全通路享 2.0% 無腦回饋！'
+  });
+
+  // 4. 判定勝出者
+  let baseResult: BestCardResult;
+
   if (cubeRate > richartRate) {
-    return {
+    baseResult = {
       merchant,
       winnerCard: 'cube',
       winnerRate: cubeRate,
@@ -63,7 +136,7 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
       runnerUpNote: richartNote,
     };
   } else if (richartRate > cubeRate) {
-    return {
+    baseResult = {
       merchant,
       winnerCard: 'richart',
       winnerRate: richartRate,
@@ -76,7 +149,7 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
       runnerUpNote: cubeNote,
     };
   } else {
-    return {
+    baseResult = {
       merchant,
       winnerCard: 'tie',
       winnerRate: cubeRate,
@@ -89,4 +162,9 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
       runnerUpNote: richartNote,
     };
   }
+
+  return {
+    ...baseResult,
+    pathways,
+  };
 }

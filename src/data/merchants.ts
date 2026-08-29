@@ -5,7 +5,32 @@ const CATHAY_OFFICIAL_URL = 'https://www.cathay-cube.com.tw/cathaybk/personal/pr
 const CATHAY_BIRTHDAY_URL = 'https://www.cathay-cube.com.tw/cathaybk/personal/product/credit-card/cards/cube-list';
 
 export const MERCHANTS: Merchant[] = [
-  // ================= 遊戲 & 影音串流 =================
+  // ================= 運動品牌 & 時尚服飾 =================
+  {
+    id: 'sports-brands-adidas-nike',
+    name: 'adidas / Nike / New Balance / PUMA / HOKA / lululemon',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ['adidas', '愛迪達', 'nike', '耐吉', 'nb', 'new balance', 'puma', 'hoka', 'lululemon', '運動鞋', '球鞋'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (百貨專櫃 / 生日月慶生月 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '若在百貨專櫃門市切換「樂饗購」3.3%！生日當月在百貨專櫃切換「慶生月」最高享 10% 小樹點！'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (運動品牌 5%) / 大筆刷 (3.3%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '直營專賣門市切換「Chill 刷」享 5.0%！在百貨專櫃切換「大筆刷」享 3.3%！'
+    },
+    tips: '買 adidas / Nike 球鞋運動服攻略：1. 生日當月去百貨專櫃刷 CUBE「慶生月」拿滿 10%！ 2. 專賣門市刷 Richart 卡切「Chill 刷」享 5%！ 3. 週末實體刷 Richart「假日刷」享 2.0%！ 4. 支援 LINE Pay 結帳切「Pay 著刷」享 2.3%！'
+  },
   {
     id: 'playstation',
     name: 'PlayStation (PSN / PS Store)',

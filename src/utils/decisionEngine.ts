@@ -64,73 +64,274 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
     }
   }
 
-  // 3. 計算該商家的多情境刷法攻略 (Pathways / Strategies)
+  // 3. 根據通路的實際屬性，精準生成專屬的「聰明刷法情境通道 (Pathways)」
   const pathways: StrategyPathway[] = [];
 
-  // 攻略 A: 百貨專櫃 + 生日月 (10.0%)
-  pathways.push({
-    icon: '🎂',
-    title: '生日當月 ＋ 百貨專櫃門市結帳',
-    condition: '門市位於新光三越、SOGO、遠東百貨、微風、台北101且為壽星月份',
-    recommendedCard: 'cube',
-    cardName: '國泰 CUBE 卡',
-    schemeName: '慶生月',
-    rate: 10.0,
-    highlightText: '最高 10.0% 小樹點',
-    note: '若該品牌設櫃於指定合作百貨，生日當月切換 CUBE「慶生月」特店方案最高享 10% 小樹點！'
-  });
+  // ================= 類型 A: 線上軟體訂閱 / AI / 遊戲串流 (Notion, ChatGPT, Netflix, Steam 等) =================
+  if (merchant.category === 'game_stream') {
+    // 專屬線上訂閱方案
+    pathways.push({
+      icon: '💻',
+      title: '線上訂閱與數位扣款',
+      condition: '綁定信用卡自動扣款訂閱',
+      recommendedCard: 'richart',
+      cardName: '台新 Richart 卡 / CUBE 卡',
+      schemeName: 'Richart 數趣刷 (3.3%) / CUBE 玩數位 (3.3%)',
+      rate: 3.3,
+      highlightText: '3.3% 回饋',
+      note: '切換 Richart「數趣刷」或 CUBE「玩數位」均享 3.3% 點數回饋。'
+    });
 
-  // 攻略 B: 新光三越專櫃 (3.8% 台新Pay)
-  pathways.push({
-    icon: '🏢',
-    title: '若在「新光三越」專櫃門市結帳',
-    condition: '使用台新 Pay 或 skm pay 結帳',
-    recommendedCard: 'richart',
-    cardName: '台新 Richart 卡',
-    schemeName: 'Pay 著刷 (台新Pay 3.8%)',
-    rate: 3.8,
-    highlightText: '3.8% 台新 Point',
-    note: '在新光三越各分館專櫃，打開「台新 Pay」綁 Richart 刷結帳直接拿滿 3.8%！'
-  });
+    // 只有官方明確列入慶生月特店的數位平台 (如 PlayStation / Nintendo) 才推薦慶生月
+    if (merchant.cube.isBirthdaySpecial) {
+      pathways.push({
+        icon: '🎂',
+        title: '壽星月份專屬特店加碼',
+        condition: '於 8 月生日當月消費',
+        recommendedCard: 'cube',
+        cardName: '國泰 CUBE 卡',
+        schemeName: '慶生月',
+        rate: 10.0,
+        highlightText: '最高 10.0% 小樹點',
+        note: '此平台為 CUBE 官方生日月指定特店，生日當月切換「慶生月」獨享 10% 超高回饋！'
+      });
+    }
 
-  // 攻略 C: SOGO / 遠百 / 微風 / 101 專櫃日常 (3.3%)
-  pathways.push({
-    icon: '🛍️',
-    title: '若在「SOGO / 遠東百貨 / 微風 / 101」專櫃結帳',
-    condition: '一般直刷或 Apple Pay / Google 錢包',
-    recommendedCard: 'cube',
-    cardName: 'CUBE 卡 / Richart 卡',
-    schemeName: 'CUBE 樂饗購 (3.3%) / Richart 大筆刷 (3.3%)',
-    rate: 3.3,
-    highlightText: '3.3% 回饋',
-    note: '平日在 SOGO、遠百、微風、101 購物，刷 CUBE「樂饗購」或 Richart「大筆刷」均享 3.3%！'
-  });
+    // 國外交易手續費提醒
+    pathways.push({
+      icon: '🌐',
+      title: '海外伺服器跨境交易提醒',
+      condition: '美金計價或海外交易',
+      recommendedCard: 'richart',
+      cardName: '雙卡皆適用',
+      schemeName: '海外交易 1.5% 手續費',
+      rate: 1.8,
+      highlightText: '實拿約 1.8%',
+      note: '國外線上交易扣除 1.5% 國際手續費後，實質淨賺約 1.8% 點數回饋。'
+    });
+  }
 
-  // 攻略 D: 綁定 LINE Pay 行動支付結帳 (2.3%)
-  pathways.push({
-    icon: '📲',
-    title: '店家支援 LINE Pay 掃碼結帳',
-    condition: '使用 LINE Pay 綁定信用卡付款',
-    recommendedCard: 'richart',
-    cardName: '台新 Richart 卡',
-    schemeName: 'Pay 著刷 (LINE Pay)',
-    rate: 2.3,
-    highlightText: '2.3% 台新 Point',
-    note: '只要店家支援 LINE Pay，改用 Richart 卡切換「Pay 著刷」保底享有 2.3%！'
-  });
+  // ================= 類型 B: 實體服飾 / 運動品牌 / 百貨品牌 (adidas, Nike, UNIQLO, 百貨專櫃) =================
+  else if (merchant.category === 'department_fashion') {
+    // 百貨專櫃 + 生日月
+    pathways.push({
+      icon: '🎂',
+      title: '若在「百貨專櫃」且為生日當月',
+      condition: '門市設於新光三越、SOGO、遠百等百貨內',
+      recommendedCard: 'cube',
+      cardName: '國泰 CUBE 卡',
+      schemeName: '慶生月',
+      rate: 10.0,
+      highlightText: '最高 10.0% 小樹點',
+      note: '若該專櫃開在指定合作百貨內，生日當月切換 CUBE「慶生月」享 10% 小樹點！'
+    });
 
-  // 攻略 E: 週末六日結帳 (2.0%)
-  pathways.push({
-    icon: '🌴',
-    title: '選在週末六日結帳（獨立街邊店 / 官方網站）',
-    condition: '週六或週日消費',
-    recommendedCard: 'richart',
-    cardName: '台新 Richart 卡',
-    schemeName: '假日刷',
-    rate: 2.0,
-    highlightText: '2.0% 台新 Point',
-    note: '獨立門市或官網直刷，選在週六週日刷 Richart 卡切換「假日刷」，全通路享 2.0% 無腦回饋！'
-  });
+    // 新光三越台新Pay
+    pathways.push({
+      icon: '🏢',
+      title: '若在「新光三越」各分館專櫃',
+      condition: '使用台新 Pay 或 skm pay 結帳',
+      recommendedCard: 'richart',
+      cardName: '台新 Richart 卡',
+      schemeName: 'Pay 著刷 (台新Pay 3.8%)',
+      rate: 3.8,
+      highlightText: '3.8% 台新 Point',
+      note: '新光三越各專櫃開啟「台新 Pay」綁 Richart 卡付款享高達 3.8%！'
+    });
+
+    // 其他百貨/Outlet
+    pathways.push({
+      icon: '🛍️',
+      title: '若在「SOGO / 遠百 / 微風 / Outlet」專櫃',
+      condition: '一般感應或直刷',
+      recommendedCard: 'cube',
+      cardName: 'CUBE 卡 / Richart 卡',
+      schemeName: 'CUBE 樂饗購 (3.3%) / Richart 大筆刷 (3.3%)',
+      rate: 3.3,
+      highlightText: '3.3% 回饋',
+      note: '平日在各大百貨專櫃刷卡，切換 CUBE「樂饗購」或 Richart「大筆刷」均享 3.3%。'
+    });
+
+    // 獨立專賣店 Chill 刷或週末
+    if (merchant.richart.isChillSpecial) {
+      pathways.push({
+        icon: '🏃',
+        title: '若在「直營專賣門市」實體直刷',
+        condition: '獨立街邊直營門市',
+        recommendedCard: 'richart',
+        cardName: '台新 Richart 卡',
+        schemeName: 'Chill 刷 (5.0%)',
+        rate: 5.0,
+        highlightText: '5.0% 台新 Point',
+        note: '在直營專賣門市切換「Chill 刷」享 5.0% 專屬加碼！'
+      });
+    }
+
+    // LINE Pay 結帳
+    pathways.push({
+      icon: '📲',
+      title: '門市支援 LINE Pay 掃碼付款',
+      condition: '使用 LINE Pay 綁定信用卡',
+      recommendedCard: 'richart',
+      cardName: '台新 Richart 卡',
+      schemeName: 'Pay 著刷 (LINE Pay)',
+      rate: 2.3,
+      highlightText: '2.3% 台新 Point',
+      note: '若門市支援 LINE Pay，Richart「Pay 著刷」保底享有 2.3%。'
+    });
+  }
+
+  // ================= 類型 C: 餐飲美食 / 手搖飲 / 火鍋燒肉 =================
+  else if (merchant.category === 'dining_delivery') {
+    if (merchant.richart.isChillSpecial) {
+      pathways.push({
+        icon: '🔥',
+        title: '實體門市內用 / 外帶直刷',
+        condition: '至門市消費',
+        recommendedCard: 'richart',
+        cardName: '台新 Richart 卡',
+        schemeName: 'Chill 刷 (10.0%)',
+        rate: 10.0,
+        highlightText: '10.0% 台新 Point',
+        note: '切換 Richart「Chill 刷」方案享 10.0% 最狂回饋！'
+      });
+    }
+
+    if (merchant.cube.isBirthdaySpecial) {
+      pathways.push({
+        icon: '🎂',
+        title: '生日當月慶生聚餐',
+        condition: '於 8 月生日當月消費',
+        recommendedCard: 'cube',
+        cardName: '國泰 CUBE 卡',
+        schemeName: '慶生月',
+        rate: 10.0,
+        highlightText: '10.0% 小樹點',
+        note: '生日當月切換 CUBE「慶生月」享 10% 小樹點！'
+      });
+    }
+
+    pathways.push({
+      icon: '📲',
+      title: '使用 LINE Pay 掃碼付款',
+      condition: '店家支援 LINE Pay 行動支付',
+      recommendedCard: 'richart',
+      cardName: '台新 Richart 卡',
+      schemeName: 'Pay 著刷 (LINE Pay)',
+      rate: 2.3,
+      highlightText: '2.3% 台新 Point',
+      note: '手搖或餐廳支援 LINE Pay，刷 Richart「Pay 著刷」享 2.3%。'
+    });
+
+    pathways.push({
+      icon: '🌴',
+      title: '週末聚餐結帳',
+      condition: '週六或週日消費',
+      recommendedCard: 'richart',
+      cardName: '台新 Richart 卡',
+      schemeName: '假日刷',
+      rate: 2.0,
+      highlightText: '2.0% 台新 Point',
+      note: '週末聚餐實體刷 Richart「假日刷」全通路 2.0% 無腦回饋！'
+    });
+  }
+
+  // ================= 類型 D: 網購電商 (蝦皮, momo, 酷澎, 淘寶) =================
+  else if (merchant.category === 'ecommerce') {
+    pathways.push({
+      icon: '🛒',
+      title: '線上刷卡結帳',
+      condition: '網購平台直刷',
+      recommendedCard: 'richart',
+      cardName: '台新 Richart 卡 / CUBE 卡',
+      schemeName: 'Richart 數趣刷 (3.3%) / CUBE 玩數位 (3.3%)',
+      rate: 3.3,
+      highlightText: '3.3% 回饋',
+      note: '切換 Richart「數趣刷」或 CUBE「玩數位」均享 3.3%。'
+    });
+
+    if (merchant.id === 'taobao') {
+      pathways.push({
+        icon: '🌏',
+        title: '淘寶跨境線上結帳',
+        condition: '海外跨境交易',
+        recommendedCard: 'richart',
+        cardName: '台新 Richart 卡',
+        schemeName: '玩旅刷 (海外線上)',
+        rate: 3.3,
+        highlightText: '3.3% 台新 Point',
+        note: '淘寶切換 Richart「玩旅刷」海外消費享 3.3%，優於 CUBE「玩數位」3.0%！'
+      });
+    }
+  }
+
+  // ================= 類型 E: 交通 / 加油 / 叫車 =================
+  else if (merchant.category === 'travel_traffic') {
+    pathways.push({
+      icon: '🚗',
+      title: '交通通勤與加油充電',
+      condition: '直刷或感應結帳',
+      recommendedCard: 'richart',
+      cardName: '台新 Richart 卡 (天天刷)',
+      schemeName: '天天刷 (3.3%)',
+      rate: 3.3,
+      highlightText: '3.3% 台新 Point',
+      note: '切換 Richart「天天刷」高鐵、台鐵、叫車、加油充電皆享 3.3%！'
+    });
+
+    if (merchant.id === 'japan-offline') {
+      pathways.push({
+        icon: '🗾',
+        title: '日本實體門市消費',
+        condition: '日本當地門市實體刷卡',
+        recommendedCard: 'cube',
+        cardName: '國泰 CUBE 卡',
+        schemeName: '日本賞',
+        rate: 3.5,
+        highlightText: '3.5% 小樹點',
+        note: '日本當地實體刷卡切換 CUBE「日本賞」享 3.5% 無上限！'
+      });
+    }
+  }
+
+  // ================= 類型 F: 未列出之自訂/一般消費 =================
+  else {
+    pathways.push({
+      icon: '🏢',
+      title: '若此店家設於百貨專櫃內',
+      condition: '門市在百貨內且生日當月',
+      recommendedCard: 'cube',
+      cardName: '國泰 CUBE 卡',
+      schemeName: '慶生月 (10%) / 樂饗購 (3.3%)',
+      rate: 10.0,
+      highlightText: '最高 10.0%',
+      note: '若該店位在百貨專櫃內，生日月切 CUBE「慶生月」享 10%，平日享 3.3%！'
+    });
+
+    pathways.push({
+      icon: '📲',
+      title: '若店家支援 LINE Pay 掃碼結帳',
+      condition: '使用 LINE Pay 綁定信用卡付款',
+      recommendedCard: 'richart',
+      cardName: '台新 Richart 卡',
+      schemeName: 'Pay 著刷 (LINE Pay)',
+      rate: 2.3,
+      highlightText: '2.3% 台新 Point',
+      note: '只要店家支援 LINE Pay，改用 Richart 卡「Pay 著刷」保底享有 2.3%！'
+    });
+
+    pathways.push({
+      icon: '🌴',
+      title: '選在週末六日結帳（實體店面 / 官網）',
+      condition: '週六或週日消費',
+      recommendedCard: 'richart',
+      cardName: '台新 Richart 卡',
+      schemeName: '假日刷',
+      rate: 2.0,
+      highlightText: '2.0% 台新 Point',
+      note: '一般獨立門市直刷，週六週日刷 Richart 卡切換「假日刷」享 2.0% 無腦回饋！'
+    });
+  }
 
   // 4. 判定勝出者
   let baseResult: BestCardResult;

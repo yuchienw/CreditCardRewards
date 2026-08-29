@@ -53,35 +53,9 @@ export const TopContextBar: React.FC<TopContextBarProps> = ({
           </span>
         </div>
 
-        {/* 3 Buttons in a Clean Single Row on Mobile, Flex on Desktop */}
+        {/* 3 Buttons in a Clean Single Row on Mobile, Flex on Desktop: 1. 壽星 -> 2. 等級 -> 3. 週末 */}
         <div className="grid grid-cols-3 gap-1.5 w-full sm:w-auto sm:flex sm:flex-wrap items-center">
-          {/* Automatic Weekend / Weekday detection with manual toggle */}
-          <button
-            onClick={toggleWeekend}
-            className={`flex items-center justify-center space-x-1 py-1 px-1.5 sm:px-3 rounded-xl sm:rounded-full text-[11px] sm:text-xs font-bold transition-all border cursor-pointer active:scale-95 text-center ${
-              context.isWeekend
-                ? 'bg-emerald-600 text-white border-emerald-400 shadow-xs shadow-emerald-500/20'
-                : 'bg-slate-800 text-slate-300 border-slate-700 hover:text-white hover:border-slate-500'
-            }`}
-            title="系統已自動根據今日日期判定！點擊可手動切換平日/週末測試"
-          >
-            <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-300 shrink-0" />
-            <span className="truncate">
-              {context.isWeekend ? (
-                <>
-                  <span className="sm:hidden">🌴 週末 2%</span>
-                  <span className="hidden sm:inline">🌴 今日{currentDayName} (週末 2%)</span>
-                </>
-              ) : (
-                <>
-                  <span className="sm:hidden">💼 {currentDayName} 1%</span>
-                  <span className="hidden sm:inline">💼 今日{currentDayName} (平日 1%)</span>
-                </>
-              )}
-            </span>
-          </button>
-
-          {/* Birthday toggle button */}
+          {/* 1. Birthday toggle button (壽星移到最前面) */}
           <button
             onClick={toggleBirthday}
             className={`flex items-center justify-center space-x-1 py-1 px-1.5 sm:px-3 rounded-xl sm:rounded-full text-[11px] sm:text-xs font-bold transition-all border cursor-pointer active:scale-95 text-center ${
@@ -107,7 +81,7 @@ export const TopContextBar: React.FC<TopContextBarProps> = ({
             </span>
           </button>
 
-          {/* CUBE Level switcher (原版配色，顯示 Lv1/Lv2/Lv3) */}
+          {/* 2. CUBE Level switcher (會員等級放中間) */}
           <button
             onClick={cycleCubeLevel}
             className={`flex items-center justify-center space-x-1 py-1 px-1.5 sm:px-3 rounded-xl sm:rounded-full text-[11px] sm:text-xs font-bold transition-all border cursor-pointer active:scale-95 text-center ${
@@ -124,6 +98,32 @@ export const TopContextBar: React.FC<TopContextBarProps> = ({
               {context.cubeLevel === 'level3' && '💳 Lv3 (3.3%)'}
               {context.cubeLevel === 'level2' && '💳 Lv2 (3.0%)'}
               {context.cubeLevel === 'level1' && '💳 Lv1 (2.0%)'}
+            </span>
+          </button>
+
+          {/* 3. Automatic Weekend / Weekday detection (週末移到最後面) */}
+          <button
+            onClick={toggleWeekend}
+            className={`flex items-center justify-center space-x-1 py-1 px-1.5 sm:px-3 rounded-xl sm:rounded-full text-[11px] sm:text-xs font-bold transition-all border cursor-pointer active:scale-95 text-center ${
+              context.isWeekend
+                ? 'bg-emerald-600 text-white border-emerald-400 shadow-xs shadow-emerald-500/20'
+                : 'bg-slate-800 text-slate-300 border-slate-700 hover:text-white hover:border-slate-500'
+            }`}
+            title="系統已自動根據今日日期判定！點擊可手動切換平日/週末測試"
+          >
+            <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-300 shrink-0" />
+            <span className="truncate">
+              {context.isWeekend ? (
+                <>
+                  <span className="sm:hidden">🌴 週末 2%</span>
+                  <span className="hidden sm:inline">🌴 今日{currentDayName} (週末 2%)</span>
+                </>
+              ) : (
+                <>
+                  <span className="sm:hidden">💼 {currentDayName} 1%</span>
+                  <span className="hidden sm:inline">💼 今日{currentDayName} (平日 1%)</span>
+                </>
+              )}
             </span>
           </button>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import type { Merchant } from '../types/merchant';
 import { checkValidity } from '../utils/validityChecker';
 import { 
@@ -50,25 +50,29 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
   favorites,
   onToggleFavorite,
 }) => {
-  const filteredMerchants = merchants.filter((m) => {
-    // 1. 若有搜尋關鍵字，一律以全資料庫「全部通路」進行全局搜尋
-    if (searchQuery.trim() !== '') {
-      const q = searchQuery.trim().toLowerCase();
-      const matchName = m.name.toLowerCase().includes(q);
-      const matchTags = m.tags.some((t) => t.toLowerCase().includes(q));
-      const matchCategory = m.categoryLabel.toLowerCase().includes(q);
-      return matchName || matchTags || matchCategory;
-    }
+  const filteredMerchants = useMemo(() => {
+    return merchants
+      .filter((m) => {
+        // 1. 若有搜尋關鍵字，一律以全資料庫「全部通路」進行全局搜尋
+        if (searchQuery.trim() !== '') {
+          const q = searchQuery.trim().toLowerCase();
+          const matchName = m.name.toLowerCase().includes(q);
+          const matchTags = m.tags.some((t) => t.toLowerCase().includes(q));
+          const matchCategory = m.categoryLabel.toLowerCase().includes(q);
+          return matchName || matchTags || matchCategory;
+        }
 
-    // 2. 無搜尋關鍵字時，依分類標籤進行篩選（常用通路、遊戲、餐飲等）
-    if (selectedCategory === 'favorites') {
-      return favorites.includes(m.id);
-    } else if (selectedCategory !== 'all') {
-      return m.category === selectedCategory;
-    }
+        // 2. 無搜尋關鍵字時，依分類標籤進行篩選（常用通路、遊戲、餐飲等）
+        if (selectedCategory === 'favorites') {
+          return favorites.includes(m.id);
+        } else if (selectedCategory !== 'all') {
+          return m.category === selectedCategory;
+        }
 
-    return true;
-  });
+        return true;
+      })
+      .sort((a, b) => a.name.localeCompare(b.name, 'zh-Hant', { numeric: true, sensitivity: 'base' }));
+  }, [merchants, searchQuery, selectedCategory, favorites]);
 
   const handleSearchSubmit = () => {
     if (filteredMerchants.length > 0) {

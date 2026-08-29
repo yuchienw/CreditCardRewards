@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { MERCHANTS } from './data/merchants';
 import type { Merchant, UserContext } from './types/merchant';
 import { TopContextBar } from './components/TopContextBar';
@@ -27,6 +27,16 @@ export function App() {
   const [isSchemeOpen, setIsSchemeOpen] = useState(false);
   const [isSourceOpen, setIsSourceOpen] = useState(false);
   const [isExpiryAlertOpen, setIsExpiryAlertOpen] = useState(false);
+
+  // 結果區域的滾動錨點 Ref
+  const resultSectionRef = useRef<HTMLDivElement>(null);
+
+  // 滾動到結果區塊
+  const scrollToResult = () => {
+    setTimeout(() => {
+      resultSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  };
 
   // 根據搜尋字串或選取的 ID 動態計算出當前的 Merchant
   const activeMerchant = useMemo<Merchant>(() => {
@@ -79,6 +89,12 @@ export function App() {
       setIsExpiryAlertOpen(true);
     }
   }, [activeMerchant.id, activeMerchant.validUntil]);
+
+  const handleSelectMerchant = (merchant: Merchant) => {
+    setSearchQuery('');
+    setSelectedMerchantId(merchant.id);
+    scrollToResult();
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-100 text-slate-900 font-sans">
@@ -138,10 +154,7 @@ export function App() {
           <QuickMerchantGrid
             merchants={MERCHANTS}
             selectedMerchantId={searchQuery.trim() ? '' : selectedMerchantId}
-            onSelectMerchant={(m) => {
-              setSearchQuery('');
-              setSelectedMerchantId(m.id);
-            }}
+            onSelectMerchant={handleSelectMerchant}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
             selectedCategory={selectedCategory}
@@ -149,12 +162,15 @@ export function App() {
           />
         </section>
 
-        {/* 下方區塊：查詢結果 (決策卡片) */}
-        <section className="space-y-2 pt-2">
+        {/* 下方區塊：查詢結果 (決策卡片) - 設有自動平滑滾動錨點 */}
+        <section ref={resultSectionRef} className="space-y-2 pt-4 scroll-mt-20">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider">
-              🎯 最佳刷卡決策結果：
+            <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center space-x-1.5">
+              <span>🎯 最佳刷卡決策結果：</span>
             </h3>
+            <span className="text-xs text-indigo-600 font-semibold bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-100">
+              即時精算中
+            </span>
           </div>
 
           <MerchantDecisionCard

@@ -68,6 +68,11 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && filteredMerchants.length > 0) {
+                onSelectMerchant(filteredMerchants[0]);
+              }
+            }}
             placeholder="搜尋通路 (例如: 50嵐, adidas, PlayStation, LINE Pay, 蝦皮, 全聯, 新光三越)..."
             className="w-full px-3 py-2.5 bg-transparent border-none text-slate-900 placeholder:text-slate-400 focus:outline-hidden font-medium text-sm sm:text-base"
           />

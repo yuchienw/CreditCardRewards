@@ -5010,8 +5010,961 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 📱 行動支付與一般消費 (全部獨立無斜線)
+  // 🎬 影城、主題樂園與購票休閒 (全部獨立單一條目)
   // =========================================================================
+  {
+    id: 'vieshow-cinemas',
+    name: '威秀影城 (VieShow Cinemas)',
+    category: 'dining_delivery',
+    categoryLabel: '休閒 & 娛樂',
+    tags: ['威秀', '威秀影城', '電影票', 'imax', '信義威秀', '板橋威秀'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (購票娛樂 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+    tips: '看電影在 8 月生日當月刷 CUBE 卡【慶生月】享 10% 超高回饋！平日刷 3.3%。'
+  },
+  {
+    id: 'ambassador-theatres',
+    name: '國賓影城 (Ambassador Theatres)',
+    category: 'dining_delivery',
+    categoryLabel: '休閒 & 娛樂',
+    tags: ['國賓影城', '國賓', '電影票', '看電影'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (購票娛樂 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'showtimes-cinemas',
+    name: '秀泰影城 (Showtimes Cinemas)',
+    category: 'dining_delivery',
+    categoryLabel: '休閒 & 娛樂',
+    tags: ['秀泰影城', '秀泰', '電影票', '樹林秀泰', '台中文心秀泰'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (購票娛樂 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'miramar-cinemas',
+    name: '美麗華影城 (Miramar Cinemas)',
+    category: 'dining_delivery',
+    categoryLabel: '休閒 & 娛樂',
+    tags: ['美麗華影城', '大直美麗華', 'imax', '電影票'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (購票娛樂 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'tokyo-disney',
+    name: '東京迪士尼樂園 (Tokyo Disney Resort)',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['東京迪士尼', '迪士尼樂園', 'disney', '日本旅遊', '門票', '海洋迪士尼'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「趣旅行」享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷 (海外消費 3.3%)',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3% 台新 Point'
+    },
+    tips: '生日月去東京迪士尼買門票或園區刷卡，刷 CUBE【慶生月】獨享 10% 小樹點！'
+  },
+  {
+    id: 'usj-japan',
+    name: '日本環球影城 (Universal Studios Japan)',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['環球影城', 'usj', '大阪環球', '瑪利歐園區', '哈利波特', '日本旅遊'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「趣旅行」享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷 (海外消費 3.3%)',
+      rate: 3.3,
+      note: '切換「玩旅刷」享 3.3%'
+    }
+  },
+
+  // =========================================================================
+  // 📚 動漫、電子書與韓流追星 (台新 Chill 刷 5% 官方特店)
+  // =========================================================================
+  {
+    id: 'book-walker',
+    name: 'BOOK WALKER (台灣漫讀電子書)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['book walker', 'bookwalker', '漫畫', '輕小說', '角川', '電子書'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (熬夜追更 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'animate-tw',
+    name: 'Animate (安利美特動漫周邊)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['animate', '安利美特', '動漫', '周邊', '西門町', '模型', '漫畫'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (熬夜追更 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'rakuten-kobo',
+    name: '樂天 KOBO (電子書商城)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['kobo', '樂天kobo', '電子書', '閱讀器'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (熬夜追更 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'readmoo',
+    name: 'Readmoo 讀墨 (繁體中文電子書)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['readmoo', '讀墨', 'mooink', '繁中電子書', '閱讀器'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (熬夜追更 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'weverse-shop',
+    name: 'Weverse Shop (韓星官方周邊)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['weverse', 'weverse shop', '防彈少年團', 'bts', 'seventeen', 'newjeans', '手燈', '專輯'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位 (或趣旅行)',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (應援追星 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'k-monstar',
+    name: 'K-MONSTAR (韓流偶像周邊)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['k-monstar', 'kmonstar', '韓流專輯', '小卡', '偶像周邊'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (應援追星 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'will-music',
+    name: '微樂客 (Will Music)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['微樂客', 'will music', '韓專代購', '歐美黑膠', '唱片行'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (應援追星 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'five-music',
+    name: '五大唱片 (5Music)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['五大唱片', '5music', '唱片行', '專輯', '海報'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (應援追星 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'fairy-tree',
+    name: '仙女樹 (韓星應援代購)',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['仙女樹', '韓星代購', '應援物', '手燈'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (應援追星 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+
+  // =========================================================================
+  // 🏋️‍♂️ 體態養成、皮拉提斯與營養保健 (台新 Chill 刷 5% 官方特店)
+  // =========================================================================
+  {
+    id: 'kx-pilates',
+    name: 'KX PILATES (動態皮拉提斯)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ['kx pilates', '皮拉提斯', '核心訓練', '器械皮拉提斯'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (體態養成 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'titor-fitness',
+    name: '虎鐵健身 (Titor Fitness)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ['虎鐵健身', 'titor fitness', '一對一健身', '教練課'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (體態養成 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: '17fit-platform',
+    name: '17FIT (運動線上預約平台)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 服飾',
+    tags: ['17fit', '運動預約', '瑜珈預約', '健身預約'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (體態養成 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'better-health-tw',
+    name: '好好生醫 (Better Health)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['好好生醫', '理科太太', '太空人膠囊', '燕窩酸', '保健品'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (營養補給 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'dietician-light-food',
+    name: '營養師輕食 (Dietician)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['營養師輕食', '江欣樺', '益生菌', '魚油', '保健食品'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (營養補給 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'popcare',
+    name: 'POPCARE 好在乎 (客製化保健品)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['popcare', '好在乎', '維他命', '保健品'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (營養補給 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'vitabox',
+    name: 'VITABOX (維他盒子天然保健品)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['vitabox', '維他盒子', '天然保健品', '葉黃素', '益生菌'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (營養補給 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'myprotein-uk',
+    name: 'MYPROTEIN (英國乳清蛋白官方官網)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['myprotein', '英國乳清', '高蛋白', '健身補品', '乳清蛋白'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位 (或趣旅行 3.3%)',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (營養補給 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+  {
+    id: 'urmart',
+    name: 'UrMart (優馬選品健康市集)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['urmart', '優馬選品', '燕麥奶', '高蛋白零食', '健康食品'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (營養補給 5.0%)',
+      rate: 5.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+    }
+  },
+
+  // =========================================================================
+  // 🍸 人氣酒吧與早午餐 (台新 Chill 刷 10% 官方特店)
+  // =========================================================================
+  {
+    id: 'cafe-acme',
+    name: 'CAFE ACME (早午餐與質感咖啡)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['cafe acme', 'acme', '早午餐', '士林acme', '北美館acme', '網美咖啡'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (歡聚微醺 10.0%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    }
+  },
+  {
+    id: 'the-antipodean',
+    name: 'The Antipodean (早午餐與巴西莓碗)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['the antipodean', 'antipodean', '澳洲早午餐', '巴西莓碗', '內湖早午餐', '富錦街'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (歡聚微醺 10.0%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    }
+  },
+  {
+    id: 'fake-sober',
+    name: 'Fake Sober (信義區人氣街頭酒吧)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['fake sober', '信義區酒吧', 'att4fun', '調酒', '街頭餐酒'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (歡聚微醺 10.0%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    }
+  },
+  {
+    id: 'bar-tcrc',
+    name: 'Bar TCRC (台南老屋前科累累酒吧)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['tcrc', 'bar tcrc', '台南酒吧', '亞洲50大酒吧', '老屋調酒'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (歡聚微醺 10.0%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    }
+  },
+  {
+    id: 'bar-home',
+    name: 'Bar Home (台南洋房餐酒館)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['bar home', '台南酒吧', '老洋房酒吧', '調酒餐酒'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (歡聚微醺 10.0%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    }
+  },
+  {
+    id: 'phowa-bar',
+    name: 'Phowa (台南新概念酒吧)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['phowa', 'tcrc二店', '台南酒吧', '特色調酒'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (歡聚微醺 10.0%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    }
+  },
+  {
+    id: 'moonrock-bar',
+    name: 'MOONROCK (台南知名沉浸酒吧)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['moonrock', '台南酒吧', '亞洲50大酒吧', '設計師酒吧'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (歡聚微醺 10.0%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    }
+  },
+
+  // =========================================================================
+  // 🏪 超市量販、3C 電子與台塑石油 (天天刷 3.3% / 台新Pay 3.8% / 台塑家 3.0%)
+  // =========================================================================
+  {
+    id: 'rt-mart',
+    name: '大潤發 (RT-MART)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['大潤發', 'rt mart', '量販', '大賣場', '超市', '全聯集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '全支付 (3.0%)',
+      rate: 3.0,
+      note: '切換「全支付」方案享 3.0%'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷 (日常採買 3.3%)',
+      rate: 3.3,
+      note: '切換「天天刷」量販享 3.3%'
+    }
+  },
+  {
+    id: 'simple-mart',
+    name: '美廉社 (Simple Mart)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['美廉社', 'simple mart', '社區超市', '啤酒', '雜貨'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '集精選',
+      rate: 2.0,
+      note: '切換「集精選」享 2.0%'
+    },
+    richart: {
+      scheme: 'pay',
+      schemeName: 'Pay 著刷 (台新Pay 3.8%) / 天天刷 (3.3%)',
+      rate: 3.8,
+      payMethod: 'taishin_pay',
+      note: '在美廉社使用台新 Pay 享高達 3.8%！直刷切換「天天刷」享 3.3%'
+    }
+  },
+  {
+    id: 'tsannkuen-3c',
+    name: '燦坤 3C (Tsann Kuen)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['燦坤', '燦坤3c', '黃色鬼屋', '家電', '筆電', '冷氣', '電視'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'pay',
+      schemeName: 'Pay 著刷 (台新Pay 3.8%) / 天天刷 (3.3%)',
+      rate: 3.8,
+      payMethod: 'taishin_pay',
+      note: '在燦坤使用台新 Pay 享高達 3.8%！直刷切換「天天刷」享 3.3%'
+    }
+  },
+  {
+    id: 'elife-mall',
+    name: '全國電子 (Digital City)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['全國電子', '揪感心', 'digital city', '家電', '冰箱', '洗衣機'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'pay',
+      schemeName: 'Pay 著刷 (台新Pay 3.8%) / 天天刷 (3.3%)',
+      rate: 3.8,
+      payMethod: 'taishin_pay',
+      note: '在全國電子使用台新 Pay 享高達 3.8%！直刷切換「天天刷」享 3.3%'
+    }
+  },
+  {
+    id: 'senao-international',
+    name: '神腦國際 (Senao)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['神腦', '神腦國際', '中華電信', '手機維修', '買手機'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'pay',
+      schemeName: 'Pay 著刷 (台新Pay 3.8%) / 天天刷 (3.3%)',
+      rate: 3.8,
+      payMethod: 'taishin_pay',
+      note: '在神腦使用台新 Pay 享高達 3.8%！直刷切換「天天刷」享 3.3%'
+    }
+  },
+  {
+    id: 'formosa-gas',
+    name: '台塑石油加油站',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['台塑', '台塑石油', '加油', '95plus', '98', '柴油'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '台塑家 (3.0%)',
+      rate: 3.0,
+      note: '切換「台塑家」方案享 3.0%'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷 (加油充電 3.3%)',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3% 台新 Point'
+    }
+  },
+  {
+    id: 'taiya-gas',
+    name: '台亞加油站 (Formosa Oil)',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['台亞', '台亞加油站', '台塑加油', '帝國'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '台塑家 (3.0%)',
+      rate: 3.0,
+      note: '切換「台塑家」方案享 3.0%'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷 (加油充電 3.3%)',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3%'
+    }
+  },
+  {
+    id: 'fortune-gas',
+    name: '福懋加油站',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['福懋', '福懋加油站', '加油', '台塑油品'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '台塑家 (3.0%)',
+      rate: 3.0,
+      note: '切換「台塑家」方案享 3.0%'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷 (加油充電 3.3%)',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3%'
+    }
+  },
+  {
+    id: 'formosa-biomedical',
+    name: '台塑生醫 (FORTE 與 Dr\'s Formula 實體門市)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['台塑生醫', 'forte', 'drs formula', '洗髮精', '保養品'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '台塑家 (3.0%)',
+      rate: 3.0,
+      note: '切換「台塑家」方案享 3.0%'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷 (日常採買 3.3%)',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3%'
+    }
+  },
+  {
+    id: 'chang-gung-biotech',
+    name: '長庚生技 (Chang Gung Biotech)',
+    category: 'grocery_convenience',
+    categoryLabel: '量販 & 超商',
+    tags: ['長庚生技', '長庚', '養生保健', '牛樟芝', '冬蟲夏草'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'selected',
+      schemeName: '台塑家 (3.0%)',
+      rate: 3.0,
+      note: '切換「台塑家」方案享 3.0%'
+    },
+    richart: {
+      scheme: 'everyday',
+      schemeName: '天天刷 (日常採買 3.3%)',
+      rate: 3.3,
+      note: '切換「天天刷」享 3.3%'
+    }
+  },
   {
     id: 'line-pay',
     name: 'LINE Pay (連線商業)',

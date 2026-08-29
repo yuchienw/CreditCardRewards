@@ -73,13 +73,28 @@ export function App() {
 
   // 根據搜尋字串或選取的 ID 動態計算出當前的 Merchant
   const activeMerchant = useMemo<Merchant>(() => {
+    const selected = MERCHANTS.find((m) => m.id === selectedMerchantId);
+
     // 1. 若有搜尋字串
     if (searchQuery.trim()) {
       const q = searchQuery.trim().toLowerCase();
+
+      // 若目前選取的 merchant 剛好符合搜尋條件，優先維持選取
+      if (
+        selected &&
+        (selected.name.toLowerCase().includes(q) ||
+          selected.tags.some((t) => t.toLowerCase().includes(q)) ||
+          selected.categoryLabel.toLowerCase().includes(q))
+      ) {
+        return selected;
+      }
+
+      // 否則尋找第一個匹配的
       const match = MERCHANTS.find(
         (m) =>
           m.name.toLowerCase().includes(q) ||
-          m.tags.some((t) => t.toLowerCase().includes(q))
+          m.tags.some((t) => t.toLowerCase().includes(q)) ||
+          m.categoryLabel.toLowerCase().includes(q)
       );
       if (match) {
         return match;
@@ -111,8 +126,7 @@ export function App() {
     }
 
     // 2. 若無搜尋字串，返回選取的 Merchant
-    const found = MERCHANTS.find((m) => m.id === selectedMerchantId);
-    return found || MERCHANTS[0];
+    return selected || MERCHANTS[0];
   }, [searchQuery, selectedMerchantId]);
 
   // 當選取的通路已過期時，自動跳出 Popup 彈窗警告
@@ -124,7 +138,7 @@ export function App() {
   }, [activeMerchant.id, activeMerchant.validUntil]);
 
   const handleSelectMerchant = (merchant: Merchant) => {
-    setSearchQuery('');
+    // 保留搜尋結果，不主動清空 searchQuery！
     setSelectedMerchantId(merchant.id);
     scrollToResult();
   };
@@ -186,7 +200,7 @@ export function App() {
 
           <QuickMerchantGrid
             merchants={MERCHANTS}
-            selectedMerchantId={searchQuery.trim() ? '' : selectedMerchantId}
+            selectedMerchantId={selectedMerchantId}
             onSelectMerchant={handleSelectMerchant}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}

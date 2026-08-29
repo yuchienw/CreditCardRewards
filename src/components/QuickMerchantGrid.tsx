@@ -58,34 +58,70 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
     return true;
   });
 
+  const handleSearchSubmit = () => {
+    if (filteredMerchants.length > 0) {
+      onSelectMerchant(filteredMerchants[0]);
+    }
+  };
+
   return (
     <div className="space-y-4">
-      {/* Search Input */}
+      {/* Search Input with Dedicated Submit Button */}
       <div className="relative">
-        <div className="relative flex items-center bg-white rounded-2xl border-2 border-indigo-200/80 shadow-md p-1.5 focus-within:border-indigo-600 focus-within:ring-2 focus-within:ring-indigo-500/20 transition-all">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSearchSubmit();
+          }}
+          className="relative flex items-center bg-white rounded-2xl border-2 border-indigo-200/80 shadow-md p-1.5 focus-within:border-indigo-600 focus-within:ring-2 focus-within:ring-indigo-500/20 transition-all"
+        >
           <Search className="w-5 h-5 text-indigo-500 ml-3 shrink-0" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' && filteredMerchants.length > 0) {
-                onSelectMerchant(filteredMerchants[0]);
-              }
-            }}
-            placeholder="搜尋通路 (例如: 50嵐, adidas, PlayStation, LINE Pay, 蝦皮, 全聯, 新光三越)..."
+            placeholder="搜尋通路 (例如: 50嵐, 燒肉, 牛肉麵, PlayStation, 蝦皮, 全聯, 新光三越)..."
             className="w-full px-3 py-2.5 bg-transparent border-none text-slate-900 placeholder:text-slate-400 focus:outline-hidden font-medium text-sm sm:text-base"
           />
           {searchQuery && (
             <button
+              type="button"
               onClick={() => onSearchChange('')}
-              className="p-1.5 mr-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100"
+              className="p-1.5 mr-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition-colors"
+              title="清除搜尋"
             >
               <X className="w-4 h-4" />
             </button>
           )}
-        </div>
+          <button
+            type="submit"
+            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-sm shrink-0 flex items-center gap-1.5"
+          >
+            <Search className="w-3.5 h-3.5" />
+            <span>搜尋送出</span>
+          </button>
+        </form>
       </div>
+
+      {/* Persistent Search Results Status Bar */}
+      {searchQuery.trim() !== '' && (
+        <div className="flex items-center justify-between bg-indigo-50/80 border border-indigo-100 px-3.5 py-2 rounded-xl text-xs text-indigo-900">
+          <div className="flex items-center gap-2">
+            <span className="font-semibold">
+              🔍 搜尋「<span className="text-indigo-600 font-bold">{searchQuery}</span>」：
+            </span>
+            <span>
+              共找到 <strong className="text-indigo-700 text-sm">{filteredMerchants.length}</strong> 個相符通路（點擊任一卡片即可查看決策）
+            </span>
+          </div>
+          <button
+            onClick={() => onSearchChange('')}
+            className="text-xs font-bold text-indigo-600 hover:text-indigo-800 underline underline-offset-2 ml-2 shrink-0 cursor-pointer"
+          >
+            清除搜尋結果
+          </button>
+        </div>
+      )}
 
       {/* Category Pills Bar */}
       <div className="overflow-x-auto no-scrollbar pb-1">

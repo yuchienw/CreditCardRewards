@@ -5,11 +5,11 @@ const CATHAY_OFFICIAL_URL = 'https://www.cathay-cube.com.tw/cathaybk/personal/pr
 
 export const MERCHANTS: Merchant[] = [
   // =========================================================================
-  // 🎮 遊戲平台、AI 服務與數位 3C (100% 單一獨立條目)
+  // 🎮 遊戲主機、AI 與數位 3C
   // =========================================================================
   {
     id: 'playstation',
-    name: 'PlayStation (PSN / PS Store)',
+    name: 'PlayStation (PSN 數位商城)',
     category: 'game_stream',
     categoryLabel: '遊戲 & 影音',
     tags: ['psn', 'ps5', 'ps4', '索尼', '主機遊戲', 'sony', 'playstation', '遊戲'],
@@ -33,7 +33,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'nintendo',
-    name: 'Nintendo eShop (任天堂)',
+    name: 'Nintendo eShop (任天堂商城)',
     category: 'game_stream',
     categoryLabel: '遊戲 & 影音',
     tags: ['switch', '任天堂', 'eshop', '瑪利歐', '薩爾達', 'nintendo', '主機遊戲'],
@@ -79,7 +79,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'mycard',
-    name: 'MyCard',
+    name: 'MyCard 點數卡',
     category: 'game_stream',
     categoryLabel: '遊戲 & 影音',
     tags: ['mycard', '智冠', '點數卡', '課金'],
@@ -232,11 +232,11 @@ export const MERCHANTS: Merchant[] = [
     }
   },
   {
-    id: 'apple-services',
-    name: 'Apple 直營店 / Apple 官網 / App Store',
+    id: 'apple-store-online',
+    name: 'Apple 直營店與官方商城',
     category: 'game_stream',
     categoryLabel: '遊戲 & 影音',
-    tags: ['apple', '蘋果', 'iphone', 'mac', 'ipad', 'app store', '直營店'],
+    tags: ['apple', '蘋果', 'iphone', 'mac', 'ipad', '直營店', '101直營店', 'a13直營店'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -248,17 +248,39 @@ export const MERCHANTS: Merchant[] = [
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (數位外掛 3.3%) / 數趣刷',
+      schemeName: 'Chill 刷 (數位外掛 3.3%)',
       rate: 3.3,
       note: '切換「Chill 刷」或「數趣刷」享 3.3%'
     }
   },
   {
-    id: 'samsung-official',
-    name: 'Samsung 三星智慧館 / 三星商城',
+    id: 'apple-app-store',
+    name: 'App Store (Apple 訂閱與課金)',
     category: 'game_stream',
     categoryLabel: '遊戲 & 影音',
-    tags: ['samsung', '三星', 'galaxy', '手機'],
+    tags: ['app store', 'icloud', 'apple music', '蘋果課金', 'ios訂閱'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'digital',
+      schemeName: '玩數位',
+      rate: 3.3,
+      note: '切換「玩數位」享 3.3%'
+    },
+    richart: {
+      scheme: 'digital_fun',
+      schemeName: '數趣刷 (3.3%)',
+      rate: 3.3,
+      note: '切換「數趣刷」享 3.3%'
+    }
+  },
+  {
+    id: 'samsung-official',
+    name: 'Samsung 三星智慧館與線上商城',
+    category: 'game_stream',
+    categoryLabel: '遊戲 & 影音',
+    tags: ['samsung', '三星', 'galaxy', '手機', '平板'],
     validUntil: '2026/09/30',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -270,7 +292,7 @@ export const MERCHANTS: Merchant[] = [
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (數位外掛)',
+      schemeName: 'Chill 刷 (數位外掛 3.3%)',
       rate: 3.3,
       isChillSpecial: true,
       note: '切換「Chill 刷」享 3.3%'
@@ -370,7 +392,7 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 📺 影音串流平台與線上課程 (100% 單一獨立條目)
+  // 📺 影音串流平台與線上課程
   // =========================================================================
   {
     id: 'netflix',
@@ -508,7 +530,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'hahow',
-    name: 'Hahow (好學校)',
+    name: 'Hahow 好學校',
     category: 'game_stream',
     categoryLabel: '遊戲 & 影音',
     tags: ['hahow', '好學校', '線上課程', '學程式', '投資'],
@@ -618,7 +640,7 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 🧋 熱門手搖飲與咖啡廳 (100% 單一獨立條目)
+  // 🧋 熱門手搖飲與咖啡廳
   // =========================================================================
   {
     id: 'fifty-lan',
@@ -785,7 +807,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'arabica-coffee',
-    name: '%Arabica',
+    name: '%Arabica 咖啡',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
     tags: ['arabica', '象山', '京都咖啡', '拿鐵'],
@@ -897,7 +919,7 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 🍲 火鍋、燒肉、餐酒館與速食 (100% 單一獨立條目)
+  // 🍲 火鍋、燒肉、餐酒館、王品與瓦城集團各獨立餐廳
   // =========================================================================
   {
     id: 'zhan-ji',
@@ -1202,7 +1224,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'taihu-brewing',
-    name: '臺虎精釀 (含啜飲室)',
+    name: '臺虎精釀 (啜飲室)',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
     tags: ['臺虎精釀', '啜飲室', '精釀啤酒', '餐酒館', '調酒'],
@@ -1451,10 +1473,10 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'sushi-express',
-    name: '爭鮮迴轉壽司 / 爭鮮 Plus',
+    name: '爭鮮迴轉壽司',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
-    tags: ['爭鮮', 'sushi express', '爭鮮plus', '平價壽司', '日料'],
+    tags: ['爭鮮', 'sushi express', '平價壽司', '日料'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -1472,11 +1494,11 @@ export const MERCHANTS: Merchant[] = [
     }
   },
   {
-    id: 'ttfb-group',
-    name: '瓦城泰統集團 (瓦城/非常泰/1010湘/大心/時時香/YABI)',
+    id: 'sushi-plus',
+    name: '爭鮮 PLUS',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
-    tags: ['瓦城', '非常泰', '1010湘', '大心', '時時香', 'yabi', '泰國菜', '聚餐'],
+    tags: ['爭鮮plus', '爭鮮', '精緻壽司', '日料'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -1494,28 +1516,297 @@ export const MERCHANTS: Merchant[] = [
     }
   },
   {
-    id: 'wowprime-group',
-    name: '王品集團 (王品/西堤/陶板屋/夏慕尼/聚/石二鍋/王品瘋Pay)',
+    id: 'thai-town',
+    name: '瓦城泰國料理',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
-    tags: ['王品', '西堤', '陶板屋', '夏慕尼', '石二鍋', '聚火鍋', '瘋pay'],
+    tags: ['瓦城', '泰國菜', '月亮蝦餅', '聚餐'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (官方指定旗艦店慶生特店10%)',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'very-thai',
+    name: '非常泰 (Very Thai)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['非常泰', '瓦城集團', '泰式料理', '餐酒'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: '1010-xiang',
+    name: '1010 湘 (湖南菜)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['1010湘', '湖南菜', '瓦城集團', '中式料理', '聚餐'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'daxin-noodle',
+    name: '大心新泰式麵食',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['大心', '泰式麵食', '瓦城集團', '酸辣麵', '冰淇淋'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'shishi-xiang',
+    name: '時時香 (RICE BAR)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['時時香', '中式料理', '瓦城集團', '聚餐', '米食'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'yabi-kitchen',
+    name: 'YABI KITCHEN (南洋跨界料理)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['yabi', 'yabi kitchen', '瓦城集團', '南洋料理', '聚餐'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'wang-steak',
+    name: '王品牛排 (Wang Steak)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['王品', '王品牛排', '牛排', '生日慶生', '紀念日'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方指定特店慶生月 10%)',
       rate: 3.3,
       isBirthdaySpecial: true,
-      note: '切換「樂饗購」3.3% / 官方指定旗艦店慶生月 10%'
+      note: '切換「樂饗購」3.3% / 🎂 官方指定旗艦店慶生月享 10%'
     },
     richart: {
       scheme: 'dining',
-      schemeName: '好饗刷 (含王品瘋Pay)',
+      schemeName: '好饗刷 (含王品瘋Pay 3.3%)',
       rate: 3.3,
       note: '切換「好饗刷」綁定王品瘋Pay享 3.3%'
     }
   },
+  {
+    id: 'tasty-steak',
+    name: '西堤牛排 (TASTy)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['西堤', '西堤牛排', 'tasty', '牛排', '聚餐'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (含王品瘋Pay 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」綁定王品瘋Pay享 3.3%'
+    }
+  },
+  {
+    id: 'tokiya',
+    name: '陶板屋和風創作料理',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['陶板屋', '王品集團', '和風洋食', '聚餐'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (含王品瘋Pay 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」綁定王品瘋Pay享 3.3%'
+    }
+  },
+  {
+    id: 'chamonix',
+    name: '夏慕尼新香榭鉄板燒',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['夏慕尼', '鐵板燒', '王品集團', '約會', '生日慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方指定特店慶生月 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」3.3% / 🎂 官方指定旗艦店慶生月享 10%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (含王品瘋Pay 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」綁定王品瘋Pay享 3.3%'
+    }
+  },
+  {
+    id: 'giguo-hotpot',
+    name: '聚日式鍋物',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['聚', '聚火鍋', '王品集團', '日式火鍋', '吃到飽'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (含王品瘋Pay 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」綁定王品瘋Pay享 3.3%'
+    }
+  },
+  {
+    id: '12hotpot',
+    name: '石二鍋',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['石二鍋', '平價火鍋', '王品集團', '檸檬冬瓜冰沙'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (含王品瘋Pay 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」綁定王品瘋Pay享 3.3%'
+    }
+  },
+  {
+    id: 'wangprime-crazy-pay',
+    name: '王品瘋Pay (王品集團全品牌)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['王品瘋pay', '瘋pay', '王品app', '瘋點數'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (王品瘋Pay 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」綁定王品瘋Pay享 3.3%'
+    }
+  },
+
+  // =========================================================================
+  // 🏨 星級飯店、KTV 與購票娛樂
+  // =========================================================================
   {
     id: 'regent-hotel',
     name: '晶華酒店 (Regent Taipei)',
@@ -1550,7 +1841,7 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購 (或趣旅行)',
+      schemeName: '樂饗購 (或趣旅行 3.3%)',
       rate: 3.3,
       note: '切換「樂饗購」3.3%'
     },
@@ -1585,7 +1876,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'royal-hotel',
-    name: '老爺酒店集團 (Hotel Royal / 礁溪老爺 / 知本老爺 / 老爺行旅)',
+    name: '老爺酒店集團 (礁溪老爺與知本老爺等)',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
     tags: ['老爺酒店', '礁溪老爺', '知本老爺', '老爺行旅', '溫泉飯店'],
@@ -1607,7 +1898,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'ldc-hotels',
-    name: '雲朗觀光 (君品 / 雲品 / 翰品 / 兆品)',
+    name: '雲朗觀光 (君品酒店與雲品溫泉酒店等)',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
     tags: ['雲朗', '君品', '雲品', '翰品', '日月潭雲品', '頤宮'],
@@ -1651,7 +1942,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'grand-hilai',
-    name: '漢來大飯店 (高雄漢來 / 台北漢來 / 漢來海港)',
+    name: '漢來大飯店與漢來海港餐廳',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
     tags: ['漢來', '漢來大飯店', '漢來海港', '高雄漢來', '南港漢來', '海港buffet'],
@@ -1717,10 +2008,54 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'oncor-ktv',
-    name: 'ONCOR KTV / sing!go / 享溫馨',
+    name: 'ONCOR 頂級 KTV',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
-    tags: ['oncor', 'singgo', '享溫馨', '頂級ktv', '信義區ktv'],
+    tags: ['oncor', '頂級ktv', '信義區ktv', '奢華包廂'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (指定KTV 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'sing-go-ktv',
+    name: 'sing!go 聚唱 KTV',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['singgo', '聚唱', 'ktv', '信義店', '西門店'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (指定KTV 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'enjoy-warm-ktv',
+    name: '享溫馨 KTV',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['享溫馨', '南部ktv', '高雄ktv', '台南ktv'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -1783,10 +2118,54 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'era-ticket',
-    name: '年代售票 / 寬宏售票 / OPENTIX 兩廳院',
+    name: '年代售票',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
-    tags: ['年代售票', '寬宏售票', 'opentix', '兩廳院', '舞台劇', '音樂劇', '門票'],
+    tags: ['年代售票', '演唱會', '舞台劇', '門票'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (購票娛樂 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」購票享 3.3%'
+    }
+  },
+  {
+    id: 'kham-ticket',
+    name: '寬宏售票',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['寬宏售票', '寬宏藝術', '演唱會', '展覽門票'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷 (購票娛樂 3.3%)',
+      rate: 3.3,
+      note: '切換「好饗刷」購票享 3.3%'
+    }
+  },
+  {
+    id: 'opentix',
+    name: 'OPENTIX 兩廳院文化生活',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['opentix', '兩廳院', '國家戲劇院', '音樂會', '舞台劇'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -1805,7 +2184,7 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 🛵 外送平台 (100% 單一獨立條目)
+  // 🛵 外送平台
   // =========================================================================
   {
     id: 'uber-eats',
@@ -1855,11 +2234,11 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 🏬 百貨購物中心與 Outlet (100% 單一獨立條目)
+  // 🏬 百貨購物中心與 Outlet (全部獨立無斜線)
   // =========================================================================
   {
     id: 'shinkong-mitsukoshi',
-    name: '新光三越 (Shin Kong Mitsukoshi - 含 skm pay)',
+    name: '新光三越 (含 skm pay)',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
     tags: ['新光三越', '新光', 'skmpay', '百貨', '信義新天地', '南西新光', '台中新光', '台南新天地'],
@@ -1884,7 +2263,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'sogo-department',
-    name: '遠東 SOGO 百貨 (忠孝/復興/敦化/天母/中壢/新竹/高雄)',
+    name: '遠東 SOGO 百貨 (全台分館)',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
     tags: ['sogo', '遠東sogo', '太平洋sogo', '復興sogo', '忠孝sogo', '天母sogo', '百貨'],
@@ -1908,7 +2287,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'feds-department',
-    name: '遠東百貨 (遠百信義 A13 / 板橋大遠百 / 遠百竹北 / Top City 台中大遠百)',
+    name: '遠東百貨 (遠百信義A13與大遠百等全台分館)',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
     tags: ['遠百', '遠東百貨', '大遠百', 'a13', '信義a13', '板橋大遠百', '竹北遠百', 'top city'],
@@ -1932,7 +2311,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'taipei-101',
-    name: '台北 101 購物中心 (Taipei 101 Mall)',
+    name: '台北 101 購物中心',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
     tags: ['101', '台北101', 'taipei 101', '精品', '觀景台', '信義區'],
@@ -1956,7 +2335,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'breeze-center',
-    name: '微風廣場 / 微風信義 / 微風南山 / 微風松高 / 微風台北車站',
+    name: '微風百貨 (微風廣場與微風信義等全館)',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
     tags: ['微風', '微風廣場', '微風信義', '微風南山', '微風松高', '微風北車', 'breeze'],
@@ -1980,7 +2359,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'lalaport',
-    name: 'LaLaport (南港 / 台中)',
+    name: 'LaLaport (南港與台中分館)',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
     tags: ['lalaport', '南港lalaport', '台中lalaport', '三井', '大型購物中心'],
@@ -2002,7 +2381,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'hanshin-department',
-    name: '漢神百貨 / 漢神巨蛋 / 漢神洲際',
+    name: '漢神百貨與漢神巨蛋',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
     tags: ['漢神', '漢神巨蛋', '漢神百貨', '漢神洲際', '高雄百貨', '巨蛋'],
@@ -2068,10 +2447,32 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'dream-mall',
-    name: '高雄夢時代購物中心 / 統一時代百貨 (含 DREAM PLAZA)',
+    name: '高雄夢時代購物中心',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
-    tags: ['夢時代', '統一時代', 'dream plaza', '高雄夢時代', '市府轉運站'],
+    tags: ['夢時代', '高雄夢時代', '時代大道', '摩天輪'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷 (指定百貨 3.3%)',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    }
+  },
+  {
+    id: 'uni-president-dept',
+    name: '統一時代百貨 (含 DREAM PLAZA)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 購物',
+    tags: ['統一時代', 'dream plaza', '市府轉運站', '信義區百貨'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -2156,10 +2557,32 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'big-city-hsinchu',
-    name: 'Big City 遠東巨城購物中心 / 廣三 SOGO',
+    name: 'Big City 遠東巨城購物中心',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
-    tags: ['巨城', 'big city', '新竹巨城', '廣三sogo', '台中廣三'],
+    tags: ['巨城', 'big city', '新竹巨城', '新竹百貨'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷 (指定百貨 3.3%)',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    }
+  },
+  {
+    id: 'kuang-san-sogo',
+    name: '廣三 SOGO 百貨 (台中)',
+    category: 'department_fashion',
+    categoryLabel: '百貨 & 購物',
+    tags: ['廣三sogo', '廣三', '台中sogo', '台中百貨'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -2178,7 +2601,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'mitsui-outlet',
-    name: 'MITSUI OUTLET PARK (三井 Outlet 林口 / 台中港 / 台南)',
+    name: 'MITSUI OUTLET PARK 三井 Outlet (全台分館)',
     category: 'department_fashion',
     categoryLabel: '百貨 & 購物',
     tags: ['三井outlet', 'outlet', '林口三井', '台中港三井', '台南三井', '名牌特賣'],
@@ -2244,7 +2667,7 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 👟 運動品牌、時尚服飾與健身房 (100% 單一獨立條目)
+  // 👟 運動品牌、時尚服飾與健身房
   // =========================================================================
   {
     id: 'adidas',
@@ -2728,7 +3151,7 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 🛒 網購電商與海外購物 (100% 單一獨立條目)
+  // 🛒 網購電商與海外購物
   // =========================================================================
   {
     id: 'shopee',
@@ -2821,7 +3244,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'taobao',
-    name: '淘寶 / 天貓 (Taobao)',
+    name: '淘寶與天貓 (Taobao)',
     category: 'ecommerce',
     categoryLabel: '網購電商',
     tags: ['taobao', '淘寶', '天貓', '集運', '海外網購'],
@@ -2844,7 +3267,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'amazon',
-    name: 'Amazon (美亞 / 日亞)',
+    name: 'Amazon (美亞與日亞商城)',
     category: 'ecommerce',
     categoryLabel: '網購電商',
     tags: ['amazon', '亞馬遜', '美亞', '日亞', '美國網購', '日本網購'],
@@ -2998,7 +3421,7 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 🏪 超商、量販超市與藥妝藥局 (100% 單一獨立條目)
+  // 🏪 超商、量販超市與藥妝藥局 (全部獨立無斜線)
   // =========================================================================
   {
     id: 'pxmart',
@@ -3320,7 +3743,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'costco',
-    name: 'Costco 好市多 (需聯名卡/一般消費)',
+    name: 'Costco 好市多 (實體門市需富邦聯名卡)',
     category: 'grocery_convenience',
     categoryLabel: '量販 & 超商',
     tags: ['好市多', 'costco', '量販', '大賣場'],
@@ -3343,7 +3766,7 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 🚆 交通通勤、加油充電與叫車 (100% 單一獨立條目)
+  // 🚆 交通通勤、加油充電與叫車 (全部獨立無斜線)
   // =========================================================================
   {
     id: 'high-speed-rail',
@@ -3435,7 +3858,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'line-go',
-    name: 'LINE GO (計程車/共享車/租車)',
+    name: 'LINE GO (計程車與共享車租車)',
     category: 'travel_traffic',
     categoryLabel: '旅遊 & 交通',
     tags: ['line go', 'line taxi', 'line叫車', '共享車'],
@@ -3474,7 +3897,7 @@ export const MERCHANTS: Merchant[] = [
       scheme: 'everyday',
       schemeName: '天天刷 (通勤交通 3.3%)',
       rate: 3.3,
-      note: '切換「天天刷」享 3.3%'
+      note: '切按「天天刷」享 3.3%'
     }
   },
   {
@@ -3612,7 +4035,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'uspace',
-    name: 'USPACE (共享車位/停車)',
+    name: 'USPACE (共享車位與智慧停車)',
     category: 'travel_traffic',
     categoryLabel: '旅遊 & 交通',
     tags: ['uspace', '停車位', '共享車位', '停車繳費'],
@@ -3634,11 +4057,11 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // ✈️ 航空公司、國外旅遊與日本實體 (100% 單一獨立條目)
+  // ✈️ 航空公司、國外旅遊與日本實體 (全部獨立無斜線)
   // =========================================================================
   {
     id: 'japan-offline',
-    name: '日本實體門市消費 (唐吉訶德 / BicCamera / 松本清 / 大國藥妝 / Lawson)',
+    name: '日本當地實體門市消費 (BicCamera、松本清、Lawson 等)',
     category: 'travel_traffic',
     categoryLabel: '旅遊 & 交通',
     tags: ['日本', '日幣', '出國', '東京', '大阪', '藥妝', '電器', 'biccamera', 'lawson', '松本清'],
@@ -3661,7 +4084,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'foreign-offline-online',
-    name: '海外實體門市消費 / 國外線上外幣交易 (含歐洲實體)',
+    name: '海外實體與國外線上外幣交易 (含歐洲實體)',
     category: 'travel_traffic',
     categoryLabel: '旅遊 & 交通',
     tags: ['國外刷卡', '外幣', '海外實體', '歐洲', '美金', '日幣', '出國'],
@@ -3794,10 +4217,98 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'japan-airlines',
-    name: '日本航空 (JAL) / 樂桃航空 / 酷航 / 新加坡航空 / 阿聯酋航空',
+    name: '日本航空 (JAL)',
     category: 'travel_traffic',
     categoryLabel: '旅遊 & 交通',
-    tags: ['日航', 'jal', '樂桃', '酷航', '新航', '阿聯酋', '機票', '出國'],
+    tags: ['日航', 'jal', '日本航空', '日本機票'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行 (航空公司 3.3%)',
+      rate: 3.3,
+      note: '切換「趣旅行」航空公司享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷 (航空公司 3.3%)',
+      rate: 3.3,
+      note: '切換「玩旅刷」航空公司享 3.3%'
+    }
+  },
+  {
+    id: 'peach-aviation',
+    name: '樂桃航空 (Peach)',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['樂桃', 'peach', '廉航', '日本廉航', '機票'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行 (航空公司 3.3%)',
+      rate: 3.3,
+      note: '切換「趣旅行」航空公司享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷 (航空公司 3.3%)',
+      rate: 3.3,
+      note: '切換「玩旅刷」航空公司享 3.3%'
+    }
+  },
+  {
+    id: 'scoot-airlines',
+    name: '酷航 (Scoot)',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['酷航', 'scoot', '新加坡酷航', '廉航', '機票'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行 (航空公司 3.3%)',
+      rate: 3.3,
+      note: '切換「趣旅行」航空公司享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷 (航空公司 3.3%)',
+      rate: 3.3,
+      note: '切換「玩旅刷」航空公司享 3.3%'
+    }
+  },
+  {
+    id: 'singapore-airlines',
+    name: '新加坡航空 (Singapore Airlines)',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['新航', '新加坡航空', '五星航空', '機票'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行 (航空公司 3.3%)',
+      rate: 3.3,
+      note: '切換「趣旅行」航空公司享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷 (航空公司 3.3%)',
+      rate: 3.3,
+      note: '切換「玩旅刷」航空公司享 3.3%'
+    }
+  },
+  {
+    id: 'emirates-airlines',
+    name: '阿聯酋航空 (Emirates)',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['阿聯酋', 'emirates', '杜拜', '歐洲機票', '豪華航空'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -3992,10 +4503,76 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'southeast-travel',
-    name: '東南旅遊 / 可樂旅遊 / 喜鴻 / 加利利',
+    name: '東南旅遊',
     category: 'travel_traffic',
     categoryLabel: '旅遊 & 交通',
-    tags: ['東南旅遊', '可樂旅遊', '喜鴻', '加利利', '五福旅遊', '旅行社', '跟團'],
+    tags: ['東南旅遊', '旅行社', '跟團', '自由行'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」旅行社享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷 (旅行社 3.3%)',
+      rate: 3.3,
+      note: '切換「玩旅刷」旅行社享 3.3%'
+    }
+  },
+  {
+    id: 'cola-tour',
+    name: '可樂旅遊 (康福旅行社)',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['可樂旅遊', '可樂', '康福', '旅行社', '跟團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」旅行社享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷 (旅行社 3.3%)',
+      rate: 3.3,
+      note: '切換「玩旅刷」旅行社享 3.3%'
+    }
+  },
+  {
+    id: 'best-tour',
+    name: '喜鴻假期',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['喜鴻', '喜鴻假期', '旅行社', '跟團', '自由行'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'travel',
+      schemeName: '趣旅行',
+      rate: 3.3,
+      note: '切換「趣旅行」旅行社享 3.3%'
+    },
+    richart: {
+      scheme: 'travel',
+      schemeName: '玩旅刷 (旅行社 3.3%)',
+      rate: 3.3,
+      note: '切換「玩旅刷」旅行社享 3.3%'
+    }
+  },
+  {
+    id: 'galilee-tour',
+    name: '加利利旅行社 (歐洲頂級旅遊)',
+    category: 'travel_traffic',
+    categoryLabel: '旅遊 & 交通',
+    tags: ['加利利', '頂級團', '歐洲蜜月', '旅行社'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
@@ -4014,7 +4591,7 @@ export const MERCHANTS: Merchant[] = [
   },
 
   // =========================================================================
-  // 📱 行動支付與一般消費 (100% 單一獨立條目)
+  // 📱 行動支付與一般消費 (全部獨立無斜線)
   // =========================================================================
   {
     id: 'line-pay',
@@ -4042,7 +4619,7 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'taishin-pay',
-    name: '台新 Pay (全家/7-11/新光三越/康是美/IKEA/NET/神腦/燦坤/全國電子/大樹藥局)',
+    name: '台新 Pay (全家、7-11、新光三越、IKEA等特店)',
     category: 'mobile_pay',
     categoryLabel: '行動支付',
     tags: ['taishinpay', '台新pay', '全家', '7-11', '掃碼支付', '新光三越', 'ikea', '康是美', '燦坤', '全國電子', '神腦'],

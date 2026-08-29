@@ -922,6 +922,1034 @@ export const MERCHANTS: Merchant[] = [
   // 🍲 火鍋、燒肉、特色餐飲、王品與瓦城集團各獨立餐廳
   // =========================================================================
   {
+    id: 'dashu-jiushi',
+    name: '大叔酒食 (炭火串燒居酒屋)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['大叔酒食', '大叔富弟', '串燒', '居酒屋', '新竹居酒屋', '東門國小', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '大叔酒食（Uncle Shawn 同集團居酒屋）：8 月生日當月刷 CUBE【慶生月】享 10%！平日刷 3.3%。'
+  },
+  {
+    id: 'dashu-yakiniku',
+    name: '大叔燒肉 (新竹總店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['大叔燒肉', '大叔富弟', '新竹燒肉', '北大路燒肉', '老字號燒肉', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+
+  // --- 饗賓餐旅集團旗下各獨立餐廳 ---
+  {
+    id: 'xiang-a-joy',
+    name: '饗 A Joy (台北 101 頂級高空 Buffet)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['饗a joy', 'ajoy', '台北101', '全台最貴buffet', '頂級吃到飽', '慶生約會'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方指定特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」3.3% / 🎂 台北101高空專櫃慶生月享 10%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (狂歡聚會 10%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    },
+    tips: '吃饗 A Joy 首選【台新 Richart 卡】切換【Chill 刷】享 10% 狂飆回饋！生日當月刷 CUBE【慶生月】亦享 10%。'
+  },
+  {
+    id: 'xiang-xiang',
+    name: '饗饗 (INPARADISE 頂級自助百匯)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['饗饗', 'inparadise', '微風信義', '新莊饗饗', '頂級buffet', '吃到飽', '慶生'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (微風專櫃慶生月 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」3.3% / 🎂 微風專櫃慶生月 10%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (瘋聚會 10%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    },
+    tips: '吃饗饗首選【台新 Richart 卡】切換【Chill 刷】享 10% 超高回饋！'
+  },
+  {
+    id: 'xuji-buffet',
+    name: '旭集 (和食集錦日料 Buffet)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['旭集', '和食集錦', '遠百信義a13', '日料吃到飽', '生魚片', '烤香魚', '慶生'],
+    validUntil: '2026/09/30',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (遠百專櫃慶生月 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」3.3% / 🎂 遠百專櫃慶生月 10%'
+    },
+    richart: {
+      scheme: 'chill',
+      schemeName: 'Chill 刷 (瘋聚會 10%)',
+      rate: 10.0,
+      isChillSpecial: true,
+      note: '🔥 切換「Chill 刷」享 10% 台新 Point！'
+    }
+  },
+  {
+    id: 'eatogether',
+    name: '饗食天堂 (自助美饌)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['饗食天堂', 'eatogether', 'buffet', '吃到飽', '聚餐', '生日'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'fruitful-food',
+    name: '果然匯 (多國蔬食 Buffet)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['果然匯', '蔬食吃到飽', '素食buffet', '健康素食'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'kaifun',
+    name: '開飯川食堂',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['開飯川食堂', '開飯', '川菜', '聚餐', '饗賓集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'siam-more',
+    name: '饗泰多 (Siam More 泰式風格餐廳)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['饗泰多', 'siam more', '泰式料理', '月亮蝦餅', '饗賓集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'zhenzhu-taiwan',
+    name: '真珠 (台灣佳味台菜餐廳)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['真珠', '台灣佳味', '台菜', '經典台菜', '饗賓集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'xiaofu-hotpot',
+    name: '小福利麻辣鍋 (火鍋吃到飽)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['小福利', '小福利麻辣鍋', '麻辣鍋吃到飽', '饗賓集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+
+  // --- 漢來美食集團旗下各獨立餐廳 ---
+  {
+    id: 'island-buffet',
+    name: '島語自助餐廳 (台北漢來大飯店頂級 Buffet)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['島語', '島語自助餐廳', '台北漢來', '南港buffet', '頂級海鮮吃到飽', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方特店慶生月 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '吃島語自助餐廳：8 月生日月必刷 CUBE 卡切換【慶生月】享 10% 小樹點！平日刷 3.3%。'
+  },
+  {
+    id: 'hilai-harbour',
+    name: '漢來海港餐廳 (Harbour Buffet)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['漢來海港', '海港餐廳', '海鮮吃到飽', 'buffet', '敦化sogo', '天母sogo'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (SOGO專櫃慶生月 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '切換「樂饗購」3.3% / 🎂 SOGO專櫃慶生月 10%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'hilai-celebrity-square',
+    name: '漢來名人坊 (米其林星級頂級粵菜)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['漢來名人坊', '名人坊', '富哥', '米其林星級', '頂級粵菜', '世貿聯誼社', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'hilai-vegetarian',
+    name: '漢來蔬食',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['漢來蔬食', '精緻素食', '蔬食飲茶', '忠孝sogo'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'hilai-dumpling',
+    name: '漢來上海湯包',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['漢來上海湯包', '小籠湯包', '上海點心', '排骨蛋炒飯'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'liuliu-fish',
+    name: '溜溜酸菜魚專賣店',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['溜溜酸菜魚', '溜溜', '酸菜魚', '漢來美食', '巨蛋美食'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'shang-cai-duck',
+    name: '上菜 (片皮鴨專賣店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['上菜', '片皮鴨', '烤鴨專賣', '漢來美食', '竹北遠百', '桃園台茂'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+
+  // --- 築間餐飲集團旗下各獨立餐廳 ---
+  {
+    id: 'jhujian-hotpot',
+    name: '築間幸福鍋物',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['築間', '築間幸福鍋物', '石頭火鍋', '蔬菜吃到飽', '宵夜火鍋'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'yakiniku-smile',
+    name: '燒肉 Smile (個人燒肉)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['燒肉smile', 'smile燒肉', '個人燒肉', '一人燒肉', '築間集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'youzhi-wagyu',
+    name: '有之和牛鍋物放題',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['有之和牛', '和牛吃到飽', '火鍋放題', '築間集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'benge-wagyu',
+    name: '本格和牛燒肉放題',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['本格和牛', '本格和牛燒肉', '燒肉吃到飽', '築間集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'jhujian-suancaiyu',
+    name: '築間酸菜魚',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['築間酸菜魚', '酸菜魚', '築間集團', '總督魚'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+
+  // --- 馬辣集團旗下各獨立餐廳 ---
+  {
+    id: 'mala-hotpot',
+    name: '馬辣頂級麻辣鴛鴦火鍋',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['馬辣', '馬辣火鍋', '麻辣鍋吃到飽', '哈根達斯吃到飽', '西門馬辣', '公館馬辣'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'new-mala-hotpot',
+    name: '新馬辣經典麻辣鍋',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['新馬辣', '新馬辣經典麻辣鍋', '和牛吃到飽', '海鮮吃到飽'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'new-mala-plus',
+    name: '新馬辣經典麻辣鍋 Plus+',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['新馬辣plus', '新馬辣plus+', '頂級和牛吃到飽', '松菸新馬辣', '信義遠百新馬辣'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'wending-hotpot',
+    name: '問鼎 (皇上吉祥宮廷火鍋)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['問鼎', '宮廷火鍋', '變臉表演', '美甲按摩', '馬辣集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'gou-yixia-izakaya',
+    name: '狗一下居酒食堂',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['狗一下', '居酒屋', '日料吃到飽', '公館居酒屋', '忠孝居酒屋', '馬辣集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'xiongyi-yakiniku',
+    name: '熊一頂級燒肉',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['熊一', '熊一頂級燒肉', '西門町燒肉', '燒肉吃到飽', '馬辣集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+
+  // --- 豆府餐飲集團旗下各獨立餐廳 ---
+  {
+    id: 'juan-doufu',
+    name: '涓豆腐 (精緻韓式料理)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['涓豆腐', '嫩豆腐煲', '韓式炸雞', '海鮮煎餅', '豆府集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'beicun-doufu',
+    name: '北村豆腐家',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['北村豆腐家', '韓式豆腐煲', '鑄鐵拌飯', '香蕉牛奶霜淇淋', '豆府集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'jiangmantang-bbq',
+    name: '姜滿堂 (正宗韓國直火燒肉)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['姜滿堂', '韓式燒肉', '直火燒肉', '豆府集團', '新竹巨城'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'baan-phadthai',
+    name: '帕泰家 (Baan Phadthai 米其林泰式炒河粉)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['帕泰家', 'baan phadthai', '米其林泰式', '炒河粉', '豆府集團'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+
+  // --- 頂級五星飯店與自助餐美饌 ---
+  {
+    id: 'regent-taipei-dining',
+    name: '台北晶華酒店 (栢麗廳 / Robin\'s / 晶華軒)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['晶華酒店', '台北晶華', '栢麗廳', 'robins牛排屋', '晶華軒', '頂級buffet', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '生日吃台北晶華酒店（栢麗廳、Robin\'s、晶華軒），刷 CUBE【慶生月】拿滿 10% 小樹點！平日刷 3.3%。'
+  },
+  {
+    id: 'grand-hyatt-taipei',
+    name: '台北君悅酒店 (凱菲屋 / 寶艾西餐廳)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['君悅酒店', '台北君悅', '凱菲屋', '寶艾西餐廳', '信義區buffet', '求婚桌', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'sheraton-grand-taipei',
+    name: '台北喜來登大飯店 (十二廚 / 請客樓 / 安東廳)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['喜來登', '台北喜來登', '十二廚', '請客樓', '安東廳', '米其林二星', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'le-meridien-taipei',
+    name: '台北寒舍艾美酒店 (探索廚房)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['寒舍艾美', '探索廚房', '信義區buffet', '頂級牛排吃到飽', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'taipei-marriott',
+    name: '台北萬豪酒店 (Garden Kitchen / INGE\'S Bar & Grill)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['台北萬豪', '萬豪酒店', 'garden kitchen', 'inges', '高空酒吧', '大直景觀', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'grand-mayfull-taipei',
+    name: '台北美福大飯店 (彩匯自助餐廳 / GMT 義大利餐廳)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['美福大飯店', '彩匯自助餐', 'gmt義大利餐廳', '和牛吃到飽', '大直飯店', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'mandarin-oriental-taipei',
+    name: '台北文華東方酒店 (文華Cafe / 雅閣 / Bencotto)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['文華東方', '文華cafe', '雅閣', '米其林一星', 'bencotto', '頂級奢華飯店', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'a-cut-steakhouse',
+    name: 'A CUT 牛排館 (台北國賓大飯店米其林一星)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['a cut', 'acut', '國賓acut', '米其林一星牛排', '乾式熟成牛排', '慶生約會'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'tainan-silks-place',
+    name: '台南晶英酒店 (ROBIN\'S 牛排館鐵板燒)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['台南晶英', '晶英酒店', 'robins', '台南牛排', '台南鐵板燒', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'hsinchu-sheraton',
+    name: '新竹喜來登大飯店 (盛宴自助餐廳 / 邀月鐵板燒)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['新竹喜來登', '竹北喜來登', '盛宴自助餐廳', '邀月鐵板燒', '采悅軒', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'hsinchu-hotel-royal',
+    name: '新竹老爺酒店 (Le Café 自助餐廳 / 明宮粵菜)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['新竹老爺', '老爺酒店', 'le cafe', '明宮', '光復路老爺', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購',
+      rate: 3.3,
+      note: '切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'hsinchu-ambassador',
+    name: '新竹國賓大飯店 (八方燴西餐廳 / A CUT 牛排館)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['新竹國賓', '八方燴', '新竹acut', '中華路國賓', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
     id: 'chen-ayi-hotpot-hsinchu',
     name: '陳阿姨火鍋灶咖 (新竹總店)',
     category: 'dining_delivery',

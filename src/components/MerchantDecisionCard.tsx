@@ -221,7 +221,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
                 <Zap className="w-4 h-4" />
               </div>
               <h4 className="font-bold text-slate-900 text-sm sm:text-base">
-                ⚡ 聰明刷法情境通道（依結帳地點與支付方式）：
+                ⚡ 聰明刷法情境通道
               </h4>
             </div>
             <button

@@ -922,6 +922,123 @@ export const MERCHANTS: Merchant[] = [
   // 🍲 火鍋、燒肉、餐酒館、王品與瓦城集團各獨立餐廳
   // =========================================================================
   {
+    id: 'pastaio',
+    name: 'PASTAIO 手工義大利麵',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['pastaio', 'PASTAIO', 'Pastaio', '義大利麵', '手工麵', '光復店', '內湖店', '新店店', '排隊美食'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+    tips: '吃 PASTAIO 在 8 月生日當月必刷【國泰 CUBE 卡】切換【慶生月】享 10% 小樹點！平日兩張卡切換對應方案皆為 3.3%。'
+  },
+  {
+    id: 'orange-shabu',
+    name: '橘色涮涮屋 (頂級鍋物)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['橘色', '橘色涮涮屋', '火鍋界lv', '頂級火鍋', '慶生聚餐'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    },
+    tips: '生日去吃橘色涮涮屋，刷 CUBE【慶生月】拿滿 10% 小樹點！平日刷 3.3%。'
+  },
+  {
+    id: 'dannys-steakhouse',
+    name: '教父牛排 (Danny\'s Steakhouse)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['教父牛排', '米其林一星', '牛排', '慶生', '鄧有癸'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
+    id: 'smith-wollensky',
+    name: 'Smith & Wollensky (微風南山牛排)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['smith wollensky', '巴菲特牛排', '微風南山', '景觀餐廳', '約會牛排'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'big_spend',
+      schemeName: '大筆刷 (指定百貨 3.3%)',
+      rate: 3.3,
+      note: '切換「大筆刷」享 3.3%'
+    }
+  },
+  {
+    id: 'meowvelous',
+    name: '貓下去敦達商行 (Meowvelous Inc.)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['貓下去', 'meowvelous', '餐酒館', '台北餐酒館', '慶生'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方特店切換「慶生月」享 10%！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3%'
+    }
+  },
+  {
     id: 'zhan-ji',
     name: '詹記麻辣火鍋',
     category: 'dining_delivery',

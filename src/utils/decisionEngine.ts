@@ -113,65 +113,63 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
 
   // ================= 類型 B: 實體服飾 / 運動品牌 / 百貨品牌 (adidas, Nike, UNIQLO, 百貨專櫃) =================
   else if (merchant.category === 'department_fashion') {
-    // 若本來就是百貨專櫃或百貨本身
-    if (merchant.id.includes('department') || merchant.id.includes('shinkong') || merchant.id.includes('sogo') || merchant.id.includes('101') || merchant.id.includes('breeze')) {
-      if (merchant.cube.isBirthdaySpecial) {
-        pathways.push({
-          icon: '🎂',
-          title: '生日當月百貨專屬加碼',
-          condition: '於 8 月生日當月於百貨館內消費',
-          recommendedCard: 'cube',
-          cardName: '國泰 CUBE 卡',
-          schemeName: '慶生月',
-          rate: 10.0,
-          highlightText: '最高 10.0% 小樹點',
-          note: '生日當月在該指定百貨切換 CUBE「慶生月」享 10% 小樹點！'
-        });
-      }
-    } else {
-      // 品牌服飾 (如 adidas, Nike, UNIQLO) 若設櫃於百貨
+    // 1. 若本身即為新光三越或設櫃於新光三越
+    if (merchant.id === 'shinkong-mitsukoshi' || merchant.cube.isBirthdaySpecial) {
       pathways.push({
         icon: '🎂',
-        title: '若在「合作百貨專櫃」且為生日當月',
-        condition: '門市設於新光三越、SOGO、遠百等百貨館內',
+        title: '新光三越壽星專屬加碼',
+        condition: '於 8 月生日當月在新光三越館內消費',
         recommendedCard: 'cube',
         cardName: '國泰 CUBE 卡',
         schemeName: '慶生月',
         rate: 10.0,
         highlightText: '最高 10.0% 小樹點',
-        note: '若該專櫃開在指定合作百貨內，生日當月切換 CUBE「慶生月」享 10% 小樹點！'
+        note: '新光三越為 CUBE 官方慶生月特店，生日當月切換「慶生月」獨享 10% 小樹點！'
       });
     }
 
-    // 新光三越台新Pay
-    if (merchant.id === 'shinkong-mitsukoshi' || !merchant.id.includes('department')) {
+    // 2. 若設櫃於各大百貨商場專櫃 (SOGO / 遠百 / 微風 / 巨城 / 夢時代 / 漢神 / Outlet 等)
+    if (!merchant.id.includes('department') && !merchant.id.includes('sogo') && !merchant.id.includes('breeze')) {
+      pathways.push({
+        icon: '🛍️',
+        title: '若設櫃於各大百貨商場專櫃',
+        condition: '由百貨商場統一收銀結帳',
+        recommendedCard: 'cube',
+        cardName: 'CUBE 卡 / Richart 卡',
+        schemeName: 'CUBE 樂饗購 (3.3%) / Richart 大筆刷 (3.3%)',
+        rate: 3.3,
+        highlightText: '3.3% 點數回饋',
+        note: '在各大百貨專櫃結帳，切換 CUBE「樂饗購」或 Richart「大筆刷」均享 3.3%！'
+      });
+
+      // 新光三越專櫃台新 Pay / 慶生特店通道
       pathways.push({
         icon: '🏢',
         title: '若在「新光三越」各分館專櫃',
-        condition: '使用台新 Pay 或 skm pay 結帳',
+        condition: '門市設於新光三越館內',
         recommendedCard: 'richart',
-        cardName: '台新 Richart 卡',
-        schemeName: 'Pay 著刷 (台新Pay 3.8%)',
+        cardName: '台新 Richart 卡 / CUBE 卡',
+        schemeName: '台新 Pay (3.8%) / 生日月 CUBE (10%)',
         rate: 3.8,
-        highlightText: '3.8% 台新 Point',
-        note: '新光三越各專櫃開啟「台新 Pay」綁 Richart 卡付款享高達 3.8%！'
+        highlightText: '最高 3.8% ~ 10%',
+        note: '新光三越專櫃可綁定「台新 Pay」享 3.8%！若為 8 月生日當月刷 CUBE「慶生月」享 10% 小樹點。'
+      });
+    } else if (merchant.id !== 'shinkong-mitsukoshi') {
+      // 本身為非新光三越的一般百貨 (SOGO / 遠百 / 微風 / 101 等)
+      pathways.push({
+        icon: '🛍️',
+        title: '百貨館內消費直刷',
+        condition: '各專櫃或美食街刷卡結帳',
+        recommendedCard: 'cube',
+        cardName: 'CUBE 卡 / Richart 卡',
+        schemeName: 'CUBE 樂饗購 (3.3%) / Richart 大筆刷 (3.3%)',
+        rate: 3.3,
+        highlightText: '3.3% 點數回饋',
+        note: '切換 CUBE「樂饗購」或 Richart「大筆刷」均享 3.3% 點數回饋。'
       });
     }
 
-    // 其他百貨/Outlet
-    pathways.push({
-      icon: '🛍️',
-      title: '若在「SOGO / 遠百 / 微風 / Outlet」專櫃',
-      condition: '一般感應或直刷',
-      recommendedCard: 'cube',
-      cardName: 'CUBE 卡 / Richart 卡',
-      schemeName: 'CUBE 樂饗購 (3.3%) / Richart 大筆刷 (3.3%)',
-      rate: 3.3,
-      highlightText: '3.3% 回饋',
-      note: '平日在各大百貨專櫃刷卡，切換 CUBE「樂饗購」或 Richart「大筆刷」均享 3.3%。'
-    });
-
-    // 獨立專賣店 Chill 刷
+    // 3. 獨立直營專賣店 Chill 刷
     if (merchant.richart.isChillSpecial) {
       pathways.push({
         icon: '🏃',

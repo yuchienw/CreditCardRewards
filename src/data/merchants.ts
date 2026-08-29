@@ -922,19 +922,20 @@ export const MERCHANTS: Merchant[] = [
   // 🍲 火鍋、燒肉、特色餐飲、王品與瓦城集團各獨立餐廳
   // =========================================================================
   {
-    id: 'jun-beef-noodles',
-    name: '竣師父牛肉麵',
+    id: 'jun-beef-daan',
+    name: '竣師父牛肉麵 (大安店)',
     category: 'dining_delivery',
     categoryLabel: '外送 & 餐飲',
-    tags: ['竣師父', '竣師父牛肉麵', '牛肉麵', '東區宵夜', '東區牛肉麵', '麻辣牛肉麵', '大安牛肉麵'],
+    tags: ['竣師父', '竣師父牛肉麵', '大安店', '大安路', '牛肉麵', '東區宵夜', '麻辣牛肉麵'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'dining',
-      schemeName: '樂饗購',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
       rate: 3.3,
-      note: '切換「樂饗購」享 3.3% 小樹點'
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
     },
     richart: {
       scheme: 'dining',
@@ -942,7 +943,31 @@ export const MERCHANTS: Merchant[] = [
       rate: 3.3,
       note: '切換「好饗刷」享 3.3% 台新 Point'
     },
-    tips: '吃竣師父牛肉麵：刷【台新 Richart 卡】切換【好饗刷】或【國泰 CUBE 卡】切換【樂饗購】皆享 3.3% 高回饋！'
+    tips: '在 8 月生日當月去竣師父牛肉麵（大安店）必刷【國泰 CUBE 卡】切換【慶生月】享 10% 小樹點！平日切換樂饗購或刷 Richart 好饗刷享 3.3%。'
+  },
+  {
+    id: 'jun-beef-dunhua',
+    name: '竣師父牛肉麵 (敦化店)',
+    category: 'dining_delivery',
+    categoryLabel: '外送 & 餐飲',
+    tags: ['竣師父', '竣師父牛肉麵', '敦化店', '市民大道', '牛肉麵', '東區宵夜', '麻辣牛肉麵'],
+    validUntil: '2026/12/31',
+    lastVerifiedAt: '2026/08/29',
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
+    cube: {
+      scheme: 'dining',
+      schemeName: '樂饗購 (🎂官方慶生特店 10%)',
+      rate: 3.3,
+      isBirthdaySpecial: true,
+      note: '🎂 8月生日月官方指定特店切換「慶生月」享 10% 小樹點！平日切換「樂饗購」享 3.3%'
+    },
+    richart: {
+      scheme: 'dining',
+      schemeName: '好饗刷',
+      rate: 3.3,
+      note: '切換「好饗刷」享 3.3% 台新 Point'
+    },
+    tips: '在 8 月生日當月去竣師父牛肉麵（敦化店）必刷【國泰 CUBE 卡】切換【慶生月】享 10% 小樹點！平日切換樂饗購或刷 Richart 好饗刷享 3.3%。'
   },
   {
     id: 'pastaio',

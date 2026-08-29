@@ -29,8 +29,8 @@ export function App() {
     };
   });
 
-  // 目前選取的通路（預設選中 PlayStation）
-  const [selectedMerchantId, setSelectedMerchantId] = useState<string>('playstation');
+  // 目前選取的通路（預設不選擇任何通路）
+  const [selectedMerchantId, setSelectedMerchantId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('favorites');
   const [isSchemeOpen, setIsSchemeOpen] = useState(false);
@@ -100,13 +100,12 @@ export function App() {
     }
   };
 
-  // 根據搜尋字串或選取的 ID 動態計算出當前的 Merchant
-  const activeMerchant = useMemo<Merchant>(() => {
-    const selected = MERCHANTS.find((m) => m.id === selectedMerchantId);
-
+  // 根據搜尋字串或選取的 ID 動態計算出當前的 Merchant (若無選擇則為 null)
+  const activeMerchant = useMemo<Merchant | null>(() => {
     // 1. 若有搜尋字串
     if (searchQuery.trim()) {
       const q = searchQuery.trim().toLowerCase();
+      const selected = selectedMerchantId ? MERCHANTS.find((m) => m.id === selectedMerchantId) : null;
 
       // 若目前選取的 merchant 剛好符合搜尋條件，優先維持選取
       if (
@@ -155,16 +154,23 @@ export function App() {
     }
 
     // 2. 若無搜尋字串，返回選取的 Merchant
-    return selected || MERCHANTS[0];
+    if (selectedMerchantId) {
+      return MERCHANTS.find((m) => m.id === selectedMerchantId) || null;
+    }
+
+    // 3. 預設不選取任何通路
+    return null;
   }, [searchQuery, selectedMerchantId]);
 
   // 當選取的通路已過期時，自動跳出 Popup 彈窗警告
   useEffect(() => {
-    const validity = checkValidity(activeMerchant.validUntil);
-    if (validity.status === 'expired') {
-      setIsExpiryAlertOpen(true);
+    if (activeMerchant) {
+      const validity = checkValidity(activeMerchant.validUntil);
+      if (validity.status === 'expired') {
+        setIsExpiryAlertOpen(true);
+      }
     }
-  }, [activeMerchant.id, activeMerchant.validUntil]);
+  }, [activeMerchant]);
 
   const handleSelectMerchant = (merchant: Merchant) => {
     // 保留搜尋結果，不主動清空 searchQuery！
@@ -227,7 +233,7 @@ export function App() {
 
           <QuickMerchantGrid
             merchants={MERCHANTS}
-            selectedMerchantId={selectedMerchantId}
+            selectedMerchantId={selectedMerchantId || ''}
             onSelectMerchant={handleSelectMerchant}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
@@ -244,20 +250,36 @@ export function App() {
             <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center space-x-1.5">
               <span>🎯 最佳刷卡決策結果：</span>
             </h3>
-            <span className="text-xs text-indigo-600 font-semibold bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-100">
-              即時精算中
-            </span>
+            {activeMerchant && (
+              <span className="text-xs text-indigo-600 font-semibold bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-100">
+                即時精算中
+              </span>
+            )}
           </div>
 
-          <MerchantDecisionCard
-            merchant={activeMerchant}
-            context={context}
-            onOpenSchemeModal={() => setIsSchemeOpen(true)}
-            onOpenSourceModal={() => setIsSourceOpen(true)}
-            onOpenExpiryAlertModal={() => setIsExpiryAlertOpen(true)}
-            isFavorite={favorites.includes(activeMerchant.id)}
-            onToggleFavorite={() => toggleFavorite(activeMerchant.id)}
-          />
+          {activeMerchant ? (
+            <MerchantDecisionCard
+              merchant={activeMerchant}
+              context={context}
+              onOpenSchemeModal={() => setIsSchemeOpen(true)}
+              onOpenSourceModal={() => setIsSourceOpen(true)}
+              onOpenExpiryAlertModal={() => setIsExpiryAlertOpen(true)}
+              isFavorite={favorites.includes(activeMerchant.id)}
+              onToggleFavorite={() => toggleFavorite(activeMerchant.id)}
+            />
+          ) : (
+            <div className="bg-white rounded-3xl border-2 border-dashed border-slate-200/90 p-8 sm:p-12 text-center space-y-3 shadow-xs">
+              <div className="w-12 h-12 rounded-2xl bg-indigo-50 flex items-center justify-center mx-auto text-indigo-600">
+                <CreditCard className="w-6 h-6" />
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-base font-bold text-slate-800">尚未選擇通路</h4>
+                <p className="text-xs sm:text-sm text-slate-500 max-w-md mx-auto">
+                  請在上方搜尋框輸入任何想消費的店家，或點擊下方通路卡片，系統將即刻為您計算國泰 CUBE 卡與台新 Richart 卡的最佳方案！
+                </p>
+              </div>
+            </div>
+          )}
         </section>
       </main>
 
@@ -275,12 +297,14 @@ export function App() {
       )}
 
       {/* Expiry Alert Popup Modal (自動彈出 / 點擊警報彈出) */}
-      <ExpiryAlertModal
-        isOpen={isExpiryAlertOpen}
-        onClose={() => setIsExpiryAlertOpen(false)}
-        merchant={activeMerchant}
-        onOpenSourceModal={() => setIsSourceOpen(true)}
-      />
+      {activeMerchant && (
+        <ExpiryAlertModal
+          isOpen={isExpiryAlertOpen}
+          onClose={() => setIsExpiryAlertOpen(false)}
+          merchant={activeMerchant}
+          onOpenSourceModal={() => setIsSourceOpen(true)}
+        />
+      )}
 
       {/* Full Scheme Catalog Modal */}
       <SchemeDrawer

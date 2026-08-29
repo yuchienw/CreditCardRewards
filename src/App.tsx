@@ -218,10 +218,10 @@ export function App() {
         <section ref={searchSectionRef} className="space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider">
-              🔍 查詢通路（輸入任何店家或點擊常用按鈕）：
+              🔍 查詢通路
             </h3>
             <span className="text-xs text-slate-500">
-              共 {MERCHANTS.length} 個精選特店 • 支援任意店家一般消費
+              共 {MERCHANTS.length} 個精選特店
             </span>
           </div>
 

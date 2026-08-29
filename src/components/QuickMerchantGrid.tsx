@@ -139,9 +139,16 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
         </div>
       )}
 
-      {/* Category Pills Bar */}
-      <div className="overflow-x-auto no-scrollbar pb-1">
-        <div className="flex space-x-1.5 min-w-max">
+      {/* Category Pills Bar (桌機版自動平鋪折行，手機版支援橫向平滑滑動與滾輪) */}
+      <div 
+        onWheel={(e) => {
+          if (e.deltaY !== 0 && e.currentTarget.scrollWidth > e.currentTarget.clientWidth) {
+            e.currentTarget.scrollLeft += e.deltaY;
+          }
+        }}
+        className="overflow-x-auto sm:overflow-visible no-scrollbar pb-1"
+      >
+        <div className="flex flex-nowrap sm:flex-wrap gap-1.5 min-w-max sm:min-w-0">
           {BASE_CATEGORY_TABS.map((tab) => {
             const Icon = tab.icon;
             const isSelected = selectedCategory === tab.id;

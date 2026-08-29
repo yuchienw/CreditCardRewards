@@ -38,13 +38,20 @@ export function App() {
   const [isExpiryAlertOpen, setIsExpiryAlertOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // ❤️ 使用者常用通路 (支援 LocalStorage 持久化)
+  // ❤️ 使用者常用通路 (預設為空清單 []，由使用者自行點擊愛心加入)
   const [favorites, setFavorites] = useState<string[]>(() => {
     try {
       const saved = localStorage.getItem('cc_favorites');
-      return saved ? JSON.parse(saved) : ['playstation', 'shopee-tw', 'px-mart', '50-lan', 'momo-shop', 'uber-eats-tw', 'uncle-shawn-1'];
+      if (!saved) return [];
+      const parsed = JSON.parse(saved);
+      // 若是上一版本預設寫入的範例清單，自動重置為乾淨空清單
+      if (Array.isArray(parsed) && parsed.length === 7 && parsed.includes('playstation') && parsed.includes('uncle-shawn-1')) {
+        localStorage.removeItem('cc_favorites');
+        return [];
+      }
+      return Array.isArray(parsed) ? parsed : [];
     } catch {
-      return ['playstation', 'shopee-tw', 'px-mart', '50-lan', 'momo-shop', 'uber-eats-tw', 'uncle-shawn-1'];
+      return [];
     }
   });
 

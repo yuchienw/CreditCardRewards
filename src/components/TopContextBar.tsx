@@ -7,10 +7,15 @@ interface TopContextBarProps {
   onUpdateContext: (updater: (prev: UserContext) => UserContext) => void;
 }
 
+const WEEKDAY_NAMES = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
+
 export const TopContextBar: React.FC<TopContextBarProps> = ({
   context,
   onUpdateContext,
 }) => {
+  const today = new Date();
+  const currentDayName = WEEKDAY_NAMES[today.getDay()];
+
   const toggleBirthday = () => {
     onUpdateContext((prev) => ({
       ...prev,
@@ -42,10 +47,48 @@ export const TopContextBar: React.FC<TopContextBarProps> = ({
       <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-2.5">
         <div className="flex items-center space-x-1.5 text-slate-400">
           <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-          <span className="font-semibold text-slate-300">情境與等級即時切換：</span>
+          <span className="font-semibold text-slate-300">
+            自動判定情境（點擊可手動切換測試）：
+          </span>
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
+          {/* Automatic Weekend / Weekday detection with manual toggle */}
+          <button
+            onClick={toggleWeekend}
+            className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-semibold transition-all border ${
+              context.isWeekend
+                ? 'bg-emerald-600 text-white border-emerald-400 shadow-xs'
+                : 'bg-slate-800 text-slate-300 border-slate-700 hover:text-white'
+            }`}
+            title="系統已自動根據今日日期判定！點擊可手動切換平日/週末測試"
+          >
+            <Calendar className="w-3.5 h-3.5 text-emerald-300" />
+            <span>
+              {context.isWeekend
+                ? `🌴 今日${currentDayName} (自動判定週末 假日刷2%)`
+                : `💼 今日${currentDayName} (自動判定平日 一般1%)`}
+            </span>
+          </button>
+
+          {/* Birthday toggle button */}
+          <button
+            onClick={toggleBirthday}
+            className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-semibold transition-all border ${
+              context.isCurrentMonthBirthday
+                ? 'bg-linear-to-r from-rose-500 to-pink-600 text-white border-pink-400 shadow-xs shadow-pink-500/30'
+                : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200'
+            }`}
+            title="系統已自動根據當前月份判定！點擊可手動切換"
+          >
+            <Cake className="w-3.5 h-3.5" />
+            <span>
+              {context.isCurrentMonthBirthday
+                ? `🎂 ${context.birthMonth}月壽星 (慶生月 10% 啟用)`
+                : `🎂 非壽星月份 (${context.birthMonth}月生日)`}
+            </span>
+          </button>
+
           {/* CUBE Level switcher */}
           <button
             onClick={cycleCubeLevel}
@@ -64,38 +107,6 @@ export const TopContextBar: React.FC<TopContextBarProps> = ({
               {context.cubeLevel === 'level2' && 'CUBE: Level 2 帳戶扣繳 (3.0%)'}
               {context.cubeLevel === 'level1' && 'CUBE: Level 1 一般 (2.0%)'}
             </span>
-          </button>
-
-          {/* Birthday toggle button */}
-          <button
-            onClick={toggleBirthday}
-            className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-semibold transition-all border ${
-              context.isCurrentMonthBirthday
-                ? 'bg-linear-to-r from-rose-500 to-pink-600 text-white border-pink-400 shadow-xs shadow-pink-500/30'
-                : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200'
-            }`}
-            title="切換是否為生日月份（觸發 CUBE 慶生月 10% 回饋）"
-          >
-            <Cake className="w-3.5 h-3.5" />
-            <span>
-              {context.isCurrentMonthBirthday
-                ? `🎂 ${context.birthMonth}月壽星 (慶生月加碼啟用)`
-                : `🎂 設定為壽星月份 (${context.birthMonth}月)`}
-            </span>
-          </button>
-
-          {/* Weekend toggle button */}
-          <button
-            onClick={toggleWeekend}
-            className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-semibold transition-all border ${
-              context.isWeekend
-                ? 'bg-emerald-600 text-white border-emerald-400 shadow-xs'
-                : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200'
-            }`}
-            title="切換今天是平日還是週末假日（影響台新假日刷 2%）"
-          >
-            <Calendar className="w-3.5 h-3.5" />
-            <span>{context.isWeekend ? '🌴 週末假日 (假日刷 2%)' : '💼 平日 (一般 1%)'}</span>
           </button>
         </div>
       </div>

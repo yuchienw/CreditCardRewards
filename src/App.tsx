@@ -11,13 +11,22 @@ import { checkValidity } from './utils/validityChecker';
 import { CreditCard, Layers, ShieldCheck, ArrowUp, Search } from 'lucide-react';
 
 export function App() {
-  // 使用者情境變數（預設 8 月壽星、CUBE Level 2 帳戶扣繳 3.0%）
-  const [context, setContext] = useState<UserContext>({
-    birthMonth: 8,
-    isCurrentMonthBirthday: true, // 預設開啟 8 月生日慶生特店加碼 (10%)
-    isWeekend: false,
-    cubeLevel: 'level2',
-    selectedPayMethod: 'all',
+  // 自動由系統當前真實日期判定：
+  // 1. 是否為週末六日 (週六 = 6, 週日 = 0)
+  // 2. 是否為 8 月生日當月
+  const [context, setContext] = useState<UserContext>(() => {
+    const today = new Date();
+    const dayOfWeek = today.getDay();
+    const currentMonth = today.getMonth() + 1; // 1 ~ 12
+    const birthMonth = 8; // 使用者生日為 8 月
+
+    return {
+      birthMonth,
+      isCurrentMonthBirthday: currentMonth === birthMonth,
+      isWeekend: dayOfWeek === 0 || dayOfWeek === 6,
+      cubeLevel: 'level2', // 預設持有帳戶扣繳 (3.0%)
+      selectedPayMethod: 'all',
+    };
   });
 
   // 目前選取的通路（預設選中 PlayStation）
@@ -56,7 +65,6 @@ export function App() {
   // 滾動回頂端搜尋框
   const scrollToSearch = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // 聚焦搜尋輸入框
     const input = document.querySelector('input[type="text"]') as HTMLInputElement | null;
     if (input) {
       setTimeout(() => input.focus(), 300);
@@ -160,7 +168,7 @@ export function App() {
         </div>
       </header>
 
-      {/* Top Context Switcher (CUBE Level, 8月生日月, 週末假日) */}
+      {/* Top Context Switcher (自動判定平日/假日、生日月、CUBE Level) */}
       <TopContextBar context={context} onUpdateContext={setContext} />
 
       {/* Main Container */}

@@ -8,7 +8,7 @@ import { SchemeDrawer } from './components/SchemeDrawer';
 import { SourceGuideModal } from './components/SourceGuideModal';
 import { ExpiryAlertModal } from './components/ExpiryAlertModal';
 import { checkValidity } from './utils/validityChecker';
-import { CreditCard, Layers, ShieldCheck } from 'lucide-react';
+import { CreditCard, Layers, ShieldCheck, ArrowUp, Search } from 'lucide-react';
 
 export function App() {
   // 使用者情境變數（預設 8 月壽星、CUBE Level 2 帳戶扣繳 3.0%）
@@ -27,15 +27,40 @@ export function App() {
   const [isSchemeOpen, setIsSchemeOpen] = useState(false);
   const [isSourceOpen, setIsSourceOpen] = useState(false);
   const [isExpiryAlertOpen, setIsExpiryAlertOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // 結果區域的滾動錨點 Ref
+  // 錨點 Refs
   const resultSectionRef = useRef<HTMLDivElement>(null);
+  const searchSectionRef = useRef<HTMLDivElement>(null);
+
+  // 監聽滾動以顯示/隱藏置頂按鈕
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // 滾動到結果區塊
   const scrollToResult = () => {
     setTimeout(() => {
       resultSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 50);
+  };
+
+  // 滾動回頂端搜尋框
+  const scrollToSearch = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // 聚焦搜尋輸入框
+    const input = document.querySelector('input[type="text"]') as HTMLInputElement | null;
+    if (input) {
+      setTimeout(() => input.focus(), 300);
+    }
   };
 
   // 根據搜尋字串或選取的 ID 動態計算出當前的 Merchant
@@ -97,7 +122,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-100 text-slate-900 font-sans">
+    <div className="min-h-screen flex flex-col bg-slate-100 text-slate-900 font-sans relative">
       {/* Top Header */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
@@ -141,7 +166,7 @@ export function App() {
       {/* Main Container */}
       <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">
         {/* 上方區塊：查詢視窗與常用通路按鈕 */}
-        <section className="space-y-3">
+        <section ref={searchSectionRef} className="space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider">
               🔍 查詢通路（輸入任何店家或點擊常用按鈕）：
@@ -182,6 +207,19 @@ export function App() {
           />
         </section>
       </main>
+
+      {/* 🚀 懸浮置頂/回搜尋框按鈕 (Floating Back-to-Search Button) */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToSearch}
+          className="fixed bottom-6 right-6 z-40 flex items-center space-x-2 px-4 py-3 bg-slate-900/90 hover:bg-indigo-600 text-white font-bold text-xs sm:text-sm rounded-full shadow-2xl backdrop-blur-md border border-slate-700/60 transition-all hover:scale-105 active:scale-95 animate-in fade-in slide-in-from-bottom-5 duration-200 group"
+          title="快速回到上方搜尋框"
+        >
+          <Search className="w-4 h-4 text-indigo-400 group-hover:text-white" />
+          <span>回搜尋框</span>
+          <ArrowUp className="w-4 h-4 ml-0.5 text-slate-400 group-hover:text-white" />
+        </button>
+      )}
 
       {/* Expiry Alert Popup Modal (自動彈出 / 點擊警報彈出) */}
       <ExpiryAlertModal

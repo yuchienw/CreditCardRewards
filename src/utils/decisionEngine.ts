@@ -6,6 +6,24 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
   let cubeSchemeName = merchant.cube.schemeName;
   let cubeNote = merchant.cube.note || '';
 
+  // 根據 CUBE 會員等級調整回饋率 (Level 1: 2.0%, Level 2: 3.0%, Level 3: 3.3%)
+  if (!merchant.cube.isBirthdaySpecial && merchant.cube.scheme !== 'japan' && merchant.cube.scheme !== 'general') {
+    if (context.cubeLevel === 'level1') {
+      cubeRate = 2.0;
+      cubeSchemeName = `${merchant.cube.schemeName} (Level 1: 2%)`;
+      cubeNote = '目前為 CUBE Level 1 一般卡友（2% 小樹點），開立帳戶扣繳可升級至 Level 2 (3%)！';
+    } else if (context.cubeLevel === 'level2') {
+      cubeRate = 3.0;
+      cubeSchemeName = `${merchant.cube.schemeName} (Level 2: 3%)`;
+      cubeNote = '目前為 CUBE Level 2（帳戶自動扣繳享 3% 小樹點）';
+    } else if (context.cubeLevel === 'level3') {
+      cubeRate = 3.3;
+      cubeSchemeName = `${merchant.cube.schemeName} (Level 3 VIP: 3.3%)`;
+      cubeNote = '目前為 CUBE Level 3（財富管理貴賓 VIP 享 3.3% 小樹點）';
+    }
+  }
+
+  // 慶生月 10% 判斷
   if (context.isCurrentMonthBirthday && merchant.cube.isBirthdaySpecial) {
     cubeRate = 10.0;
     cubeSchemeName = '慶生月 (生日特店專屬)';
@@ -72,4 +90,3 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Best
     };
   }
 }
-

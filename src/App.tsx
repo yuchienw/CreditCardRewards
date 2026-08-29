@@ -9,12 +9,12 @@ import { SourceGuideModal } from './components/SourceGuideModal';
 import { CreditCard, Layers, ShieldCheck } from 'lucide-react';
 
 export function App() {
-  // 使用者情境變數（預設 8 月壽星）
+  // 使用者情境變數（預設 8 月壽星、CUBE Level 2 帳戶扣繳 3.0%）
   const [context, setContext] = useState<UserContext>({
     birthMonth: 8,
     isCurrentMonthBirthday: true, // 預設開啟 8 月生日慶生特店加碼 (10%)
     isWeekend: false,
-    cubeLevel: 'level3',
+    cubeLevel: 'level2',
     selectedPayMethod: 'all',
   });
 

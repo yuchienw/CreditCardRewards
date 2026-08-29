@@ -60,7 +60,7 @@ export interface UserContext {
   birthMonth: number;
   isCurrentMonthBirthday: boolean;
   isWeekend: boolean;
-  cubeLevel: 'level2' | 'level3'; // Level 2 享 3.0%, Level 3 (VIP) 享 3.3%
+  cubeLevel: 'level1' | 'level2' | 'level3'; // Level 1 (2%), Level 2 (3%), Level 3 (3.3%)
   selectedPayMethod: 'all' | 'taishin_pay' | 'line_pay' | 'card';
 }
 

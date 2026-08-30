@@ -1,5 +1,7 @@
 # 🧠 專案核心開發規範與記憶 (Claude Code & AI Assistant Memory)
 
+> **🚨【最高準則】刷錯卡或選錯權益，很可能損失非常多，請務必要謹慎確認。嚴禁任何憑空猜測或未經官方條款查核之判定！**
+> 
 > 請直接參閱本專案的核心規格書與 Antigravity 記憶檔案：
 > - 👉 [**`GEMINI.md` (完整核心記憶與 AI 開發鐵律)**](GEMINI.md)
 > - 👉 [**`USER_SPECIFICATION.md` (使用者需求規格書)**](USER_SPECIFICATION.md)

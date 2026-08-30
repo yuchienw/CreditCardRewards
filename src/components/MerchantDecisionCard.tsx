@@ -40,7 +40,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   isFavorite = false,
   onToggleFavorite,
 }) => {
-  const [showAllPathways, setShowAllPathways] = useState(true);
+  const [showAllPathways, setShowAllPathways] = useState(false);
   const [selectedScenario, setSelectedScenario] = useState<SmartScenario>('default');
 
   // 當切換選取的店家時，重設情境為預設
@@ -299,10 +299,14 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
             </div>
           )}
 
-          {/* ⚡ Potential Strategy Rate Range Callout */}
+          {/* ⚡ Potential Strategy Rate Range Callout (點擊可直接展開/收合下方聰明刷法) */}
           {hasRateRange && (
-            <div className="mt-3 pt-3 border-t border-slate-200/60 flex items-center justify-between flex-wrap gap-2">
-              <div className="flex items-center space-x-1.5 text-xs font-extrabold text-amber-950 bg-amber-500/20 border border-amber-400/50 px-3 py-1.5 rounded-xl shadow-2xs">
+            <div 
+              onClick={() => setShowAllPathways((prev) => !prev)}
+              className="mt-3 pt-3 border-t border-slate-200/60 flex items-center justify-between flex-wrap gap-2 cursor-pointer group"
+              title="點擊展開/收合聰明刷法情境通道"
+            >
+              <div className="flex items-center space-x-1.5 text-xs font-extrabold text-amber-950 bg-amber-500/20 group-hover:bg-amber-500/30 border border-amber-400/50 px-3 py-1.5 rounded-xl shadow-2xs transition-colors">
                 <Zap className="w-4 h-4 text-amber-600 shrink-0" />
                 <span>
                   聰明刷法潛在區間：
@@ -311,8 +315,8 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
                   </span>
                 </span>
               </div>
-              <span className="text-[11px] text-slate-500 font-semibold">
-                👇 請參考下方情境通道獲取最高回饋
+              <span className="text-xs text-indigo-600 group-hover:text-indigo-800 font-bold flex items-center space-x-1 transition-colors bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-200">
+                <span>{showAllPathways ? '收合聰明刷法 ▲' : '點擊查看聰明刷法 ▼'}</span>
               </span>
             </div>
           )}
@@ -320,13 +324,16 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
 
         {/* ⚡ 達人情境加碼刷法攻略 (Multi-Scenario Pathways) */}
         <div className="bg-linear-to-br from-indigo-50/90 via-slate-50 to-amber-50/50 rounded-2xl border border-indigo-200/80 p-5 space-y-3 shadow-xs">
-          <div className="flex items-center justify-between">
+          <div 
+            onClick={() => setShowAllPathways((prev) => !prev)}
+            className="flex items-center justify-between cursor-pointer group"
+          >
             <div className="flex items-center space-x-2">
-              <div className="p-1 rounded-lg bg-indigo-600 text-white">
+              <div className="p-1 rounded-lg bg-indigo-600 text-white group-hover:bg-indigo-700 transition-colors">
                 <Zap className="w-4 h-4" />
               </div>
               <div className="flex items-center space-x-2 flex-wrap gap-1">
-                <h4 className="font-bold text-slate-900 text-sm sm:text-base">
+                <h4 className="font-bold text-slate-900 text-sm sm:text-base group-hover:text-indigo-900 transition-colors">
                   ⚡ 聰明刷法情境通道
                 </h4>
                 {hasRateRange && (
@@ -337,20 +344,21 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
               </div>
             </div>
             <button
-              onClick={() => setShowAllPathways(!showAllPathways)}
-              className="text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center space-x-1 cursor-pointer"
+              type="button"
+              className="text-xs text-indigo-600 group-hover:text-indigo-800 font-bold flex items-center space-x-1 cursor-pointer bg-white px-2.5 py-1 rounded-lg border border-indigo-200 shadow-2xs"
             >
               <span>{showAllPathways ? '收合' : '展開'}</span>
               {showAllPathways ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
             </button>
           </div>
 
-          <p className="text-xs text-slate-600">
-            即使此品牌非獨立加碼通路，只要透過以下結帳情境或支付方式，依然可享有超高回饋：
-          </p>
-
           {showAllPathways && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            <>
+              <p className="text-xs text-slate-600 pt-1">
+                即使此品牌非獨立加碼通路，只要透過以下結帳情境或支付方式，依然可享有超高回饋：
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
               {decision.pathways.map((path, idx) => (
                 <div
                   key={idx}
@@ -374,8 +382,9 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
                 </div>
               ))}
             </div>
-          )}
-        </div>
+          </>
+        )}
+      </div>
 
         {/* Side-by-Side Comparison of both cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">

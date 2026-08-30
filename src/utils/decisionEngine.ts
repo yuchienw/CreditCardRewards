@@ -499,3 +499,187 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
     pathways,
   };
 }
+
+/**
+ * 根據使用者選取的情境過濾條件，動態重新計算最優結果與 App 操作指引
+ */
+export function evaluateScenarioDecision(
+  merchant: Merchant,
+  context: UserContext,
+  scenario: import('../types/merchant').SmartScenario
+): EnhancedDecisionResult {
+  const baseDecision = evaluateBestCard(merchant, context);
+
+  if (scenario === 'default') {
+    return {
+      ...baseDecision,
+      activeScenario: 'default',
+    };
+  }
+
+  let cubeRate = baseDecision.runnerUpCard === 'cube' ? (baseDecision.runnerUpRate || 0.3) : baseDecision.winnerRate;
+  let cubeSchemeName = merchant.cube.schemeName;
+  let cubeNote = merchant.cube.note || '';
+
+  let richartRate = baseDecision.runnerUpCard === 'richart' ? (baseDecision.runnerUpRate || 1.0) : baseDecision.winnerRate;
+  let richartSchemeName = merchant.richart.schemeName;
+  let richartNote = merchant.richart.note || '';
+  let scenarioDesc = '';
+
+  const standardCubeRate = context.cubeLevel === 'level1' ? 2.0 : context.cubeLevel === 'level2' ? 3.0 : 3.3;
+
+  switch (scenario) {
+    case 'dining_mcc':
+      scenarioDesc = '🍽️ 實體餐飲業 (MCC 5811~5814)';
+      // CUBE
+      if (context.isCurrentMonthBirthday && merchant.cube.isBirthdaySpecial) {
+        cubeRate = merchant.cube.birthdayRate || 10.0;
+        cubeSchemeName = `慶生月 (${cubeRate}%)`;
+        cubeNote = '🎂 官方指定慶生特店，生日當月切換「慶生月」享最高回饋！';
+      } else {
+        cubeRate = standardCubeRate;
+        cubeSchemeName = `樂饗購 (${cubeRate}%)`;
+        cubeNote = '全台營業登記為餐飲業（MCC 5811~5814）之獨立餐廳/火鍋/咖啡，切換「樂饗購」享小樹點！';
+      }
+      // Richart
+      if (merchant.richart.isChillSpecial) {
+        richartRate = 10.0;
+        richartSchemeName = 'Chill 刷 (指定名店 10.0%)';
+        richartNote = '切換 Richart「Chill 刷」享 10.0% 最狂回饋！';
+      } else {
+        richartRate = 3.3;
+        richartSchemeName = '好饗刷 (全臺餐飲 3.3%)';
+        richartNote = '切換「好饗刷」全台餐飲（MCC 5811~5814）享 3.3% 台新 Point！';
+      }
+      break;
+
+    case 'delivery':
+      scenarioDesc = '🛵 外送平台 (Uber Eats / Foodpanda)';
+      // CUBE
+      if (context.isCurrentMonthBirthday) {
+        cubeRate = 3.5;
+        cubeSchemeName = '慶生月 (外送 3.5%)';
+        cubeNote = '🎂 8 月壽星叫 Uber Eats 切換「慶生月」享 3.5% 小樹點無上限！';
+      } else {
+        cubeRate = standardCubeRate;
+        cubeSchemeName = `樂饗購 (外送 ${cubeRate}%)`;
+        cubeNote = '透過 Uber Eats / Foodpanda 訂餐，切換「樂饗購」享小樹點！';
+      }
+      // Richart
+      richartRate = 3.3;
+      richartSchemeName = '好饗刷 (外送平台 3.3%)';
+      richartNote = '切換「好饗刷」Uber Eats / Foodpanda 外送享 3.3% 台新 Point！';
+      break;
+
+    case 'shinkong_counter':
+      scenarioDesc = '🏢 設於新光三越專櫃';
+      // CUBE
+      if (context.isCurrentMonthBirthday) {
+        cubeRate = 3.5;
+        cubeSchemeName = '慶生月 (新光三越 3.5%)';
+        cubeNote = '🎂 新光三越為 CUBE 官方慶生特店，生日月切換「慶生月」享 3.5% 小樹點無上限！';
+      } else {
+        cubeRate = standardCubeRate;
+        cubeSchemeName = `樂饗購 (新光三越 ${cubeRate}%)`;
+        cubeNote = '新光三越各專櫃直刷，切換「樂饗購」享小樹點！';
+      }
+      // Richart (台新 Pay 3.8%)
+      richartRate = 3.8;
+      richartSchemeName = 'Pay 著刷 (台新 Pay 3.8%)';
+      richartNote = '於新光三越專櫃使用「台新 Pay」綁 Richart 卡付款享高達 3.8% 台新 Point，最優首選！';
+      break;
+
+    case 'dept_counter':
+      scenarioDesc = '🏬 設於各大百貨商場專櫃 (SOGO/遠百/微風/101等)';
+      // CUBE
+      cubeRate = standardCubeRate;
+      cubeSchemeName = `樂饗購 (各大百貨 ${cubeRate}%)`;
+      cubeNote = '在 SOGO / 遠百 / 微風 / 101 / 巨城 / 夢時代等專櫃由百貨統一收銀，切換「樂饗購」享小樹點！';
+      // Richart
+      richartRate = 3.3;
+      richartSchemeName = '大筆刷 (各大百貨 3.3%)';
+      richartNote = '在指定百貨商場由百貨統一收銀，切換「大筆刷」享 3.3% 台新 Point！';
+      break;
+
+    case 'line_pay':
+      scenarioDesc = '📲 使用 LINE Pay 掃碼付款';
+      cubeRate = 0.3;
+      cubeSchemeName = '一般消費 (0.3%)';
+      cubeNote = '使用 LINE Pay 綁定 CUBE 卡若未穿透特店，僅享一般消費 0.3%';
+      richartRate = 2.3;
+      richartSchemeName = 'Pay 著刷 (LINE Pay 2.3%)';
+      richartNote = '使用 LINE Pay 綁定 Richart 卡切換「Pay 著刷」保底享 2.3% 台新 Point！';
+      break;
+
+    case 'taishin_pay':
+      scenarioDesc = '💳 使用 台新 Pay 掃碼付款';
+      cubeRate = 0.3;
+      cubeSchemeName = '一般消費 (0.3%)';
+      cubeNote = '台新 Pay 僅適用台新信用卡';
+      richartRate = 3.8;
+      richartSchemeName = 'Pay 著刷 (台新 Pay 3.8%)';
+      richartNote = '在支援台新 Pay 特店（新光三越、全家、7-11、康是美、IKEA、NET等）掃碼享 3.8% 最高回饋！';
+      break;
+
+    case 'weekend_spend':
+      scenarioDesc = '🌴 週末六日休假日消費';
+      richartRate = 2.0;
+      richartSchemeName = '假日刷 (週末 2.0%)';
+      richartNote = '週末六日全通路一般消費切換「假日刷」享 2.0% 台新 Point！';
+      break;
+  }
+
+  let finalResult: BestCardResult;
+
+  if (cubeRate > richartRate) {
+    finalResult = {
+      merchant,
+      winnerCard: 'cube',
+      winnerRate: cubeRate,
+      winnerSchemeName: cubeSchemeName,
+      winnerNote: cubeNote,
+      validUntil: merchant.validUntil,
+      runnerUpCard: 'richart',
+      runnerUpRate: richartRate,
+      runnerUpSchemeName: richartSchemeName,
+      runnerUpNote: richartNote,
+      activeScenario: scenario,
+      scenarioDescription: scenarioDesc,
+    };
+  } else if (richartRate > cubeRate) {
+    finalResult = {
+      merchant,
+      winnerCard: 'richart',
+      winnerRate: richartRate,
+      winnerSchemeName: richartSchemeName,
+      winnerNote: richartNote,
+      validUntil: merchant.validUntil,
+      runnerUpCard: 'cube',
+      runnerUpRate: cubeRate,
+      runnerUpSchemeName: cubeSchemeName,
+      runnerUpNote: cubeNote,
+      activeScenario: scenario,
+      scenarioDescription: scenarioDesc,
+    };
+  } else {
+    finalResult = {
+      merchant,
+      winnerCard: 'tie',
+      winnerRate: cubeRate,
+      winnerSchemeName: `雙卡皆享 ${cubeRate}% (CUBE: ${cubeSchemeName} / 台新: ${richartSchemeName})`,
+      winnerNote: cubeNote || richartNote,
+      validUntil: merchant.validUntil,
+      runnerUpCard: undefined,
+      runnerUpRate: richartRate,
+      runnerUpSchemeName: richartSchemeName,
+      runnerUpNote: richartNote,
+      activeScenario: scenario,
+      scenarioDescription: scenarioDesc,
+    };
+  }
+
+  return {
+    ...finalResult,
+    pathways: baseDecision.pathways,
+  };
+}

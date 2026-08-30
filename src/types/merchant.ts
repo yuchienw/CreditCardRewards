@@ -65,6 +65,16 @@ export interface UserContext {
   selectedPayMethod: 'all' | 'taishin_pay' | 'line_pay' | 'card';
 }
 
+export type SmartScenario =
+  | 'default'               // 預設門市直刷 / 官網扣款
+  | 'dining_mcc'           // 🍽️ 實體餐飲業 (MCC 5811~5814)
+  | 'delivery'             // 🛵 外送平台 (Uber Eats / Foodpanda)
+  | 'shinkong_counter'     // 🏢 設於新光三越專櫃 (台新Pay 3.8% / 慶生 3.5%)
+  | 'dept_counter'         // 🏬 設於各大百貨商場專櫃 (SOGO/遠百/微風/101等 3.3%)
+  | 'line_pay'             // 📲 使用 LINE Pay 掃碼 (2.3%)
+  | 'taishin_pay'          // 💳 使用 台新 Pay 掃碼 (3.8%)
+  | 'weekend_spend';       // 🌴 週末假日消費 (2.0%)
+
 export interface BestCardResult {
   merchant: Merchant;
   winnerCard: 'cube' | 'richart' | 'tie';
@@ -76,4 +86,6 @@ export interface BestCardResult {
   runnerUpRate?: number;
   runnerUpSchemeName?: string;
   runnerUpNote?: string;
+  activeScenario?: SmartScenario;
+  scenarioDescription?: string;
 }

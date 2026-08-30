@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import type { Merchant, UserContext } from '../types/merchant';
-import { evaluateBestCard } from '../utils/decisionEngine';
+import React, { useState, useEffect } from 'react';
+import type { Merchant, UserContext, SmartScenario } from '../types/merchant';
+import { evaluateScenarioDecision } from '../utils/decisionEngine';
 import { checkValidity } from '../utils/validityChecker';
 import { 
   Trophy, 
@@ -16,7 +16,9 @@ import {
   ChevronUp,
   AlertTriangle,
   AlertOctagon,
-  Heart
+  Heart,
+  SlidersHorizontal,
+  RotateCcw
 } from 'lucide-react';
 
 interface MerchantDecisionCardProps {
@@ -39,7 +41,14 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   onToggleFavorite,
 }) => {
   const [showAllPathways, setShowAllPathways] = useState(true);
-  const decision = evaluateBestCard(merchant, context);
+  const [selectedScenario, setSelectedScenario] = useState<SmartScenario>('default');
+
+  // 當切換選取的店家時，重設情境為預設
+  useEffect(() => {
+    setSelectedScenario('default');
+  }, [merchant.id]);
+
+  const decision = evaluateScenarioDecision(merchant, context, selectedScenario);
   const validity = checkValidity(merchant.validUntil);
   const isCubeWinner = decision.winnerCard === 'cube';
   const isRichartWinner = decision.winnerCard === 'richart';
@@ -53,6 +62,18 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   const minPotentialRate = candidateRates.length > 0 ? Math.min(...candidateRates) : decision.winnerRate;
   const maxPotentialRate = candidateRates.length > 0 ? Math.max(...candidateRates) : decision.winnerRate;
   const hasRateRange = candidateRates.length > 0 && minPotentialRate !== maxPotentialRate;
+
+  // 根據商家的屬性動態篩選出合適的情境標籤
+  const scenarioOptions: { id: SmartScenario; label: string; icon: string; desc: string }[] = [
+    { id: 'default', label: '門市直刷 / 官網', icon: '🏪', desc: '店家標準門市或官網直刷' },
+    { id: 'dining_mcc', label: '實體餐廳 (MCC)', icon: '🍽️', desc: '全台實體餐飲業（MCC 5811~5814）' },
+    { id: 'delivery', label: '外送平台', icon: '🛵', desc: 'Uber Eats 或 Foodpanda 訂餐' },
+    { id: 'shinkong_counter', label: '新光三越專櫃', icon: '🏢', desc: '新光三越專櫃（台新Pay 3.8%）' },
+    { id: 'dept_counter', label: '各大百貨專櫃', icon: '🏬', desc: 'SOGO / 遠百 / 微風 / 101 等（3.3%）' },
+    { id: 'taishin_pay', label: '台新 Pay', icon: '💳', desc: '特店掃碼付款（3.8%）' },
+    { id: 'line_pay', label: 'LINE Pay', icon: '📲', desc: '行動支付掃碼（2.3%）' },
+    { id: 'weekend_spend', label: '週末假日', icon: '🌴', desc: '週六或週日消費（2.0%）' },
+  ];
 
   return (
     <div className="bg-white rounded-3xl border-2 border-indigo-500/30 shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
@@ -147,6 +168,63 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
 
       {/* Decision Result Highlight */}
       <div className="p-6 sm:p-8 space-y-6">
+        {/* ⚡ 聰明刷法情境模擬切換器 (Interactive Scenario Filter) */}
+        <div className="bg-linear-to-r from-indigo-50/80 via-slate-50 to-indigo-50/50 border border-indigo-200/70 rounded-2xl p-4 sm:p-4.5 space-y-3 shadow-xs">
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <div className="flex items-center space-x-2">
+              <div className="p-1 rounded-lg bg-indigo-600 text-white">
+                <SlidersHorizontal className="w-3.5 h-3.5" />
+              </div>
+              <span className="text-xs sm:text-sm font-black text-indigo-950">
+                ⚡ 模擬不同結帳情境（點擊即時試算更優結果）：
+              </span>
+            </div>
+
+            {selectedScenario !== 'default' && (
+              <button
+                onClick={() => setSelectedScenario('default')}
+                className="inline-flex items-center space-x-1 text-xs text-indigo-600 hover:text-indigo-800 font-bold bg-white px-2.5 py-1 rounded-lg border border-indigo-200 shadow-2xs cursor-pointer hover:bg-indigo-50 transition-colors"
+              >
+                <RotateCcw className="w-3 h-3" />
+                <span>還原預設</span>
+              </button>
+            )}
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {scenarioOptions.map((opt) => {
+              const isSelected = selectedScenario === opt.id;
+              return (
+                <button
+                  key={opt.id}
+                  onClick={() => setSelectedScenario(opt.id)}
+                  title={opt.desc}
+                  className={`inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer border ${
+                    isSelected
+                      ? 'bg-indigo-600 text-white border-indigo-700 shadow-md ring-2 ring-indigo-300'
+                      : 'bg-white text-slate-700 border-slate-200 hover:border-indigo-300 hover:bg-indigo-50/60'
+                  }`}
+                >
+                  <span className="text-sm">{opt.icon}</span>
+                  <span>{opt.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {selectedScenario !== 'default' && decision.scenarioDescription && (
+            <div className="text-xs text-indigo-950 bg-indigo-100/70 px-3.5 py-2 rounded-xl border border-indigo-300/60 font-semibold flex items-center justify-between flex-wrap gap-2">
+              <div className="flex items-center space-x-1.5">
+                <span>💡 正在模擬：</span>
+                <span className="font-extrabold underline">{decision.scenarioDescription}</span>
+              </div>
+              <span className="text-emerald-700 font-black text-xs sm:text-sm">
+                最佳回饋率：{decision.winnerRate}%
+              </span>
+            </div>
+          )}
+        </div>
+
         {/* The WINNER Card Banner */}
         <div
           className={`p-5 sm:p-6 rounded-2xl border-2 shadow-md relative overflow-hidden ${

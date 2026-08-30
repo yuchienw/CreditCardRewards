@@ -163,10 +163,10 @@ export function App() {
         return match;
       }
 
-      // 若兩張卡都不適用特定加碼，自動生成「一般消費」判定
+      // 若兩張卡都不適用特定加碼，自動生成「非指定特店」判定，並主動提醒使用者留意是否為實體餐飲
       return {
         id: `custom-${searchQuery}`,
-        name: `${searchQuery.trim()}（一般消費）`,
+        name: `${searchQuery.trim()}（非指定特店）`,
         category: 'general',
         categoryLabel: '一般消費',
         tags: [searchQuery.trim()],
@@ -174,17 +174,17 @@ export function App() {
         lastVerifiedAt: '2026/08/29',
         cube: {
           scheme: 'general',
-          schemeName: '一般消費',
+          schemeName: '一般消費 (0.3%)',
           rate: 0.3,
-          note: '未在 CUBE 特約加碼清單，適用一般消費 0.3%（若切換「固定回饋」方案則 1.2%）'
+          note: '未在 CUBE 官方特約名單中（💡請留意：若該店符合實體餐飲規範且刷卡機登記為餐飲業，切換「樂饗購」享 3.3%）'
         },
         richart: {
           scheme: 'weekend',
           schemeName: '假日刷 (週末2.0%) / 平日 1.0%',
           rate: 2.0,
-          note: '週末六日一般消費 2.0% / 平日 1.0%'
+          note: '未在 Richart 官方特約名單中（💡請留意：若該店符合實體餐飲規範且刷卡機登記為餐飲業，切換「好饗刷」享 3.3%）'
         },
-        tips: `「${searchQuery.trim()}」未在雙卡特約加碼名單中：週末六日刷【台新 Richart 卡】切換【假日刷】享 2.0% 台新 Point，平日刷 Richart 卡享 1.0%，均優於 CUBE 的 0.3%！`
+        tips: `💡【請留意店家屬性】：\n1. 🍽️ 若此店家符合「全台實體餐廳 / 火鍋 / 咖啡廳 / 居酒屋」等餐飲業規範（收單機登記餐飲業 MCC 5811~5814），結帳切換【國泰 CUBE 樂饗購】或【台新 Richart 好饗刷】皆可享 3.3% 高額回饋！\n2. 🛍️ 若為一般非餐飲店家 / 雜項開銷：週末六日刷【台新 Richart 卡】切換【假日刷】享 2.0%，平日享 1.0%！`
       };
     }
 

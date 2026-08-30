@@ -388,9 +388,22 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
 
   // ================= 類型 F: 未列出之自訂/一般消費 =================
   else {
+    // 1. 提醒使用者確認是否符合實體餐廳規範 (樂饗購 / 好饗刷 3.3%)
+    pathways.push({
+      icon: '🍽️',
+      title: '請留意：若此店家為「實體餐廳」',
+      condition: '店家收單機登記為餐飲業 (MCC 5811~5814)',
+      recommendedCard: 'cube',
+      cardName: '國泰 CUBE 卡 / 台新 Richart 卡',
+      schemeName: 'CUBE 樂饗購 (3.3%) / Richart 好饗刷 (3.3%)',
+      rate: 3.3,
+      highlightText: '最高享 3.3% 回饋',
+      note: '請確認該店是否符合實體餐飲業規範（如獨立餐廳、火鍋、咖啡廳等），若符合，結帳切換 CUBE「樂饗購」或 Richart「好饗刷」即可享 3.3% 點數回饋！'
+    });
+
     pathways.push({
       icon: '🛵',
-      title: '若是餐飲店家，可看是否有 Foodpanda / Uber Eats',
+      title: '若店家有上架 Foodpanda / Uber Eats',
       condition: '透過外送平台下單訂購',
       recommendedCard: 'richart',
       cardName: 'Richart 卡 / CUBE 卡',

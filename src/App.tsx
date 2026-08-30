@@ -277,6 +277,7 @@ export function App() {
             favorites={favorites}
             onToggleFavorite={toggleFavorite}
             context={context}
+            onSubmitSearch={scrollToResult}
           />
         </section>
 

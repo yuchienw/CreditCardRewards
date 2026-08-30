@@ -26,6 +26,7 @@ interface QuickMerchantGridProps {
   favorites: string[];
   onToggleFavorite: (id: string) => void;
   context: UserContext;
+  onSubmitSearch?: () => void;
 }
 
 const BASE_CATEGORY_TABS = [
@@ -51,6 +52,7 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
   favorites,
   onToggleFavorite,
   context,
+  onSubmitSearch,
 }) => {
   // 動態計算當前情境下國泰 CUBE 卡的實質回饋率（包含壽星月 10% / 3.5% 與 Lv1/Lv2/Lv3 切換）
   const getEffectiveCubeRate = (m: Merchant) => {
@@ -99,6 +101,9 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
   const handleSearchSubmit = () => {
     if (filteredMerchants.length > 0) {
       onSelectMerchant(filteredMerchants[0]);
+    } else {
+      // 就算查無資料（非指定特店），送出搜尋時也直接滑動到下方的決策結果
+      onSubmitSearch?.();
     }
   };
 
@@ -222,6 +227,30 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
             className="px-4 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition-colors cursor-pointer"
           >
             瀏覽全部通路
+          </button>
+        </div>
+      )}
+
+      {/* Empty Search Results Prompt for Unlisted Merchants */}
+      {searchQuery.trim() !== '' && filteredMerchants.length === 0 && (
+        <div className="p-6 text-center bg-white rounded-2xl border border-indigo-100 shadow-xs space-y-2.5">
+          <div className="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center mx-auto text-indigo-600 font-bold text-lg">
+            🔍
+          </div>
+          <div className="space-y-1">
+            <h4 className="text-sm font-bold text-slate-800">
+              「{searchQuery}」未在官方特約名單中（判定為非指定特店）
+            </h4>
+            <p className="text-xs text-slate-500 max-w-md mx-auto">
+              系統已為您自動精算雙卡在一般消費與各情境下的最佳決策！
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={onSubmitSearch}
+            className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-bold hover:bg-indigo-700 shadow-sm transition-all cursor-pointer"
+          >
+            <span>👉 立即查看下方決策結果</span>
           </button>
         </div>
       )}

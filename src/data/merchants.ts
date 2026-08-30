@@ -258,22 +258,23 @@ export const MERCHANTS: Merchant[] = [
     name: 'App Store (Apple 訂閱與課金)',
     category: 'game_stream',
     categoryLabel: '遊戲 & 影音',
-    tags: ['app store', 'icloud', 'apple music', '蘋果課金', 'ios訂閱'],
+    tags: ['app store', 'icloud', 'apple music', '蘋果課金', 'ios訂閱', 'apple內購', '蘋果內購'],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
-    officialSourceUrl: TAISHIN_OFFICIAL_URL,
+    officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
-      schemeName: '玩數位',
+      schemeName: '玩數位 (3.3%)',
       rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      note: '切換「玩數位」享 3.0%~3.3% 小樹點（Apple 媒體服務官方特店）'
     },
     richart: {
-      scheme: 'digital_fun',
-      schemeName: '數趣刷 (3.3%)',
-      rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
-    }
+      scheme: 'weekend',
+      schemeName: '一般消費 (1.0%) / 假日刷 (2.0%)',
+      rate: 1.0,
+      note: '非台新數趣刷特店，平日一般消費 1.0% / 週末假日刷 2.0%'
+    },
+    tips: 'Apple 內購與訂閱（App Store、iCloud+、Apple Music、iOS 遊戲課金等）為國泰 CUBE 卡【玩數位】官方指定特店，享 3.0%~3.3% 小樹點！台新 Richart 卡未列入加碼（僅一般消費 1.0% / 假日 2.0%），因此絕對首選 CUBE 卡！'
   },
   {
     id: 'samsung-official',
@@ -9022,47 +9023,49 @@ export const MERCHANTS: Merchant[] = [
   },
   {
     id: 'official-stream-apple',
-    name: 'Apple 媒體服務',
+    name: 'Apple 媒體服務 (App Store / 內購 / iCloud)',
     category: 'game_stream',
     categoryLabel: '遊戲 & 影音',
-    tags: ["Apple 媒體服務", "串流影音", "數位訂閱", "玩數位"],
+    tags: ["Apple 媒體服務", "App Store", "Apple內購", "iCloud", "Apple Music", "玩數位"],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
-      schemeName: '玩數位',
+      schemeName: '玩數位 (3.3%)',
       rate: 3.3,
-      note: '切換「玩數位」享 3.3% 小樹點'
+      note: '切換「玩數位」享 3.0%~3.3% 小樹點（官方指定特店）'
     },
     richart: {
-      scheme: 'digital_fun',
-      schemeName: '數趣刷',
-      rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      scheme: 'weekend',
+      schemeName: '一般消費 (1.0%) / 假日刷 (2.0%)',
+      rate: 1.0,
+      note: '非台新數趣刷特店，平日 1.0% / 假日 2.0%'
     },
+    tips: 'Apple 媒體服務為國泰 CUBE 卡【玩數位】指定特店（最高 3.3%），台新 Richart 卡非加碼特店（僅 1.0%~2.0%）。'
   },
   {
     id: 'official-stream-google-play',
-    name: 'Google Play',
+    name: 'Google Play (安卓課金與應用程式)',
     category: 'game_stream',
     categoryLabel: '遊戲 & 影音',
-    tags: ["Google Play", "串流影音", "數位訂閱", "玩數位"],
+    tags: ["Google Play", "安卓課金", "Google訂閱", "玩數位"],
     validUntil: '2026/12/31',
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
-      schemeName: '玩數位',
+      schemeName: '玩數位 (3.3%)',
       rate: 3.3,
-      note: '切換「玩數位」享 3.3% 小樹點'
+      note: '切換「玩數位」享 3.0%~3.3% 小樹點（官方指定特店）'
     },
     richart: {
-      scheme: 'digital_fun',
-      schemeName: '數趣刷',
-      rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      scheme: 'weekend',
+      schemeName: '一般消費 (1.0%) / 假日刷 (2.0%)',
+      rate: 1.0,
+      note: '非台新數趣刷特店，平日 1.0% / 假日 2.0%'
     },
+    tips: 'Google Play 為國泰 CUBE 卡【玩數位】指定特店（最高 3.3%），台新 Richart 卡非加碼特店（僅 1.0%~2.0%）。'
   },
   {
     id: 'official-stream-max',

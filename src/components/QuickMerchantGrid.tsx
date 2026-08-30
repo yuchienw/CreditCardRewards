@@ -154,7 +154,7 @@ export const QuickMerchantGrid: React.FC<QuickMerchantGridProps> = ({
               🔍 搜尋「<span className="text-indigo-600 font-bold">{searchQuery}</span>」：
             </span>
             <span>
-              共找到 <strong className="text-indigo-700 text-sm">{filteredMerchants.length}</strong> 個相符通路（點擊任一卡片即可查看決策）
+              共找到 <strong className="text-indigo-700 text-sm">{filteredMerchants.length}</strong> 個相符通路
             </span>
           </div>
           <button

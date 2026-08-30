@@ -45,6 +45,15 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   const isRichartWinner = decision.winnerCard === 'richart';
   const isTie = decision.winnerCard === 'tie';
 
+  // 計算聰明刷法情境通道與當前條件下的潛在回饋區間 (Range)
+  const allPathwayRates = (decision.pathways || []).map((p) => p.rate).filter((r) => typeof r === 'number' && !isNaN(r));
+  const candidateRates = [decision.winnerRate, decision.runnerUpRate, ...allPathwayRates].filter(
+    (r): r is number => typeof r === 'number' && !isNaN(r)
+  );
+  const minPotentialRate = candidateRates.length > 0 ? Math.min(...candidateRates) : decision.winnerRate;
+  const maxPotentialRate = candidateRates.length > 0 ? Math.max(...candidateRates) : decision.winnerRate;
+  const hasRateRange = candidateRates.length > 0 && minPotentialRate !== maxPotentialRate;
+
   return (
     <div className="bg-white rounded-3xl border-2 border-indigo-500/30 shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
       {/* 🚨 High-Priority Expiration Alert Banner (if expired or expiring soon) */}
@@ -211,6 +220,24 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
               💡 {decision.winnerNote}
             </div>
           )}
+
+          {/* ⚡ Potential Strategy Rate Range Callout */}
+          {hasRateRange && (
+            <div className="mt-3 pt-3 border-t border-slate-200/60 flex items-center justify-between flex-wrap gap-2">
+              <div className="flex items-center space-x-1.5 text-xs font-extrabold text-amber-950 bg-amber-500/20 border border-amber-400/50 px-3 py-1.5 rounded-xl shadow-2xs">
+                <Zap className="w-4 h-4 text-amber-600 shrink-0" />
+                <span>
+                  聰明刷法潛在區間：
+                  <span className="text-amber-800 underline font-black text-sm ml-1">
+                    {minPotentialRate}% ~ {maxPotentialRate}%
+                  </span>
+                </span>
+              </div>
+              <span className="text-[11px] text-slate-500 font-semibold">
+                👇 請參考下方情境通道獲取最高回饋
+              </span>
+            </div>
+          )}
         </div>
 
         {/* ⚡ 達人情境加碼刷法攻略 (Multi-Scenario Pathways) */}
@@ -220,9 +247,16 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
               <div className="p-1 rounded-lg bg-indigo-600 text-white">
                 <Zap className="w-4 h-4" />
               </div>
-              <h4 className="font-bold text-slate-900 text-sm sm:text-base">
-                ⚡ 聰明刷法情境通道
-              </h4>
+              <div className="flex items-center space-x-2 flex-wrap gap-1">
+                <h4 className="font-bold text-slate-900 text-sm sm:text-base">
+                  ⚡ 聰明刷法情境通道
+                </h4>
+                {hasRateRange && (
+                  <span className="px-2 py-0.5 rounded-md bg-amber-500/25 text-amber-900 text-[11px] font-black border border-amber-400/40">
+                    潛在區間 {minPotentialRate}% ~ {maxPotentialRate}%
+                  </span>
+                )}
+              </div>
             </div>
             <button
               onClick={() => setShowAllPathways(!showAllPathways)}

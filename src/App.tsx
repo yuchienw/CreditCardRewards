@@ -163,6 +163,36 @@ export function App() {
         return match;
       }
 
+      // 判斷是否帶有餐飲相關關鍵字（如：熟度、鍋、餐廳、燒肉、牛排、咖啡、居酒屋、酒吧、麵、食堂等）
+      const diningKeywords = ['鍋', '火鍋', '餐廳', '燒肉', '牛排', '咖啡', '甜點', '義大利麵', '小吃', '居酒屋', '酒吧', '壽司', '料理', '早午餐', '食堂', '便當', '熟度', '麵', '飯', '拉麵', '熱炒', '快炒', '披薩', '漢堡', '冰', '茶', '烘焙', '私廚', '吃到飽', '餐酒館', '酒館'];
+      const isLikelyDining = diningKeywords.some((kw) => q.includes(kw));
+
+      if (isLikelyDining) {
+        return {
+          id: `custom-dining-${searchQuery}`,
+          name: `${searchQuery.trim()}（實體餐飲）`,
+          category: 'dining_delivery',
+          categoryLabel: '外送 & 餐飲',
+          tags: [searchQuery.trim(), '餐飲', '餐廳'],
+          validUntil: '2026/12/31',
+          lastVerifiedAt: '2026/08/29',
+          officialSourceUrl: 'https://www.cathay-cube.com.tw/cathaybk/personal/product/credit-card/cards/cube-list',
+          cube: {
+            scheme: 'dining',
+            schemeName: '樂饗購 (餐飲 3.3%)',
+            rate: 3.3,
+            note: '全台實體餐飲業（MCC 5811~5814）切換「樂饗購」享 3.0%~3.3% 小樹點！'
+          },
+          richart: {
+            scheme: 'dining',
+            schemeName: '好饗刷 (餐飲 3.3%)',
+            rate: 3.3,
+            note: '全台實體餐飲店家（不含餐券），切換「好饗刷」享 3.3% 台新 Point！'
+          },
+          tips: `「${searchQuery.trim()}」判定為實體餐飲店家：結帳時切換【國泰 CUBE 卡】（樂饗購 3.3%）或【台新 Richart 卡】（好饗刷 3.3%）均可享有最高 3.3% 點數回饋！`
+        };
+      }
+
       // 若兩張卡都不適用特定加碼，自動生成「一般消費」判定
       return {
         id: `custom-${searchQuery}`,

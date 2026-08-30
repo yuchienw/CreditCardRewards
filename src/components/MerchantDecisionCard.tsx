@@ -66,13 +66,13 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   // 根據商家的屬性動態篩選出合適的情境標籤
   const scenarioOptions: { id: SmartScenario; label: string; icon: string; desc: string }[] = [
     { id: 'default', label: '門市直刷 / 官網', icon: '🏪', desc: '店家標準門市或官網直刷' },
-    { id: 'dining_mcc', label: '實體餐廳 (MCC)', icon: '🍽️', desc: '全台實體餐飲業（MCC 5811~5814）' },
-    { id: 'delivery', label: '外送平台', icon: '🛵', desc: 'Uber Eats 或 Foodpanda 訂餐' },
-    { id: 'shinkong_counter', label: '新光三越專櫃', icon: '🏢', desc: '新光三越專櫃（台新Pay 3.8%）' },
-    { id: 'dept_counter', label: '各大百貨專櫃', icon: '🏬', desc: 'SOGO / 遠百 / 微風 / 101 等（3.3%）' },
-    { id: 'taishin_pay', label: '台新 Pay', icon: '💳', desc: '特店掃碼付款（3.8%）' },
-    { id: 'line_pay', label: 'LINE Pay', icon: '📲', desc: '行動支付掃碼（2.3%）' },
-    { id: 'weekend_spend', label: '週末假日', icon: '🌴', desc: '週六或週日消費（2.0%）' },
+    { id: 'dining_mcc', label: '實體餐廳 (MCC 3.3%)', icon: '🍽️', desc: '全台實體餐飲業（MCC 5811~5814 享 3.3%）' },
+    { id: 'delivery', label: '外送平台 (3.3%~3.5%)', icon: '🛵', desc: 'Uber Eats 或 Foodpanda 訂餐享 3.3%（8月生日 Uber Eats 享 3.5%）' },
+    { id: 'shinkong_counter', label: '新光三越 (3.8%)', icon: '🏢', desc: '新光三越專櫃使用台新 Pay 享 3.8%（慶生月 3.5%）' },
+    { id: 'dept_counter', label: '各大百貨專櫃 (3.3%)', icon: '🏬', desc: 'SOGO / 遠百 / 微風 / 101 等由百貨收銀享 3.3%' },
+    { id: 'taishin_pay', label: '台新 Pay (3.8%)', icon: '💳', desc: '支援台新 Pay 特店掃碼付款享 3.8%' },
+    { id: 'line_pay', label: 'LINE Pay (2.3%)', icon: '📲', desc: '支援 LINE Pay 門市行動支付掃碼享 2.3%' },
+    { id: 'weekend_spend', label: '週末假日 (2.0%)', icon: '🌴', desc: '週六或週日消費全通路享 2.0%' },
   ];
 
   return (

@@ -391,19 +391,19 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
     // 1. 提醒使用者確認是否符合實體餐廳規範 (樂饗購 / 好饗刷 3.3%)
     pathways.push({
       icon: '🍽️',
-      title: '請留意：若此店家為「實體餐廳」',
+      title: '實體餐廳消費 (MCC 5811~5814)',
       condition: '店家收單機登記為餐飲業 (MCC 5811~5814)',
       recommendedCard: 'cube',
       cardName: '國泰 CUBE 卡 / 台新 Richart 卡',
       schemeName: 'CUBE 樂饗購 (3.3%) / Richart 好饗刷 (3.3%)',
       rate: 3.3,
-      highlightText: '最高享 3.3% 回饋',
+      highlightText: '最高 3.3%',
       note: '請確認該店是否符合實體餐飲業規範（如獨立餐廳、火鍋、咖啡廳等），若符合，結帳切換 CUBE「樂饗購」或 Richart「好饗刷」即可享 3.3% 點數回饋！'
     });
 
     pathways.push({
       icon: '🛵',
-      title: '若店家有上架 Foodpanda / Uber Eats',
+      title: '外送平台訂餐 (Uber Eats / 熊貓)',
       condition: '透過外送平台下單訂購',
       recommendedCard: 'richart',
       cardName: 'Richart 卡 / CUBE 卡',
@@ -415,37 +415,37 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
 
     pathways.push({
       icon: '🏢',
-      title: '若此店家設於各大百貨專櫃內',
+      title: '各大百貨專櫃 (SOGO/遠百等)',
       condition: '由各大百貨商場統一收銀結帳',
       recommendedCard: 'cube',
       cardName: '國泰 CUBE 卡 / 台新 Richart 卡',
       schemeName: 'CUBE 樂饗購 (3.3%) / Richart 大筆刷 (3.3%)',
       rate: 3.3,
-      highlightText: '3.3% 點數回饋',
+      highlightText: '3.3% 點數',
       note: '若該店位在各大百貨專櫃內由百貨收銀結帳，切換 CUBE「樂饗購」或 Richart「大筆刷」享 3.3% 點數回饋！'
     });
 
     pathways.push({
       icon: '📲',
-      title: '若店家支援 LINE Pay 掃碼結帳',
+      title: 'LINE Pay 掃碼支付',
       condition: '使用 LINE Pay 綁定信用卡付款',
       recommendedCard: 'richart',
       cardName: '台新 Richart 卡',
-      schemeName: 'Pay 著刷 (LINE Pay)',
+      schemeName: 'Pay 著刷 (LINE Pay 2.3%)',
       rate: 2.3,
-      highlightText: '2.3% 台新 Point',
+      highlightText: '2.3% 回饋',
       note: '只要店家支援 LINE Pay，改用 Richart 卡「Pay 著刷」保底享有 2.3%！'
     });
 
     pathways.push({
       icon: '🌴',
-      title: '選在週末六日結帳（實體店面 / 官網）',
+      title: '週末假日消費 (實體/官網)',
       condition: '週六或週日消費',
       recommendedCard: 'richart',
       cardName: '台新 Richart 卡',
-      schemeName: '假日刷',
+      schemeName: '假日刷 (2.0%)',
       rate: 2.0,
-      highlightText: '2.0% 台新 Point',
+      highlightText: '2.0% 回饋',
       note: '一般獨立門市直刷，週六週日刷 Richart 卡切換「假日刷」享 2.0% 無腦回饋！'
     });
   }

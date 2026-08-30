@@ -176,7 +176,7 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
                 <SlidersHorizontal className="w-3.5 h-3.5" />
               </div>
               <span className="text-xs sm:text-sm font-black text-indigo-950">
-                ⚡ 模擬不同結帳情境（點擊即時試算更優結果）：
+                ⚡ 模擬不同結帳情境：
               </span>
             </div>
 
@@ -358,24 +358,33 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
                 即使此品牌非獨立加碼通路，只要透過以下結帳情境或支付方式，依然可享有超高回饋：
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
               {decision.pathways.map((path, idx) => (
                 <div
                   key={idx}
-                  className="p-3 bg-white rounded-xl border border-slate-200/80 shadow-xs flex items-start space-x-3 hover:border-indigo-300 transition-colors"
+                  className="p-3.5 bg-white rounded-xl border border-slate-200/90 shadow-2xs hover:border-indigo-300 hover:shadow-xs transition-all space-y-2 flex flex-col justify-between"
                 >
-                  <span className="text-xl shrink-0 mt-0.5">{path.icon}</span>
-                  <div className="space-y-1 text-xs flex-1">
-                    <div className="flex items-center justify-between gap-1">
-                      <span className="font-bold text-slate-900">{path.title}</span>
-                      <span className="font-extrabold text-indigo-600 shrink-0 bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-100">
+                  <div className="space-y-1.5">
+                    {/* Header: Icon + Title + Highlight Rate Badge */}
+                    <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-1.5">
+                      <div className="flex items-center space-x-1.5 min-w-0">
+                        <span className="text-lg shrink-0">{path.icon}</span>
+                        <span className="font-bold text-slate-900 text-xs sm:text-sm">
+                          {path.title}
+                        </span>
+                      </div>
+                      <span className="shrink-0 text-xs font-black text-indigo-700 bg-indigo-50 border border-indigo-200/80 px-2 py-0.5 rounded-lg whitespace-nowrap shadow-2xs">
                         {path.highlightText}
                       </span>
                     </div>
-                    <div className="text-[11px] text-slate-600 leading-snug">
+
+                    {/* Recommendation Card & Scheme */}
+                    <div className="text-[11px] font-semibold text-slate-700 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-100/90 leading-snug">
                       👉 <strong>{path.cardName}</strong>（{path.schemeName}）
                     </div>
-                    <div className="text-[10px] text-slate-700 leading-tight">
+
+                    {/* Detailed Note */}
+                    <div className="text-[11px] text-slate-600 leading-relaxed pt-0.5">
                       {path.note}
                     </div>
                   </div>

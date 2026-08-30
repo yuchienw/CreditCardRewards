@@ -43,9 +43,10 @@ export const MerchantDecisionCard: React.FC<MerchantDecisionCardProps> = ({
   const [showAllPathways, setShowAllPathways] = useState(false);
   const [selectedScenario, setSelectedScenario] = useState<SmartScenario>('default');
 
-  // 當切換選取的店家時，重設情境為預設
+  // 當切換選取的店家或進行新查詢時，重設情境為預設，且聰明刷法通道重設為收合
   useEffect(() => {
     setSelectedScenario('default');
+    setShowAllPathways(false);
   }, [merchant.id]);
 
   const decision = evaluateScenarioDecision(merchant, context, selectedScenario);

@@ -68,22 +68,64 @@ export function evaluateBestCard(merchant: Merchant, context: UserContext): Enha
   // 3. 根據通路的實際屬性，精準生成專屬的「聰明刷法情境通道 (Pathways)」
   const pathways: StrategyPathway[] = [];
 
-  // ================= 類型 A: 線上軟體訂閱 / AI / 遊戲串流 (Notion, ChatGPT, Netflix, Steam 等) =================
+  // ================= 類型 A: 線上軟體訂閱 / AI / 遊戲串流 (Apple 內購, ChatGPT, Netflix, Steam 等) =================
   if (merchant.category === 'game_stream') {
-    // 專屬線上訂閱方案
-    pathways.push({
-      icon: '💻',
-      title: '線上訂閱與數位扣款',
-      condition: '綁定信用卡自動扣款訂閱',
-      recommendedCard: 'richart',
-      cardName: '台新 Richart 卡 / CUBE 卡',
-      schemeName: 'Richart 數趣刷 (3.3%) / CUBE 玩數位 (3.3%)',
-      rate: 3.3,
-      highlightText: '3.3% 回饋',
-      note: '切換 Richart「數趣刷」或 CUBE「玩數位」均享 3.3% 點數回饋。'
-    });
+    // 1. 根據雙卡在該商家的真實回饋，給予精確的扣款指引
+    if (merchant.cube.scheme === 'digital' && (merchant.richart.scheme === 'general' || merchant.richart.scheme === 'weekend')) {
+      // 如 Apple 媒體服務 / Google Play / Spotify
+      pathways.push({
+        icon: '💻',
+        title: '線上訂閱首選推薦',
+        condition: '綁定國泰 CUBE 卡自動扣款',
+        recommendedCard: 'cube',
+        cardName: '國泰 CUBE 卡',
+        schemeName: '玩數位 (3.3%)',
+        rate: 3.3,
+        highlightText: '3.3% 小樹點',
+        note: '此服務為 CUBE「玩數位」官方特店（最高 3.3%），台新 Richart 未列入加碼（僅一般消費 1.0%）。'
+      });
+    } else if (merchant.richart.scheme === 'digital_fun' && merchant.cube.scheme === 'general') {
+      // 如 Steam / ChatGPT / Notion / Claude / Canva / Perplexity
+      pathways.push({
+        icon: '💻',
+        title: '線上訂閱首選推薦',
+        condition: '綁定台新 Richart 卡自動扣款',
+        recommendedCard: 'richart',
+        cardName: '台新 Richart 卡',
+        schemeName: '數趣刷 (3.3%)',
+        rate: 3.3,
+        highlightText: '3.3% 台新 Point',
+        note: '此服務為台新「數趣刷」官方特店（享 3.3%），CUBE 卡未列入加碼（僅一般消費 0.3%）。'
+      });
+    } else if (merchant.richart.scheme === 'chill') {
+      // 如 Chill 刷 5% 追更 (Netflix, Disney+, 巴哈姆特等)
+      pathways.push({
+        icon: '🍿',
+        title: '追劇與訂閱首推 Chill 刷',
+        condition: '切換 Richart Chill 刷方案',
+        recommendedCard: 'richart',
+        cardName: '台新 Richart 卡',
+        schemeName: 'Chill 刷 (5.0%)',
+        rate: 5.0,
+        highlightText: '5.0% 台新 Point',
+        note: '切換台新「Chill 刷」享 5.0% 超高回饋，優於 CUBE 玩數位的 3.3%！'
+      });
+    } else {
+      // 雙卡均支援 (如 PlayStation, Nintendo)
+      pathways.push({
+        icon: '💻',
+        title: '線上訂閱與數位扣款',
+        condition: '綁定信用卡自動扣款訂閱',
+        recommendedCard: 'richart',
+        cardName: '台新 Richart 卡 / CUBE 卡',
+        schemeName: 'Richart 數趣刷 (3.3%) / CUBE 玩數位 (3.3%)',
+        rate: 3.3,
+        highlightText: '3.3% 回饋',
+        note: '切換 Richart「數趣刷」或 CUBE「玩數位」均享 3.3% 點數回饋。'
+      });
+    }
 
-    // 只有官方明確列入慶生月特店的數位平台 (如 PlayStation / Nintendo) 才推薦慶生月
+    // 只有官方明確列入慶生月特店的數位平台 (如 PlayStation / Nintendo / 巴哈姆特動畫瘋) 才推薦慶生月
     if (merchant.cube.isBirthdaySpecial) {
       const bdayRate = merchant.cube.birthdayRate || 10.0;
       pathways.push({

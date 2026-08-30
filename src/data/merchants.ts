@@ -65,16 +65,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 玩數位指定特店，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷',
+      schemeName: '數趣刷 (遊戲影音 3.3%)',
       rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -131,16 +131,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 玩數位指定特店，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷 (AI 服務)',
+      schemeName: '數趣刷 (AI服務 3.3%)',
       rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -153,16 +153,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 玩數位指定特店，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷 (AI 服務)',
+      schemeName: '數趣刷 (AI服務 3.3%)',
       rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -175,16 +175,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 玩數位指定特店，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷 (AI 服務)',
+      schemeName: '數趣刷 (AI服務 3.3%)',
       rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -197,16 +197,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 玩數位指定特店，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷 (AI 服務)',
+      schemeName: '數趣刷 (AI服務 3.3%)',
       rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -219,16 +219,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 玩數位指定特店，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷 (AI 服務)',
+      schemeName: '數趣刷 (AI服務 3.3%)',
       rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -450,15 +450,15 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
-      schemeName: '玩數位',
+      schemeName: '玩數位 (3.3%)',
       rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      note: '切換「玩數位」享 3.0%~3.3% 小樹點（官方明文指定特店）'
     },
     richart: {
-      scheme: 'digital_fun',
-      schemeName: '數趣刷',
-      rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      scheme: 'weekend',
+      schemeName: '一般消費 (1.0%) / 假日刷 (2.0%)',
+      rate: 1.0,
+      note: '非台新數趣刷特店，平日 1.0% / 週末假日刷 2.0%'
     }
   },
   {
@@ -472,15 +472,15 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
       scheme: 'digital',
-      schemeName: '玩數位',
+      schemeName: '玩數位 (3.3%)',
       rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      note: '切換「玩數位」享 3.0%~3.3% 小樹點（官方明文指定特店）'
     },
     richart: {
-      scheme: 'digital_fun',
-      schemeName: '數趣刷',
-      rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      scheme: 'weekend',
+      schemeName: '一般消費 (1.0%) / 假日刷 (2.0%)',
+      rate: 1.0,
+      note: '非台新數趣刷特店，平日 1.0% / 週末假日刷 2.0%'
     }
   },
   {
@@ -518,17 +518,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (熬夜追更 5%)',
+      schemeName: 'Chill 刷 (熬夜追更 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -4662,17 +4661,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購 (專櫃門市)',
-      rate: 3.3,
-      note: '在百貨專櫃切「樂饗購」3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立門市與官網非 CUBE 特店享 0.3%（若設於百貨專櫃由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (運動品牌 5%) / 大筆刷 (3.3%)',
+      schemeName: 'Chill 刷 (運動品牌 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '直營門市切「Chill 刷」享 5.0%！百貨專櫃切「大筆刷」享 3.3%！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     },
     tips: 'adidas 刷法：直營專賣店刷 Richart「Chill 刷」享 5.0%！在百貨專櫃平日刷 3.3% / 生日月 CUBE「慶生月」享 10%！'
   },
@@ -4686,17 +4684,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '百貨專櫃切「樂饗購」3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立門市與官網非 CUBE 特店享 0.3%（若設於百貨專櫃由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (運動品牌 5%)',
+      schemeName: 'Chill 刷 (運動品牌 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '直營專賣門市切「Chill 刷」享 5.0%！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     },
     tips: 'Nike 直營店刷 Richart「Chill 刷」享 5.0%！'
   },
@@ -4710,17 +4707,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '百貨專櫃切「樂饗購」3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立門市與官網非 CUBE 特店享 0.3%（若設於百貨專櫃由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (運動品牌 5%)',
+      schemeName: 'Chill 刷 (運動品牌 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '直營店切換「Chill 刷」享 5.0%！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -4733,17 +4729,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '百貨專櫃切「樂饗購」3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立門市與官網非 CUBE 特店享 0.3%（若設於百貨專櫃由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (運動品牌 5%)',
+      schemeName: 'Chill 刷 (運動品牌 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '直營門市切「Chill 刷」享 5.0%'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -4825,17 +4820,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '百貨專櫃切「樂饗購」3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立門市與官網非 CUBE 特店享 0.3%（若設於百貨專櫃由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (5%) / 大筆刷 (3.3%)',
+      schemeName: 'Chill 刷 (運動品牌 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '直營店切「Chill 刷」享 5.0%！百貨專櫃切「大筆刷」享 3.3%'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -4848,17 +4842,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (體態養成 5%)',
+      schemeName: 'Chill 刷 (體態養成 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -4871,17 +4864,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (體態養成 5%)',
+      schemeName: 'Chill 刷 (體態養成 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -4894,17 +4886,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
-      schemeName: 'Chill 刷 (體態養成 5%)',
+      schemeName: 'Chill 刷 (體態養成 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -4940,16 +4931,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'big_spend',
       schemeName: '大筆刷 (時尚品味 3.3%)',
       rate: 3.3,
-      note: '切換「大筆刷」享 3.3%'
+      note: '切換「大筆刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -4962,16 +4953,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'big_spend',
       schemeName: '大筆刷 (時尚品味 3.3%)',
       rate: 3.3,
-      note: '切換「大筆刷」享 3.3%'
+      note: '切換「大筆刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -4984,16 +4975,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'big_spend',
       schemeName: '大筆刷 (時尚品味 3.3%)',
       rate: 3.3,
-      note: '切換「大筆刷」享 3.3%'
+      note: '切換「大筆刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -5006,17 +4997,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'pay',
       schemeName: 'Pay 著刷 (台新Pay 3.8%) / 大筆刷 (3.3%)',
       rate: 3.8,
-      payMethod: 'taishin_pay',
-      note: '在 NET 使用台新 Pay 享高達 3.8%！直刷切換「大筆刷」享 3.3%'
+      note: 'NET 門市使用台新 Pay 享高達 3.8%！直刷大筆刷享 3.3%'
     },
     tips: '在 NET 結帳使用【台新 Pay】綁 Richart 卡享 3.8%！'
   },
@@ -5030,17 +5020,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'pay',
       schemeName: 'Pay 著刷 (台新Pay 3.8%) / 大筆刷 (3.3%)',
       rate: 3.8,
-      payMethod: 'taishin_pay',
-      note: '在 IKEA 使用台新 Pay 享高達 3.8%！或切換「大筆刷」享 3.3%'
+      note: 'IKEA 門市使用台新 Pay 享 3.8%！直刷大筆刷享 3.3%'
     },
     tips: '在 IKEA 結帳打開【台新 Pay】綁 Richart 卡享 3.8% 最神回饋！'
   },
@@ -5054,16 +5043,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'big_spend',
       schemeName: '大筆刷 (居家裝修 3.3%)',
       rate: 3.3,
-      note: '切換「大筆刷」享 3.3%'
+      note: '切換「大筆刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -5076,16 +5065,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'big_spend',
       schemeName: '大筆刷 (居家裝修 3.3%)',
       rate: 3.3,
-      note: '切換「大筆刷」享 3.3%'
+      note: '切換「大筆刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -5098,16 +5087,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'big_spend',
       schemeName: '大筆刷 (居家裝修 3.3%)',
       rate: 3.3,
-      note: '切換「大筆刷」享 3.3%'
+      note: '切換「大筆刷」享 3.3% 台新 Point！'
     }
   },
   {
@@ -5120,16 +5109,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'big_spend',
       schemeName: '大筆刷 (居家裝修 3.3%)',
       rate: 3.3,
-      note: '切換「大筆刷」享 3.3%'
+      note: '切換「大筆刷」享 3.3% 台新 Point！'
     }
   },
 
@@ -5488,15 +5477,15 @@ export const MERCHANTS: Merchant[] = [
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
       scheme: 'selected',
-      schemeName: '集精選',
+      schemeName: '集精選 (3.0%)',
       rate: 3.0,
-      note: '切換「集精選」享 2.0%~3.0%'
+      note: '實體卡或 Apple/Google/Samsung Pay 感應享 3.0% 小樹點！'
     },
     richart: {
-      scheme: 'everyday',
-      schemeName: '天天刷 (日常採買 3.3%)',
-      rate: 3.3,
-      note: '切換「天天刷」量販享 3.3%'
+      scheme: 'weekend',
+      schemeName: '一般消費 (1.0%) / 假日刷 (2.0%)',
+      rate: 1.0,
+      note: '非台新天天刷指定量販，平日 1.0% / 週末假日刷 2.0%'
     },
     tips: '逛家樂福刷【台新 Richart 卡】（切換天天刷享 3.3%）回饋率最高！'
   },
@@ -6730,17 +6719,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (熬夜追更 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -6753,17 +6741,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (熬夜追更 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -6776,17 +6763,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (熬夜追更 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -6799,17 +6785,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (熬夜追更 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -6845,17 +6830,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (應援追星 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -6891,17 +6875,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (應援追星 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -6914,17 +6897,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (應援追星 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
 
@@ -6941,17 +6923,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (體態養成 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -7056,17 +7037,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (營養補給 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -7079,17 +7059,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (營養補給 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
   {
@@ -7125,17 +7104,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3%'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 特店享一般消費 0.3%'
     },
     richart: {
       scheme: 'chill',
       schemeName: 'Chill 刷 (營養補給 5.0%)',
       rate: 5.0,
-      isChillSpecial: true,
-      note: '🔥 切換「Chill 刷」享 5.0% 台新 Point！'
+      note: '切換「Chill 刷」享 5.0% 台新 Point！'
     }
   },
 
@@ -8855,16 +8833,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3% 小樹點'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 玩數位指定特店，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷',
+      schemeName: '數趣刷 (AI服務 3.3%)',
       rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point！'
     },
   },
   {
@@ -8877,16 +8855,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3% 小樹點'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 玩數位指定特店，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷',
+      schemeName: '數趣刷 (AI服務 3.3%)',
       rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point！'
     },
   },
   {
@@ -8987,16 +8965,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
-      scheme: 'digital',
-      schemeName: '玩數位',
-      rate: 3.3,
-      note: '切換「玩數位」享 3.3% 小樹點'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '非 CUBE 玩數位指定特店，享一般消費 0.3%（若切換固定回饋則 1.2%）'
     },
     richart: {
       scheme: 'digital_fun',
-      schemeName: '數趣刷',
+      schemeName: '數趣刷 (AI服務 3.3%)',
       rate: 3.3,
-      note: '切換「數趣刷」享 3.3%'
+      note: '切換「數趣刷」享 3.3% 台新 Point！'
     },
   },
   {
@@ -10817,16 +10795,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: CATHAY_OFFICIAL_URL,
     cube: {
-      scheme: 'selected',
-      schemeName: '集精選',
-      rate: 3.0,
-      note: '切換「集精選」享 3.0% 小樹點'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'big_spend',
-      schemeName: '大筆刷',
+      schemeName: '大筆刷 (居家裝修 3.3%)',
       rate: 3.3,
-      note: '切換「大筆刷」享 3.3%'
+      note: '切換「大筆刷」享 3.3% 台新 Point！'
     },
   },
   {
@@ -11486,16 +11464,16 @@ export const MERCHANTS: Merchant[] = [
     lastVerifiedAt: '2026/08/29',
     officialSourceUrl: TAISHIN_OFFICIAL_URL,
     cube: {
-      scheme: 'dining',
-      schemeName: '樂饗購',
-      rate: 3.3,
-      note: '切換「樂饗購」享 3.3% 小樹點'
+      scheme: 'general',
+      schemeName: '一般消費 (0.3%)',
+      rate: 0.3,
+      note: '獨立專賣門市非 CUBE 特店享 0.3%（若設於百貨商場由百貨收銀則享樂饗購 3.3%）'
     },
     richart: {
       scheme: 'big_spend',
-      schemeName: '大筆刷',
+      schemeName: '大筆刷 (居家裝修 3.3%)',
       rate: 3.3,
-      note: '切換「大筆刷」享 3.3% 台新 Point'
+      note: '切換「大筆刷」享 3.3% 台新 Point！'
     },
   }
 ];
